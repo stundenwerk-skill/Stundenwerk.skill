@@ -26,7 +26,7 @@ Urheber: © 2026 [DEIN NAME] und Mitwirkende.
 
 ## Ausnahme für Lehrkräfte: ohne „Weitergabe unter gleichen Bedingungen“
 Du willst Teile von Kreide (z. B. eine angepasste Vorlage oder einen eigenen Befehl auf Basis von Kreide) in Material einbauen, das unter einer anderen Lizenz steht? Als Lehrkraft bekommst du **auf Anfrage kostenlos** eine Zusatzerlaubnis nach **CC BY-NC 4.0** (ohne SA) für deine nicht-kommerzielle Arbeit.
-→ Anfrage per Issue „Lizenz-Anfrage“ im Repo oder über [KONTAKT]. Kurz angeben: wer du bist (Lehrkraft, Bundesland), wofür.
+→ Anfrage per Issue „Lizenz-Anfrage“ im Repo oder über [kreide.skill@gmail.com](mailto:kreide.skill@gmail.com). Kurz angeben: wer du bist (Lehrkraft, Bundesland), wofür.
 
 ## Und das, was ich mit Kreide erstelle?
 Klassenarbeiten, Arbeitsblätter, Elternbriefe usw., die du mit Kreide erzeugst, sind **dein Material**. Die Lizenz von Kreide gilt für die Befehle und Vorlagen selbst, nicht automatisch für deine Ergebnisse.

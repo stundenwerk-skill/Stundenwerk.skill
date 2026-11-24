@@ -655,7 +655,7 @@ Erstelle ein Quiz zu: $ARGUMENTS
 
 - **Für Lehrkräfte kostenlos.** Die Inhalte (Befehle, Länderprofile, Regeln, Vorlagen, Anleitungen) stehen unter **CC BY-NC-SA 4.0**: teilen und anpassen für nicht-kommerzielle Zwecke, mit Namensnennung und unter gleichen Bedingungen. → [`LICENSE`](LICENSE), Kurzfassung in [`LIZENZ.md`](LIZENZ.md)
 - **Ausnahme für Lehrkräfte:** Auf Anfrage gibt es kostenlos eine Zusatzerlaubnis **ohne „Weitergabe unter gleichen Bedingungen“** (CC BY-NC 4.0). → Issue „Lizenz-Anfrage“
-- **Unternehmen und kommerzielle Nutzung:** nur mit **kostenpflichtiger Lizenz**. **Schulträger, Behörden, Landesinstitute:** für landes- oder trägerweiten Einsatz bitte Kontakt aufnehmen, es gibt kostenpflichtige Kooperations- und Supportverträge. → [`KOMMERZIELL.md`](KOMMERZIELL.md)
+- **Unternehmen und kommerzielle Nutzung:** nur mit **kostenpflichtiger Lizenz**. **Schulträger, Behörden, Landesinstitute:** für landes- oder trägerweiten Einsatz bitte Kontakt aufnehmen, es gibt kostenpflichtige Kooperations- und Supportverträge. → [`KOMMERZIELL.md`](KOMMERZIELL.md) · Kontakt: [kreide.skill@gmail.com](mailto:kreide.skill@gmail.com)
 - **Skripte** (`scripts/`): **MIT** → [`scripts/LICENSE`](scripts/LICENSE)
 - **Name „Kreide“, Logo und Wortmarke** sind **nicht** frei lizenziert. Unveränderte Weitergabe und Berichte sind erlaubt. Veränderte Fassungen brauchen einen eigenen Namen und ein eigenes Logo. → [`MARKE.md`](MARKE.md)
 - **Was du mit Kreide erstellst** (Klassenarbeiten, Arbeitsblätter, Briefe), ist dein Material.
