@@ -8,10 +8,10 @@
 | Thema der Stunde | |
 | Einheit | |
 
-## Bildungsplanbezug
+## Lehrplanbezug
 - Prozessbezogene Kompetenzen:
 - Inhaltsbezogene Kompetenzen (Standard-Nr.):
-- Leitperspektiven:
+- Fächerübergreifende Ziele des Landes:
 
 ## Ziele
 - Stundenziel:

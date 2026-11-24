@@ -1,17 +1,19 @@
-# Kontext: Lehrkraft in Baden-Württemberg
+# Kontext: Lehrkraft
 
-<!-- VORLAGE: Alles in [eckigen Klammern] durch eigene Angaben ersetzen. Max. ~150 Zeilen. -->
+<!-- VORLAGE: Alles in [eckigen Klammern] durch eigene Angaben ersetzen (macht /einrichten mit dir). Max. ~150 Zeilen. -->
 
 ## Ich
-- Lehrkraft an einer [Realschule / Gemeinschaftsschule / Gymnasium …] in [Ort, Regierungsbezirk]
+- Bundesland: [z. B. Bayern]
+- Lehrkraft an einer [Schulart, z. B. Realschule / Gesamtschule / Gymnasium …] in [Ort]
 - Fächer: [Fach 1], [Fach 2]
 - Klassenleitung: [Klasse]
-- Anrede der Lernenden in Material: „du“ (Kl. 5–10), „Sie“ (Oberstufe)
+- Anrede der Lernenden in Material: „du“ (Sek I), „Sie“ (Oberstufe)
 
 ## Grundlagen
-- Bildungsplan 2016 BW (Gymnasium: G9 neu mit Lesehilfen), Notenbildungsverordnung (NVO)
+- Lehrplan, Leistungsnachweise und Abschlüsse nach den Vorgaben des Bundeslandes (Länderprofil im Skill `kreide:unterricht`)
+- Eigene, geprüfte Landesangaben haben Vorrang: @_Schule/Landesvorgaben.md
 - Immer Operatoren und Anforderungsbereiche I–III verwenden
-- Bildungsplan-Standards NIE erfinden; ohne Beleg „[Standard prüfen]“ schreiben
+- Lehrplan-Standards NIE erfinden; ohne Beleg „[Lehrplanbezug prüfen]“ schreiben
 - Schulweite Vorgaben: @_Schule/Notenschluessel-Fachschaften.md
 - Termine/Ferien: @_Schule/Jahresplan-2026-27.md
 

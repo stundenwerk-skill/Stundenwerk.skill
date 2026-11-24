@@ -6,7 +6,7 @@ argument-hint: "[Anlass, z. B. Leistungsabfall Mathe / Verhalten / Übergang] [S
 
 Bereite ein Elterngespräch vor zu: $ARGUMENTS
 
-Datenschutz: Nur Platzhalter verwenden ([Kind], [Eltern], [Datum]). Keine Namen, Diagnosen oder Gesundheitsdaten speichern. Rechtliche Fragen (Versetzung, Ordnungsmaßnahmen nach § 90 SchG) nur allgemein ansprechen und auf Schulleitung verweisen.
+Datenschutz: Nur Platzhalter verwenden ([Kind], [Eltern], [Datum]). Keine Namen, Diagnosen oder Gesundheitsdaten speichern. Rechtliche Fragen (Versetzung, Ordnungsmaßnahmen nach dem Schulgesetz des Landes) nur allgemein ansprechen und auf Schulleitung verweisen.
 
 Erstelle:
 

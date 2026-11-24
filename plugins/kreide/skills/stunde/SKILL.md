@@ -8,11 +8,11 @@ Plane eine Stunde zu: $ARGUMENTS
 
 Vorgehen:
 1. Klassenprofil, Stoffverteilungsplan.md und die letzten 5 Logbuch-Einträge lesen. An den Stand anknüpfen.
-2. Passende Bildungsplan-Auszüge (`../_Bildungsplan/`) und Beispiele (`../_Beispiele/`) berücksichtigen.
+2. Passende Lehrplan-Auszüge (`../_Lehrplan/`) und Beispiele (`../_Beispiele/`) berücksichtigen.
 
 Erstelle in `Einheiten/<aktuelle Einheit>/Stunden/JJJJ-MM-TT_Thema.md`:
 - Kopf: Klasse, Fach, Niveau, Thema, Dauer
-- Bildungsplanbezug (prozess- und inhaltsbezogen) und Leitperspektiven, falls passend
+- Lehrplanbezug (prozess- und inhaltsbezogen) und fächerübergreifende Ziele des Landes (z. B. Leitperspektiven in BW, Bildungs- und Erziehungsziele in BY), falls passend
 - Stundenziel + 2–4 Feinziele mit Operatoren
 - Verlaufsplan als Tabelle: Phase | Zeit | Inhalt / Aktivität L und S | Sozialform | Material
   (Einstieg · Erarbeitung · Sicherung · Übung/Transfer · Hausaufgabe) – Summe der Zeiten = Dauer

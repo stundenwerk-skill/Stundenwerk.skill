@@ -1,6 +1,6 @@
 {
-  "name": "kreide-bw",
-  "description": "Kreide – KI-Kollegium für Lehrkräfte in Baden-Württemberg",
+  "name": "kreide",
+  "description": "Kreide – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
   "owner": {
     "name": "DEIN NAME / DEINE SCHULE"
   },
@@ -8,7 +8,7 @@
     {
       "name": "kreide",
       "source": "./plugins/kreide",
-      "description": "25 Skills für Lehrkräfte in BW: /kreide:stunde, /kreide:klassenarbeit, /kreide:vertretung, /kreide:elternbrief u. v. m."
+      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /kreide:stunde, /kreide:klassenarbeit, /kreide:vertretung u. v. m."
     }
   ]
 }

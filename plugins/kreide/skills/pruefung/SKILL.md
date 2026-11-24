@@ -1,13 +1,15 @@
 ---
 name: pruefung
-description: Vorbereitung auf Abschlussprüfungen in BW (Hauptschulabschluss, Realschulabschluss, Abitur) – Übungsaufgaben im Prüfungsstil, Wiederholungsplan, Checklisten.
-argument-hint: "[Abschluss: HSA/RSA/Abitur] [Fach] [Thema oder 'gesamt']"
+description: Vorbereitung auf Abschlussprüfungen in allen Bundesländern (Erster Schulabschluss, Mittlerer Schulabschluss, Abitur – mit den Landesbezeichnungen) – Übungsaufgaben im Prüfungsstil, Wiederholungsplan, Checklisten.
+argument-hint: "[Abschluss: ESA/MSA/Abitur oder Landesbezeichnung] [Fach] [Thema oder 'gesamt']"
 ---
 
 Erstelle Prüfungsvorbereitung für: $ARGUMENTS
 
+Vorher: Länderprofil lesen (über den Skill `unterricht`) und die **Abschlussbezeichnung des Landes** verwenden (z. B. Berufsbildungsreife in Berlin, Realschulabschluss in Sachsen, Qualifizierter Sekundarabschluss I in Rheinland-Pfalz).
+
 Wichtig:
-- Prüfungsvorgaben, Schwerpunktthemen, zugelassene Hilfsmittel und Operatorenlisten ändern sich jährlich. Wenn sie nicht in `_Bildungsplan/` oder `_Schule/` liegen: Websuche nutzen, falls verfügbar, sonst als „[aktuelle Prüfungsvorgaben prüfen]“ markieren.
+- Prüfungsvorgaben, Schwerpunktthemen, zugelassene Hilfsmittel und Operatorenlisten ändern sich jährlich und unterscheiden sich je Land. Wenn sie nicht in `_Lehrplan/` oder `_Schule/` liegen: Websuche auf den offiziellen Seiten des Landes nutzen, falls verfügbar, sonst als „[aktuelle Prüfungsvorgaben des Landes prüfen]“ markieren.
 - Keine Originalaufgaben früherer Prüfungen abschreiben. Eigene Aufgaben im gleichen Stil, Aufbau und Niveau erstellen.
 
 Erstelle im Ordner `Pruefung/` der Klasse:

@@ -3,7 +3,7 @@ paths:
   - "**/Klassenarbeiten/**"
 ---
 
-# Regeln für Klassenarbeiten (NVO BW)
+# Regeln für Klassenarbeiten (nach Landesvorgaben)
 
 - Kopf aus `_Schule/Vorlagen/Kopf-Klassenarbeit.md` verwenden
 - Jede Aufgabe: Operator, AFB (I/II/III), Punktzahl

@@ -1,16 +1,16 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/logo-wordmark-dark.svg">
-    <img src="assets/logo-wordmark.svg" alt="Kreide – KI-Kollegium für Lehrkräfte in BW" width="520">
+    <img src="assets/logo-wordmark.svg" alt="Kreide – KI-Kollegium für Lehrkräfte" width="520">
   </picture>
 </p>
 
 <h1 align="center">Kreide</h1>
 
-<p align="center"><b>Dein KI-Kollegium für den Schulalltag in Baden-Württemberg.</b><br>
+<p align="center"><b>Dein KI-Kollegium für den Schulalltag – in allen 16 Bundesländern.</b><br>
 Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
 
-Kreide ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben und erstellt daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr. Für alle Schularten und Fächer in BW. Ohne Programmierkenntnisse, mit automatischen Updates.
+Kreide ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben und erstellt daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr. Für alle Bundesländer, Schularten und Fächer. Ohne Programmierkenntnisse, mit automatischen Updates.
 
 ---
 
@@ -25,7 +25,7 @@ Kreide ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stof
 6. [Rules: Regeln für bestimmte Ordner](#6-rules-regeln-für-bestimmte-ordner)
 7. [Befehlsreferenz](#7-befehlsreferenz)
 8. [Arbeitsabläufe: Befehle kombinieren](#8-arbeitsabläufe-befehle-kombinieren)
-9. [Material aufbereiten: Bildungsplan, Stoffverteilung, Logbuch](#9-material-aufbereiten)
+9. [Material aufbereiten: Lehrplan, Stoffverteilung, Logbuch](#9-material-aufbereiten)
 10. [Datenschutz](#10-datenschutz)
 11. [Befehle anpassen und eigene schreiben](#11-befehle-anpassen-und-eigene-schreiben)
 12. [Tipps für optimale Ergebnisse](#12-tipps-für-optimale-ergebnisse)
@@ -71,7 +71,7 @@ Du tippst nur:
 /kreide:klassenarbeit Lineare Funktionen 45
 ```
 
-Claude liest dann selbst Logbuch, Stoffverteilungsplan, Bildungsplan-Auszug und Beispiele und legt die fertigen Dateien im richtigen Ordner ab. Du kannst auch einfach in normaler Sprache schreiben: *„Mach mir eine Klassenarbeit zu linearen Funktionen, 45 Minuten.“* Claude nimmt dann den passenden Befehl selbst.
+Claude liest dann selbst Logbuch, Stoffverteilungsplan, Lehrplan-Auszug und Beispiele und legt die fertigen Dateien im richtigen Ordner ab. Du kannst auch einfach in normaler Sprache schreiben: *„Mach mir eine Klassenarbeit zu linearen Funktionen, 45 Minuten.“* Claude nimmt dann den passenden Befehl selbst.
 
 > **Tipp:** Tippe `/` und die ersten Buchstaben, z. B. `/klass`. Claude zeigt dir passende Befehle zur Auswahl.
 
@@ -118,23 +118,23 @@ Bestätige jeden Schritt mit **Ja**, wenn Claude fragt.
    ```text
    /plugin
    ```
-   → **Marketplaces** → **kreide-bw** → **Enable auto-update**
+   → **Marketplaces** → **kreide** → **Enable auto-update**
 3. In einen Klassenordner wechseln, Claude starten und testen:
    ```text
    /memory                         ← zeigt, welche CLAUDE.md-Dateien geladen sind
    /kreide:einstieg Bruchrechnung
    ```
 
-**Fertig.** Danach nach und nach Bildungsplan-Auszüge und eigene Beispiele ergänzen (Abschnitt 9). Das macht die Ergebnisse deutlich besser.
+**Fertig.** Danach nach und nach Lehrplan-Auszüge und eigene Beispiele ergänzen (Abschnitt 9). Das macht die Ergebnisse deutlich besser.
 
 <details>
 <summary><b>Manuell einrichten (für Fortgeschrittene)</b></summary>
 
 ```bash
 # Plugin mit Updates
-claude plugin marketplace add NAME/kreide-bw
-claude plugin install kreide@kreide-bw
-# dann in Claude: /plugin → Marketplaces → kreide-bw → Enable auto-update
+claude plugin marketplace add NAME/kreide
+claude plugin install kreide@kreide
+# dann in Claude: /plugin → Marketplaces → kreide → Enable auto-update
 
 # Regeln
 cp vorlage/.claude/rules/*.md ~/.claude/rules/
@@ -182,7 +182,7 @@ zeigt die aktuelle Version, was sich geändert hat und ob du etwas tun musst. Cl
 Falls Auto-Update aus ist oder du sofort die neueste Version willst:
 
 ```text
-/plugin marketplace update kreide-bw
+/plugin marketplace update kreide
 ```
 
 Danach Claude neu starten.
@@ -219,7 +219,7 @@ Schule/                                   ← dein Schulordner (aus „vorlage�
 │
 ├── Mathematik/                         ⚙ /kreide:neue-klasse (ein Ordner pro Fach)
 │   ├── CLAUDE.md                         ← Fachregeln, Lehrwerk, Fachschaftsbeschlüsse
-│   ├── _Bildungsplan/                    ← Auszüge als Markdown
+│   ├── _Lehrplan/                    ← Auszüge als Markdown
 │   ├── _Beispiele/                       ← eigene gelungene Arbeiten („Goldstandard“)
 │   └── Klasse-7b/                      ⚙ /kreide:neue-klasse (ein Ordner pro Lerngruppe)
 │       ├── CLAUDE.md                     ← Klassenprofil (anonym!)
@@ -232,9 +232,9 @@ Schule/                                   ← dein Schulordner (aus „vorlage�
 │       │       └── Arbeitsblaetter/    ⚙ /kreide:stunde, :differenzieren
 │       ├── Klassenarbeiten/
 │       │   ├── KA2-Lineare-Funktionen/ ⚙ /kreide:klassenarbeit, :fehleranalyse, :berichtigung, :lernlandkarte
-│       │   └── WH-2026-11-20-Steigung/ ⚙ /kreide:wiederholungsarbeit
+│       │   └── KT-2026-11-20-Steigung/ ⚙ /kreide:kurztest
 │       ├── Vertretung/                 ⚙ /kreide:vertretung
-│       ├── GFS/                        ⚙ /kreide:gfs
+│       ├── Praesentation/              ⚙ /kreide:praesentation
 │       └── Pruefung/                   ⚙ /kreide:pruefung
 │
 └── Klassenleitung-7b/                  ⚙ /einrichten
@@ -258,19 +258,20 @@ Schule/                                   ← dein Schulordner (aus „vorlage�
 
 ### 5.1 `CLAUDE.md` (Schulordner): du und deine Schule
 - Schulart, Ort, Fächer, Klassenleitung, Anrede (du/Sie)
-- Grundregeln: Bildungsplan BW, NVO, Operatoren, keine erfundenen Standards
+- **Bundesland** (danach richten sich Lehrplan, Begriffe und Regeln)
+- Grundregeln: Lehrplan und Vorgaben des Landes, Operatoren, keine erfundenen Standards
 - Arbeitsweise: Dateien speichern, Dateinamen, Lösungen separat
 - Verweise mit `@_Schule/…` auf kurze, immer wichtige Dateien (Notenschlüssel, Jahresplan)
 
 > `@pfad` bindet eine Datei **immer** ein. Nur für kurze Dateien nutzen. Beim ersten Mal fragt Claude Code einmal nach Bestätigung.
 
 ### 5.2 `Fach/CLAUDE.md`: das Fach
-- Lehrwerk(e) je Klassenstufe, Kompetenzbereiche laut Bildungsplan
+- Lehrwerk(e) je Klassenstufe, Kompetenzbereiche laut Lehrplan des Landes
 - Fachschaftsbeschlüsse: Notenschlüssel, Anzahl Klassenarbeiten, Hilfsmittel
 - Stil: Kontexte, AFB-Verteilung, Layoutwünsche
 
 ### 5.3 `Klasse/CLAUDE.md`: das Klassenprofil (**anonym!**)
-- Schulart, Niveau (G/M/E), Wochenstunden, Doppelstunden
+- Schulart, Niveau bzw. Bildungsgang (Bezeichnungen des Landes), Wochenstunden, Doppelstunden
 - Lerngruppe **auf Klassenebene**: Anzahl, Förderbedarfe (ohne Namen), DaZ, Leistungsspitze
 - Was methodisch funktioniert und was nicht
 
@@ -311,14 +312,14 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 
 | Skill | Was er tut |
 |---|---|
-| `kreide:unterricht-bw` | Wissen zu Bildungsplan BW (inkl. G9 neu, Leitperspektiven), NVO, Operatoren/AFB, Niveaus G/M/E, Datenschutz. **Kein Aufruf nötig**, Claude nutzt ihn automatisch. |
+| `kreide:unterricht` | Grundwissen für alle Länder (KMK-Bildungsstandards, Operatoren/AFB, Abschlüsse, Datenschutz) **plus Länderprofil** deines Bundeslandes (Lehrplan, Schularten, Leistungsnachweise). **Kein Aufruf nötig**, Claude nutzt ihn automatisch. Siehe Abschnitt 7.7. |
 
 ### 7.3 Planung
 
 | Befehl | Beispiel | Liest | Erzeugt |
 |---|---|---|---|
-| `/kreide:einheit [Thema] [Std.]` | `/kreide:einheit Lineare Funktionen 14` | Stoffverteilung, Profil, Bildungsplan, Jahresplan | `Einheiten/NN-Thema/Planung.md` mit Stundenfolge, Leistungsfeststellung, Differenzierung |
-| `/kreide:stunde [Thema] [Min.]` | `/kreide:stunde Steigungsdreieck 90` | Profil, Logbuch (letzte 5), Bildungsplan, Beispiele | `Stunden/JJJJ-MM-TT_Thema.md` (Verlaufsplan) und `Arbeitsblaetter/AB_Thema.md` mit Lösung |
+| `/kreide:einheit [Thema] [Std.]` | `/kreide:einheit Lineare Funktionen 14` | Stoffverteilung, Profil, Lehrplan, Jahresplan | `Einheiten/NN-Thema/Planung.md` mit Stundenfolge, Leistungsfeststellung, Differenzierung |
+| `/kreide:stunde [Thema] [Min.]` | `/kreide:stunde Steigungsdreieck 90` | Profil, Logbuch (letzte 5), Lehrplan, Beispiele | `Stunden/JJJJ-MM-TT_Thema.md` (Verlaufsplan) und `Arbeitsblaetter/AB_Thema.md` mit Lösung |
 | `/kreide:einstieg [Thema]` | `/kreide:einstieg Prozentrechnung` | Profil | **nur Chat:** 3 Einstiege (Problem · Bild/Objekt · Provokation) mit Empfehlung |
 | `/kreide:tafelbild [Thema/Datei]` | `/kreide:tafelbild Steigung` | Stundenplanung | `…_Tafelbild.md` mit Merksatz, Beispiel, Farben und Lückentext-Variante |
 | `/kreide:differenzieren [Datei] [Varianten]` | `/kreide:differenzieren Arbeitsblaetter/AB_Steigung.md G E DaZ` | Arbeitsblatt, Profil | `…_G.md`, `…_E.md`, `…_DaZ.md` und eine gemeinsame Lösung |
@@ -330,14 +331,14 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 
 | Befehl | Beispiel | Liest | Erzeugt |
 |---|---|---|---|
-| `/kreide:klassenarbeit [Thema] [Min.]` | `/kreide:klassenarbeit Lineare Funktionen 45` | Profil, Stoffverteilung, Logbuch (letzte 10), Bildungsplan, Beispiele, Notenschlüssel | `Klassenarbeiten/KAx-Thema/`: `KA.md`, `KA_B.md`, `Erwartungshorizont.md`, `Uebersicht.md` |
-| `/kreide:wiederholungsarbeit [Thema] [Min.]` | `/kreide:wiederholungsarbeit Steigung 15` | Logbuch (letzte 3–5) | `Klassenarbeiten/WH-Datum-Thema/`: `WH.md`, `WH_B.md`, `Loesung.md` |
+| `/kreide:klassenarbeit [Thema] [Min.]`<br>(Bayern: Schulaufgabe) | `/kreide:klassenarbeit Lineare Funktionen 45` | Länderprofil, Profil, Stoffverteilung, Logbuch (letzte 10), Lehrplan, Beispiele, Notenschlüssel | `Klassenarbeiten/KAx-Thema/`: `KA.md`, `KA_B.md`, `Erwartungshorizont.md`, `Uebersicht.md` |
+| `/kreide:kurztest [Thema] [Min.]`<br>(BW: Wiederholungsarbeit, BY: Stegreifaufgabe/Kurzarbeit) | `/kreide:kurztest Steigung 15` | Länderprofil, Logbuch (letzte 3–5) | `Klassenarbeiten/KT-Datum-Thema/`: `Test.md`, `Test_B.md`, `Loesung.md` |
 | `/kreide:exit-ticket [Thema]` | `/kreide:exit-ticket Steigung ablesen` | Logbuch bzw. Stunde | `…_ExitTicket.md`: 3 Fragen, Version A/B, Auswertungshilfe |
 | `/kreide:lernlandkarte [Thema]` | `/kreide:lernlandkarte KA2 Lineare Funktionen` | Stoffverteilung, Logbuch, KA-Übersicht | `Lernlandkarte.md` („Ich kann …“-Tabelle mit Übungsverweisen) |
-| `/kreide:gfs [Thema] [Form]` | `/kreide:gfs Funktionen im Alltag Präsentation` | Profil, Stoffverteilung, Schulvorgaben | `GFS/`: Themenliste, Anforderungen, Bewertungsbogen, Kolloquium-Leitfaden |
-| `/kreide:pruefung [Abschluss] [Fach] [Thema]` | `/kreide:pruefung RSA Mathematik gesamt` | Bildungsplan, Jahresplan, Prüfungsvorgaben | `Pruefung/`: Themenüberblick, Wiederholungsplan, Übungsaufgaben, Lösungen, Tipps |
+| `/kreide:praesentation [Thema] [Form]`<br>(BW: GFS, SN: Komplexe Leistung …) | `/kreide:praesentation Funktionen im Alltag Präsentation` | Länderprofil, Profil, Stoffverteilung, Schulvorgaben | `Praesentation/`: Themenliste, Anforderungen, Bewertungsbogen, Kolloquium-Leitfaden |
+| `/kreide:pruefung [Abschluss] [Fach] [Thema]` | `/kreide:pruefung MSA Mathematik gesamt` | Länderprofil, Lehrplan, Jahresplan, Prüfungsvorgaben | `Pruefung/`: Themenüberblick, Wiederholungsplan, Übungsaufgaben, Lösungen, Tipps |
 
-> Bei Klassenarbeiten und Wiederholungsarbeiten prüft Claude, ob alles laut Logbuch unterrichtet wurde. Die NVO-Regeln (Ankündigung, max. 1 KA/Tag, möglichst ≤ 3/Woche) sind in `unterricht-bw` hinterlegt.
+> Bei Klassenarbeiten und Kurztests prüft Claude, ob alles laut Logbuch unterrichtet wurde, und nutzt Begriffe und Regeln deines Landes (z. B. Ankündigung, Höchstzahl pro Tag/Woche) aus dem Länderprofil bzw. aus `_Schule/Landesvorgaben.md`.
 
 ### 7.5 Korrektur und Rückmeldung (immer anonym)
 
@@ -356,6 +357,36 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 | `/kreide:protokoll [Sitzung] [Stichpunkte]` | `/kreide:protokoll Fachkonferenz Mathe: TOP1 …` | Schulordner | `_Schule/Protokolle/Datum_Art.md` (Klassenkonferenzen nur im Chat) |
 | `/kreide:ausflug [Art] [Ziel] [Datum] [Klasse]` | `/kreide:ausflug Exkursion Wilhelma 14.05. 7b` | `Klassenleitung-…` | `Ausfluege/Datum_Ziel/`: Planung, Checkliste, Kosten, Elternbrief, Arbeitsauftrag |
 
+### 7.7 Bundesländer: so passt sich Kreide an dein Land an
+
+Kreide bringt für **jedes der 16 Länder ein Länderprofil** mit (`plugins/kreide/skills/unterricht/laender/`). Claude liest es automatisch anhand der Zeile `Bundesland:` in deiner `CLAUDE.md` und verwendet dann die Begriffe und Regeln deines Landes.
+
+| Land | Lehrplan heißt … | Große schriftliche Arbeit | Erster / Mittlerer Abschluss |
+|---|---|---|---|
+| Baden-Württemberg | Bildungsplan | Klassenarbeit | Hauptschulabschluss / Realschulabschluss |
+| Bayern | LehrplanPLUS | **Schulaufgabe** | Erfolgreicher Abschluss der Mittelschule / Realschulabschluss bzw. Mittlerer Schulabschluss |
+| Berlin | Rahmenlehrplan 1–10 (mit BB) | Klassenarbeit | Berufsbildungsreife / Mittlerer Schulabschluss |
+| Brandenburg | Rahmenlehrplan 1–10 (mit BE) | Klassenarbeit | Berufsbildungsreife / Fachoberschulreife |
+| Bremen | Bildungsplan | Klassenarbeit | Einfache Berufsbildungsreife / Mittlerer Schulabschluss |
+| Hamburg | Bildungsplan | Klassenarbeit | Erster allgemeinbildender Schulabschluss / Mittlerer Schulabschluss |
+| Hessen | Kerncurriculum | Klassenarbeit | Hauptschulabschluss / Realschulabschluss |
+| Mecklenburg-Vorpommern | Rahmenplan | Klassenarbeit | Berufsreife / Mittlere Reife |
+| Niedersachsen | Kerncurriculum | Klassenarbeit | Hauptschulabschluss / Sekundarabschluss I – Realschulabschluss |
+| Nordrhein-Westfalen | Kernlehrplan | Klassenarbeit (Oberstufe: Klausur) | Erster Schulabschluss / Mittlerer Schulabschluss |
+| Rheinland-Pfalz | Lehrplan | Klassenarbeit | Berufsreife / Qualifizierter Sekundarabschluss I |
+| Saarland | Lehrplan | Klassenarbeit | Hauptschulabschluss / Mittlerer Bildungsabschluss |
+| Sachsen | Lehrplan | Klassenarbeit (dazu Komplexe Leistungen) | Hauptschulabschluss / Realschulabschluss |
+| Sachsen-Anhalt | Lehrplan / Rahmenrichtlinien | Klassenarbeit | Hauptschulabschluss / Realschulabschluss |
+| Schleswig-Holstein | Fachanforderungen | Klassenarbeit | Erster Schulabschluss / Mittlerer Schulabschluss |
+| Thüringen | Lehrplan | Klassenarbeit | Hauptschulabschluss / Realschulabschluss |
+
+**Wie verlässlich sind die Profile?** Belegte Angaben stehen ohne Zusatz. Was nicht sicher belegt ist (z. B. Höchstzahl von Arbeiten pro Woche in manchen Ländern), ist mit **„[prüfen]“** markiert. Claude gibt solche Punkte nicht als Tatsache aus, sondern kennzeichnet sie im Material.
+
+**Dein Land genauer machen:**
+1. Trage geprüfte Regeln in **`_Schule/Landesvorgaben.md`** ein (mit Quelle). Die haben Vorrang vor dem Länderprofil.
+2. Oder lass Claude helfen: *„Prüfe die [prüfen]-Punkte meines Länderprofils auf den offiziellen Seiten meines Landes und trage die Ergebnisse mit Quelle in Landesvorgaben.md ein.“*
+3. Fehler im Länderprofil? Melde sie der Person, die Kreide pflegt. Dann sind sie mit dem nächsten Update für alle korrigiert.
+
 ---
 
 ## 8. Arbeitsabläufe: Befehle kombinieren
@@ -364,7 +395,7 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 1. Altes Schuljahr sichern: `/kreide:sichern`, dann Claude bitten: *„Verschiebe alle Klassenordner in Archiv/2025-26.“*
 2. `_Schule/Jahresplan-…md` mit Ferien und Terminen füllen (Claude kann eine Vorlage erstellen)
 3. Für jede neue Lerngruppe: `/kreide:neue-klasse Mathematik 5c Gymnasium 4 Std.`
-4. Stoffverteilungsplan: *„Entwirf den Stoffverteilungsplan für die 5c nach Bildungsplan und Jahresplan.“*
+4. Stoffverteilungsplan: *„Entwirf den Stoffverteilungsplan für die 5c nach Lehrplan und Jahresplan.“*
 5. Erste Einheit: `/kreide:einheit …`
 
 ### 8.2 Zyklus einer Unterrichtseinheit
@@ -383,7 +414,7 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 ### 8.3 Zyklus einer Klassenarbeit
 
 ```text
-/kreide:wiederholungsarbeit …                 → zwischendurch Stand prüfen
+/kreide:kurztest …                            → zwischendurch Stand prüfen
 /kreide:lernlandkarte …                       → ca. 1 Woche vorher an die Klasse
 /kreide:klassenarbeit …                       → KA, Version B, Erwartungshorizont
    (du korrigierst selbst)
@@ -403,9 +434,9 @@ Sonntags im Schulordner:
 
 Fällt kurzfristig eine Stunde aus: `/kreide:vertretung 7b Mathe 45`, dann den Ablaufzettel weitergeben.
 
-### 8.5 GFS und Abschlussprüfung
-- GFS: `/kreide:gfs` → Themenliste für die Klasse, Bewertungsbogen für dich, Kolloquiumsfragen
-- Abschlussklassen: `/kreide:pruefung RSA Deutsch gesamt`. **Aktuelle Prüfungsvorgaben** in `_Bildungsplan/` ablegen!
+### 8.5 Präsentationsleistung und Abschlussprüfung
+- Präsentationsleistung (z. B. GFS in BW): `/kreide:praesentation` → Themenliste für die Klasse, Bewertungsbogen für dich, Kolloquiumsfragen
+- Abschlussklassen: `/kreide:pruefung MSA Deutsch gesamt` (Claude verwendet die Abschlussbezeichnung deines Landes). **Aktuelle Prüfungsvorgaben** in `_Lehrplan/` ablegen!
 
 ### 8.6 Klassenleitung
 Im Ordner `Klassenleitung-7b`:
@@ -423,10 +454,12 @@ Claude arbeitet am besten mit **Markdown**. Das ist einfacher Text mit `#` für 
 
 | Material | Wohin | Tipp |
 |---|---|---|
-| **Bildungsplan** | `Fach/_Bildungsplan/` | Nur deine Klassenstufen, **Standardnummern mitkopieren**. Quelle: bildungsplaene-bw.de |
-| **Lesehilfen G9 neu** | `Fach/_Bildungsplan/` | Für Gymnasium Kl. 5/6 ff., weil sie Stundenumfang und Schwerpunkte ändern |
-| **Prüfungsvorgaben** | `Fach/_Bildungsplan/` | jährlich aktualisieren |
-| **Stoffverteilungsplan** | `Klasse/Stoffverteilungsplan.md` | Tabelle: KW, Einheit, Stunden, Standards, Leitperspektiven, Leistung |
+| **Lehrplan** (Bildungsplan, LehrplanPLUS, Kernlehrplan, Kerncurriculum, Rahmenlehrplan, Fachanforderungen …) | `Fach/_Lehrplan/` | Nur deine Klassenstufen, **Nummerierungen mitkopieren**. Wo es ihn gibt, steht im Länderprofil; Übersicht: bildungsserver.de → Lehrpläne der Bundesländer |
+| **Schulinternes Curriculum / Fachcurriculum** | `Fach/_Lehrplan/` | In vielen Ländern Pflicht (z. B. Schleswig-Holstein, NRW) und für Claude sehr hilfreich |
+| **Übergangs- und Lesehilfen** (z. B. G9-Umstellung) | `Fach/_Lehrplan/` | wenn dein Land sie herausgibt |
+| **Geprüfte Landesregeln** | `_Schule/Landesvorgaben.md` | haben Vorrang vor dem mitgelieferten Länderprofil |
+| **Prüfungsvorgaben** | `Fach/_Lehrplan/` | jährlich aktualisieren |
+| **Stoffverteilungsplan** | `Klasse/Stoffverteilungsplan.md` | Tabelle: KW, Einheit, Stunden, Kompetenzen/Standards, fächerübergreifende Ziele, Leistung |
 | **Schulcurriculum, Fachschaftsbeschlüsse** | `_Schule/` und `Fach/CLAUDE.md` | nur das Verbindliche, kurz |
 | **Notenschlüssel** | `_Schule/Notenschluessel-Fachschaften.md` | eine landesweite Prozentvorgabe gibt es nicht, also die Werte deiner Fachschaft eintragen |
 | **Eigene gelungene KAs/Stunden** | `Fach/_Beispiele/` | **Der größte Qualitätshebel.** Claude übernimmt Niveau, Länge, Layout |
@@ -435,7 +468,7 @@ Claude arbeitet am besten mit **Markdown**. Das ist einfacher Text mit `#` für 
 **Umwandeln lassen.** Datei in den Ordner legen und Claude sagen:
 
 ```text
-Wandle _Bildungsplan/BP2016_Mathe.pdf in Markdown um. Behalte nur Klassen 7/8,
+Wandle _Lehrplan/BP2016_Mathe.pdf in Markdown um. Behalte nur Klassen 7/8,
 alle Standardnummern und Überschriften. Speichere als BP2016-Mathe-SekI-Kl7-8.md.
 Lösche das PDF nicht, ich prüfe erst.
 ```
@@ -477,7 +510,7 @@ So fragen Klassenarbeiten nichts ab, was gar nicht dran war. Folgestunden knüpf
 | `ausflug`, `elternbrief` | keine Namen, Gesundheitsdaten oder Notfallkontakte |
 
 ### 10.3 Organisatorisch
-- Inhalte, die du Claude gibst, werden zur Verarbeitung an Anthropic übertragen. Für personenbezogene Daten sind die landeseigenen Werkzeuge (SCHULE@BW, F13) bzw. die Vorgaben deiner Schule maßgeblich.
+- Inhalte, die du Claude gibst, werden zur Verarbeitung an Anthropic übertragen. Für personenbezogene Daten sind die landeseigenen bzw. von der Schule freigegebenen Werkzeuge (z. B. telli; siehe Länderprofil) und die Vorgaben deiner Schule maßgeblich.
 - Kläre, ob und wie du auf einem Privatgerät dienstlich arbeiten darfst.
 - Schülerarbeiten nur **vollständig anonymisiert** und ohne Handschrift-Fotos verwenden.
 - **Noten gibst du.** Alle Bewertungsvorschläge sind Entwürfe.
@@ -543,7 +576,7 @@ Erstelle ein Quiz zu: $ARGUMENTS
 7. **Regelmäßig `/kreide:sichern`**, und ab und zu die neueste Sicherung extern kopieren.
 8. **Drucken/Word:** *„Mach aus KA.md eine Word-Datei mit Schulkopf.“*
 9. **Ab und zu `/kreide:neuigkeiten`**, um neue Befehle nicht zu verpassen.
-10. **Alles prüfen.** Fachliche Richtigkeit, Bildungsplanbezug und Bewertung verantwortest du.
+10. **Alles prüfen.** Fachliche Richtigkeit, Lehrplanbezug und Bewertung verantwortest du.
 
 ---
 
@@ -554,10 +587,11 @@ Erstelle ein Quiz zu: $ARGUMENTS
 | `/kreide:…`-Befehle erscheinen nicht | Claude nach `/einrichten` neu starten. Dann `/plugin` → **Installed**: Ist `kreide` aktiviert? Sonst `/einrichten` erneut ausführen. |
 | `/einrichten` erscheint nicht | Claude wurde nicht im Schulordner (umbenannter Ordner `vorlage`) gestartet. Dort starten (Anhang A). |
 | `/einrichten` meldet, dass git fehlt | Claude hilft bei der Installation. Alternativ ohne Updates einrichten (Claude bietet das an). |
-| Updates kommen nicht an | `/plugin` → Marketplaces → kreide-bw: Ist **auto-update** an? Sonst `/plugin marketplace update kreide-bw` und neu starten. `/kreide:neuigkeiten` zeigt die Version. |
+| Updates kommen nicht an | `/plugin` → Marketplaces → kreide: Ist **auto-update** an? Sonst `/plugin marketplace update kreide` und neu starten. `/kreide:neuigkeiten` zeigt die Version. |
 | Claude kennt mein Klassenprofil nicht | Nicht im Klassenordner gestartet. Mit `/memory` prüfen. |
-| Claude fragt ständig, ob es `_Schule/` oder `_Bildungsplan/` lesen darf | Zugriff fehlt oder der Schulordner wurde verschoben. `/einrichten` erneut ausführen und den Zugriffs-Schritt bestätigen. |
-| Bildungsplan-Nummern stimmen nicht | Auszug fehlt in `_Bildungsplan/`. Claude markiert dann mit „[Standard prüfen]“. |
+| Claude fragt ständig, ob es `_Schule/` oder `_Lehrplan/` lesen darf | Zugriff fehlt oder der Schulordner wurde verschoben. `/einrichten` erneut ausführen und den Zugriffs-Schritt bestätigen. |
+| Lehrplan-Nummern stimmen nicht | Auszug fehlt in `_Lehrplan/`. Claude markiert dann mit „[Lehrplanbezug prüfen]“. |
+| Begriffe oder Regeln passen nicht zu meinem Land | Bundesland in der `CLAUDE.md` prüfen. Richtige Angaben in `_Schule/Landesvorgaben.md` eintragen (haben Vorrang) und der Person melden, die Kreide pflegt. |
 | Klassenarbeit fragt Unbehandeltes ab | Das Logbuch ist lückenhaft. Nachtragen und neu erzeugen lassen. |
 | Ergebnisse zu lang oder zu schwer | Beispiele in `_Beispiele/` ablegen, Regel in die Fach-CLAUDE.md schreiben. |
 | Befehl doppelt (`/klassenarbeit` und `/kreide:klassenarbeit`) | Alte Kopie aus Version 1.0. `/einrichten` bietet das Aufräumen an. |
@@ -571,10 +605,10 @@ Erstelle ein Quiz zu: $ARGUMENTS
 - [ ] Claude Code installiert und angemeldet
 - [ ] Ordner `vorlage` in `Schule` umbenannt und an festen Platz verschoben
 - [ ] Im Schulordner `/einrichten` vollständig durchlaufen
-- [ ] Claude neu gestartet, **Auto-Update eingeschaltet** (`/plugin` → Marketplaces → kreide-bw)
+- [ ] Claude neu gestartet, **Auto-Update eingeschaltet** (`/plugin` → Marketplaces → kreide)
 - [ ] Im Klassenordner `/memory` und `/kreide:einstieg …` getestet
 - [ ] Notenschlüssel der Fachschaft eingetragen
-- [ ] Pro Fach: Bildungsplan-Auszug und 1–2 eigene Beispiele
+- [ ] Pro Fach: Lehrplan-Auszug und 1–2 eigene Beispiele
 - [ ] Pro Klasse: Stoffverteilungsplan
 - [ ] Routinen: `/kreide:logbuch` nach jeder Stunde, `/kreide:sichern` jede Woche
 
@@ -619,8 +653,8 @@ Das Terminal ist ein Fenster, in das man Befehle tippt. Du brauchst nur **drei D
 ### B.1 Aufbau
 
 ```text
-kreide-bw/                      ← dieses Repo = Plugin-Marketplace
-├── .claude-plugin/marketplace.json      ← Katalog: Marketplace „kreide-bw“, Plugin „Kreide“
+kreide/                      ← dieses Repo = Plugin-Marketplace
+├── .claude-plugin/marketplace.json      ← Katalog: Marketplace „kreide“, Plugin „Kreide“
 ├── plugins/kreide/
 │   ├── .claude-plugin/plugin.json       ← Name, VERSION, Beschreibung
 │   └── skills/<name>/SKILL.md           ← die Befehle (/kreide:<name>)
@@ -636,12 +670,12 @@ Warum so?
 - **`/einrichten` als Projekt-Skill der Vorlage** → funktioniert, bevor das Plugin installiert ist
 
 ### B.2 Erstveröffentlichung
-1. In `vorlage/einrichtung/marketplace-quelle.txt` die eigene Adresse eintragen, z. B. `meine-schule/kreide-bw`
+1. In `vorlage/einrichtung/marketplace-quelle.txt` die eigene Adresse eintragen, z. B. `meine-schule/kreide`
 2. In `.claude-plugin/marketplace.json` den `owner` anpassen
 3. Prüfen: `claude plugin validate .`
 4. Auf GitHub veröffentlichen:
    ```bash
-   gh repo create kreide-bw --public --source=. --push
+   gh repo create kreide --public --source=. --push
    ```
    **Öffentlich** ist am einfachsten. Lehrkräfte brauchen dann kein GitHub-Konto, Updates laufen ohne Anmeldung. Das Repo enthält keine personenbezogenen Daten. Bei einem **privaten** Repo braucht jede Lehrkraft Lesezugriff und gespeicherte Zugangsdaten auf ihrem Rechner.
 5. Lehrkräften den Link zur ZIP (`Code → Download ZIP`) und diese README schicken
@@ -664,24 +698,30 @@ Nutzt die Schule Claude über eine Organisation, kann ein Admin über **verwalte
 ```json
 {
   "extraKnownMarketplaces": {
-    "kreide-bw": {
-      "source": { "source": "github", "repo": "meine-schule/kreide-bw" },
+    "kreide": {
+      "source": { "source": "github", "repo": "meine-schule/kreide" },
       "autoUpdate": true
     }
   },
   "enabledPlugins": {
-    "kreide@kreide-bw": true
+    "kreide@kreide": true
   }
 }
 ```
 
 Details: [Manage plugins for your organization](https://code.claude.com/docs/en/plugins/org)
 
-### B.5 Testen vor dem Veröffentlichen
+### B.5 Länderprofile pflegen
+- Dateien: `plugins/kreide/skills/unterricht/laender/<KÜRZEL>.md` (BW, BY, BE, BB, HB, HH, HE, MV, NI, NW, RP, SL, SN, ST, SH, TH)
+- Regel: Nur belegte Angaben ohne Zusatz, alles andere mit „[prüfen]“. Quelle im Commit oder als Kommentar nennen.
+- Rückmeldungen von Lehrkräften (aus ihren `Landesvorgaben.md`) sind die beste Quelle, um „[prüfen]“-Punkte aufzulösen.
+- Nach Änderungen: Version erhöhen, `CHANGELOG.md` und `neuigkeiten` ergänzen (siehe B.3).
+
+### B.6 Testen vor dem Veröffentlichen
 ```bash
 claude plugin validate .
 claude plugin marketplace add ./          # lokaler Test-Marketplace
-claude plugin install kreide@kreide-bw
+claude plugin install kreide@kreide
 ```
 Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bzw. mit `/reload-plugins`.
 
@@ -690,4 +730,4 @@ Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bz
 **Offizielle Dokumentation:**
 [CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions) · [Plugins](https://code.claude.com/docs/en/plugins) · [Marketplace erstellen](https://code.claude.com/docs/en/plugin-marketplaces) · [Marketplace hosten & Updates](https://code.claude.com/docs/en/plugins/host-marketplace)
 
-*Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetz, NVO, Bildungspläne) und die Vorgaben deiner Schule.*
+*Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetze, Verordnungen, Lehrpläne deines Landes) und die Vorgaben deiner Schule.*

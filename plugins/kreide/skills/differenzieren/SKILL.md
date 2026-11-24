@@ -1,6 +1,6 @@
 ---
 name: differenzieren
-description: Macht aus einem Arbeitsblatt differenzierte Fassungen – G/M/E-Niveau, DaZ/sprachsensibel, Förderung und Forderung.
+description: Macht aus einem Arbeitsblatt differenzierte Fassungen – Niveaustufen (z. B. grundlegend/mittel/erweitert), DaZ/sprachsensibel, Förderung und Forderung.
 argument-hint: "[Pfad zum Arbeitsblatt] [optional: gewünschte Varianten, z. B. G M E DaZ]"
 ---
 

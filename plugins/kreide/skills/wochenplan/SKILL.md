@@ -9,10 +9,10 @@ Erstelle einen Vorbereitungsplan für die Woche: $ARGUMENTS (ohne Angabe: kommen
 Vom Ordner `Schule/` aus starten. Vorgehen:
 1. `_Schule/Jahresplan-*.md` lesen: Termine, Ferien, Konferenzen in dieser Woche.
 2. Für jede Klasse (alle `*/Klasse-*/`): letzte Logbuch-Einträge und Stoffverteilungsplan lesen.
-3. Abgleichen: Liegt die Klasse im Plan? Steht eine Klassenarbeit / Wiederholungsarbeit an? Ist eine Klassenarbeit angekündigt und schon erstellt?
+3. Abgleichen: Liegt die Klasse im Plan? Steht eine Klassenarbeit / Kurztest an? Ist eine Klassenarbeit angekündigt und schon erstellt?
 
 Ausgabe im Chat (und als `_Schule/Wochenplaene/KW-NN.md`):
 - Termine der Woche
 - Tabelle pro Klasse: Klasse | Fach | Stand | geplante Themen diese Woche | Abweichung vom Plan | To-do
-- Leistungsfeststellungen der Woche (NVO beachten: max. 1 KA/Tag, möglichst ≤ 3/Woche pro Klasse – soweit aus den Daten erkennbar)
+- Leistungsfeststellungen der Woche (Höchstzahlen des Landes laut Länderprofil bzw. `_Schule/Landesvorgaben.md` beachten – soweit aus den Daten erkennbar)
 - Priorisierte To-do-Liste für die Vorbereitung (was zuerst), mit passendem Skill-Befehl, z. B. `/kreide:stunde …`, `/kreide:klassenarbeit …`

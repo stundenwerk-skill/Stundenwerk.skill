@@ -6,7 +6,18 @@ description: Zeigt, was in der aktuellen Version der Schul-Befehle neu ist und o
 Zeige der Lehrkraft in einfacher Sprache, was neu ist. Nutze genau die Angaben unten, erfinde nichts dazu.
 Danach: Wenn unter „Zu tun“ etwas steht, biete an, es direkt zu erledigen.
 
-## Aktuelle Version: 1.1.0 (24.11.2026)
+## Aktuelle Version: 1.2.0 (25.11.2026)
+
+**Neu: Kreide gilt für alle 16 Bundesländer**
+- Länderprofile mit Lehrplan-Portal, Schularten, Abschlüssen und Regeln für Leistungsnachweise (z. B. Schulaufgabe in Bayern).
+- Eigene, geprüfte Angaben in `_Schule/Landesvorgaben.md` haben Vorrang.
+- Umbenannt: `/kreide:kurztest` (vorher Wiederholungsarbeit), `/kreide:praesentation` (vorher GFS), Ordner `_Lehrplan/` (vorher `_Bildungsplan/`).
+
+**Zu tun (1.2.0)**
+- In der `CLAUDE.md` des Schulordners die Zeile `- Bundesland: …` ergänzen, falls sie fehlt.
+- Ordner `_Bildungsplan/` in den Fächern in `_Lehrplan/` umbenennen (Claude kann das für dich tun).
+
+## Version 1.1.0 (24.11.2026)
 
 **Neu**
 - Die Befehle aktualisieren sich jetzt automatisch, wenn Auto-Update eingeschaltet ist.
@@ -16,8 +27,8 @@ Danach: Wenn unter „Zu tun“ etwas steht, biete an, es direkt zu erledigen.
 - Das Paket heißt jetzt **Kreide**. Alle Befehle beginnen mit `kreide:`, z. B. `/kreide:klassenarbeit`. Tipp: `/` tippen und den Anfang des Namens eingeben.
 
 **Zu tun**
-- Falls noch nicht geschehen: Auto-Update einschalten (`/plugin` → Marketplaces → `kreide-bw` → Enable auto-update).
+- Falls noch nicht geschehen: Auto-Update einschalten (`/plugin` → Marketplaces → `kreide` → Enable auto-update).
 - Wer vorher Version 1.0 hatte: Alte Kopien der Befehle in `~/.claude/skills/` entfernen. `/einrichten` im Schulordner bietet das an.
 
 ## Frühere Versionen
-- 1.0.0 (24.11.2026): erste Version mit 22 Befehlen.
+- 1.0.0 (24.11.2026): erste Version mit 22 Befehlen (nur Baden-Württemberg).

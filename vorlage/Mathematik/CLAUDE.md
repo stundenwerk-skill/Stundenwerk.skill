@@ -6,9 +6,9 @@
 - Kl. 5–6: [Titel, Verlag]; Kl. 7–10: [Titel, Verlag]
 - Seitenangaben gerne nennen, aber keine Aufgaben aus dem Buch abschreiben
 
-## Bildungsplan
-- Auszüge liegen in `_Bildungsplan/`; bei Bedarf dort nachlesen
-- Leitideen: Zahl – Variable – Operation, Messen, Raum und Form, Funktionaler Zusammenhang, Daten und Zufall
+## Lehrplan
+- Auszüge liegen in `_Lehrplan/`; bei Bedarf dort nachlesen
+- Leitideen (KMK-Bildungsstandards, Beispiel): Zahl und Operation, Größen und Messen, Strukturen und funktionaler Zusammenhang, Raum und Form, Daten und Zufall [mit Lehrplan des Landes abgleichen]
 - Prozessbezogen: Argumentieren, Problemlösen, Modellieren, Darstellen, Kommunizieren
 
 ## Fachschaftsbeschlüsse

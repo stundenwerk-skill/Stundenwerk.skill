@@ -1,7 +1,9 @@
 {
   "name": "kreide",
   "displayName": "Kreide",
-  "version": "1.1.0",
-  "description": "Kreide – KI-Kollegium für Lehrkräfte in Baden-Württemberg: Unterrichtsplanung, Klassenarbeiten nach NVO, Differenzierung, Korrektur, Klassenleitung. Bildungsplan BW und Datenschutz eingebaut.",
-  "author": { "name": "DEIN NAME / DEINE SCHULE" }
+  "version": "1.2.0",
+  "description": "Kreide – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern: Unterrichtsplanung, Klassenarbeiten nach Landesvorgaben, Differenzierung, Korrektur, Klassenleitung. Länderprofile, Lehrplanbezug und Datenschutz eingebaut.",
+  "author": {
+    "name": "DEIN NAME / DEINE SCHULE"
+  }
 }

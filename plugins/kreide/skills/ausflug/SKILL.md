@@ -13,7 +13,7 @@ Hinweise:
 Erstelle im Ordner `Klassenleitung-…/Ausfluege/JJJJ-MM-TT_Ziel/`:
 
 1. `Planung.md`
-   - Ziel, pädagogischer Bezug (Bildungsplan, Leitperspektiven, z. B. BNE, BO)
+   - Ziel, pädagogischer Bezug (Lehrplan, fächerübergreifende Ziele, z. B. Nachhaltigkeit, Berufsorientierung)
    - Ablaufplan mit Uhrzeiten (Treffpunkt, Anreise, Programm, Pausen, Rückkehr)
    - Begleitpersonen (Anzahl), Notfallplan als Platzhalter
 2. `Checkliste.md` – Vorlauf in Wochen: Genehmigung, Buchung, Elternbrief, Geld einsammeln, Erste-Hilfe-Set, Liste mitnehmen …
