@@ -1,6 +1,6 @@
 # Claude Code für Lehrkräfte in Baden-Württemberg
 
-**Eine Vorlage, mit der Claude Code deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben kennt und daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr erstellt. Gedacht für alle Schularten und Fächer in BW. Ohne Programmier- oder Git-Kenntnisse.**
+**Ein Paket, mit dem Claude Code deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben kennt und daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr erstellt. Gedacht für alle Schularten und Fächer in BW. Ohne Programmierkenntnisse, mit automatischen Updates.**
 
 ---
 
@@ -9,72 +9,75 @@
 0. [Was ist in diesem Paket?](#0-was-ist-in-diesem-paket)
 1. [Grundidee](#1-grundidee)
 2. [Einrichtung in 15 Minuten](#2-einrichtung-in-15-minuten)
-3. [Ordnerstruktur](#3-ordnerstruktur)
-4. [Die drei CLAUDE.md-Ebenen](#4-die-drei-claudemd-ebenen)
-5. [Rules: Regeln für bestimmte Ordner](#5-rules-regeln-für-bestimmte-ordner)
-6. [Skill-Referenz: alle 25 Befehle](#6-skill-referenz-alle-25-befehle)
-7. [Arbeitsabläufe: Skills kombinieren](#7-arbeitsabläufe-skills-kombinieren)
-8. [Material aufbereiten: Bildungsplan, Stoffverteilung, Logbuch](#8-material-aufbereiten)
-9. [Datenschutz](#9-datenschutz)
-10. [Skills anpassen und eigene schreiben](#10-skills-anpassen-und-eigene-schreiben)
-11. [Tipps für optimale Ergebnisse](#11-tipps-für-optimale-ergebnisse)
-12. [Häufige Probleme](#12-häufige-probleme)
-13. [Checkliste](#13-checkliste)
+3. [Updates und Neuigkeiten](#3-updates-und-neuigkeiten)
+4. [Ordnerstruktur](#4-ordnerstruktur)
+5. [Die drei CLAUDE.md-Ebenen](#5-die-drei-claudemd-ebenen)
+6. [Rules: Regeln für bestimmte Ordner](#6-rules-regeln-für-bestimmte-ordner)
+7. [Befehlsreferenz](#7-befehlsreferenz)
+8. [Arbeitsabläufe: Befehle kombinieren](#8-arbeitsabläufe-befehle-kombinieren)
+9. [Material aufbereiten: Bildungsplan, Stoffverteilung, Logbuch](#9-material-aufbereiten)
+10. [Datenschutz](#10-datenschutz)
+11. [Befehle anpassen und eigene schreiben](#11-befehle-anpassen-und-eigene-schreiben)
+12. [Tipps für optimale Ergebnisse](#12-tipps-für-optimale-ergebnisse)
+13. [Häufige Probleme](#13-häufige-probleme)
+14. [Checkliste](#14-checkliste)
 - [Anhang A: Terminal-Mini-Kurs](#anhang-a-terminal-mini-kurs)
-- [Anhang B: Für Verantwortliche – Verteilung über GitHub](#anhang-b-für-verantwortliche--verteilung-über-github)
+- [Anhang B: Für Verantwortliche – Pflege, Versionen, Verteilung](#anhang-b-für-verantwortliche--pflege-versionen-verteilung)
 
 ---
 
 ## 0. Was ist in diesem Paket?
 
-| Pfad | Inhalt |
-|---|---|
-| `README.md` | diese Anleitung |
-| `CLAUDE.md` | Vorlage für deinen persönlichen Kontext (füllt `/einrichten` mit dir aus) |
-| `.claude/skills/` | **25 Skills** (Befehle wie `/klassenarbeit`, `/stunde`, `/vertretung` …) |
-| `.claude/rules/` | Datenschutz (immer), Regeln für Klassenarbeiten und Arbeitsblätter (ordnerabhängig) |
-| `.claude/settings.json` | Lesesperren für Schülerdaten (Projektebene) |
-| `einrichtung/` | Vorlage für deine persönlichen Einstellungen (nutzt `/einrichten`) |
-| `_Schule/` | Vorlagen: Notenschlüssel, Jahresplan, KA-Kopf, Stundenentwurf, Briefkopf |
-| `Mathematik/` | Beispielfach mit `Klasse-7b`, Muster für jedes Fach |
-| `Klassenleitung-7b/` | Beispielordner für die Klassenleitung |
+| Teil | Was es ist | Für wen |
+|---|---|---|
+| `vorlage/` | **Dein Schulordner**: Vorlagen für dich, deine Fächer und Klassen, Regeln, Datenschutz-Einstellungen und der Befehl `/einrichten` | Lehrkräfte: wird zu `Schule` umbenannt |
+| `plugins/schule/` | **Das Plugin „schule“** mit 25 Skills (`/schule:stunde`, `/schule:klassenarbeit` …). Wird bei der Einrichtung installiert und **aktualisiert sich automatisch** | wird installiert, nicht angefasst |
+| `.claude-plugin/marketplace.json` | Katalog, über den Claude Code das Plugin findet und Updates bezieht | Verantwortliche |
+| `CHANGELOG.md` | Liste aller Änderungen | alle |
+| `README.md` | diese Anleitung | alle |
 
 ---
 
 ## 1. Grundidee
 
-Claude Code liest beim Start automatisch die `CLAUDE.md`-Dateien **des Ordners, in dem du startest, und aller übergeordneten Ordner**. Die Befehle (Skills) installiert `/einrichten` einmalig in deinem persönlichen Claude-Ordner, damit sie **überall** funktionieren.
+**Zwei Teile, die sich ergänzen:**
 
-Startest du Claude in `Mathematik/Klasse-7b`, kennt es:
+| Teil | Wo | Ändert sich … |
+|---|---|---|
+| **Dein Wissen**: Schule, Fächer, Klassen, Logbuch, Stoffverteilung | Schulordner (`CLAUDE.md`-Dateien und deine Dateien) | durch dich |
+| **Die Befehle**: wie man eine Klassenarbeit, Stunde, Vertretung … erstellt | Plugin `schule` | durch Updates, automatisch |
+
+Claude Code liest beim Start die `CLAUDE.md`-Dateien **des Ordners, in dem du startest, und aller übergeordneten Ordner**. Startest du in `Mathematik/Klasse-7b`, kennt es:
 
 | Ebene | Datei | Inhalt |
 |---|---|---|
-| Du & Schule | `CLAUDE.md` | Schulart, Fächer, Arbeitsweise, Datenschutz |
-| Fach | `Mathematik/CLAUDE.md` | Lehrwerk, Fachschaftsbeschlüsse, Stil |
-| Klasse | `Mathematik/Klasse-7b/CLAUDE.md` | anonymes Klassenprofil, Niveau, Besonderheiten |
-| Befehle | persönliche Skills | 25 Befehle, alle mit `/` aufrufbar |
+| Du & Schule | `Schule/CLAUDE.md` | Schulart, Fächer, Arbeitsweise, Datenschutz |
+| Fach | `Schule/Mathematik/CLAUDE.md` | Lehrwerk, Fachschaftsbeschlüsse, Stil |
+| Klasse | `Schule/Mathematik/Klasse-7b/CLAUDE.md` | anonymes Klassenprofil, Niveau, Besonderheiten |
 
-Du musst also nichts jedes Mal neu erklären. Du tippst nur:
+Du tippst nur:
 
 ```text
-/klassenarbeit Lineare Funktionen 45
+/schule:klassenarbeit Lineare Funktionen 45
 ```
 
-Claude liest dann selbst Logbuch, Stoffverteilungsplan, Bildungsplan-Auszug und Beispiele und legt die fertigen Dateien im richtigen Ordner ab.
+Claude liest dann selbst Logbuch, Stoffverteilungsplan, Bildungsplan-Auszug und Beispiele und legt die fertigen Dateien im richtigen Ordner ab. Du kannst auch einfach in normaler Sprache schreiben: *„Mach mir eine Klassenarbeit zu linearen Funktionen, 45 Minuten.“* Claude nimmt dann den passenden Befehl selbst.
+
+> **Tipp:** Tippe `/` und die ersten Buchstaben, z. B. `/klass`. Claude zeigt dir passende Befehle zur Auswahl.
 
 ---
 
 ## 2. Einrichtung in 15 Minuten
 
-Du brauchst **keine** Programmier- oder Git-Kenntnisse. Neu im Terminal? Dann zuerst [Anhang A](#anhang-a-terminal-mini-kurs) lesen (2 Minuten).
+Du brauchst **keine** Programmierkenntnisse. Neu im Terminal? Dann zuerst [Anhang A](#anhang-a-terminal-mini-kurs) lesen (2 Minuten).
 
 ### Schritt 1: Claude Code installieren
 Anleitung: https://code.claude.com/docs. Du brauchst ein Claude-Konto.
 
-### Schritt 2: Paket entpacken
-1. ZIP-Datei herunterladen (von GitHub: grüner Knopf **„Code“ → „Download ZIP“**)
+### Schritt 2: Paket entpacken und Schulordner anlegen
+1. ZIP-Datei herunterladen (von GitHub: grüner Knopf **„Code“ → „Download ZIP“**, oder von der Person, die das Paket verteilt)
 2. Doppelklick zum Entpacken
-3. Den entpackten Ordner in **`Schule`** umbenennen und dorthin verschieben, wo er bleiben soll, z. B. in **Dokumente**
+3. Darin den Ordner **`vorlage`** suchen, in **`Schule`** umbenennen und dorthin verschieben, wo er bleiben soll, z. B. in **Dokumente**
 
 > Nur in einen Cloud-Ordner (iCloud, OneDrive, Dropbox …), wenn deine Schule das erlaubt.
 
@@ -89,36 +92,45 @@ Anleitung: https://code.claude.com/docs. Du brauchst ein Claude-Konto.
 /einrichten
 ```
 
-Claude erledigt dann alles Schritt für Schritt und fragt vorher nach:
-1. **Installiert die 25 Befehle und Regeln dauerhaft** in deinem persönlichen Claude-Ordner
-2. **Richtet Zugriff und Datenschutz-Sperren ein**, damit Claude den Schulordner lesen darf und Schülerdaten gesperrt bleiben
-3. **Stellt dir bis zu 8 kurze Fragen**: Schulart, Fächer, Klassen, Klassenleitung …
-4. **Füllt die Vorlagen aus und legt deine Fach- und Klassenordner an**
+Claude erledigt alles Schritt für Schritt und fragt vorher nach:
+1. **Prüft, ob alles da ist**, und hilft, falls ein kleines Hilfsprogramm (git) für Updates fehlt
+2. **Installiert das Plugin „schule“** mit allen Befehlen
+3. **Installiert die Regeln** für Datenschutz, Klassenarbeiten und Arbeitsblätter
+4. **Richtet Zugriff und Datenschutz-Sperren ein**, damit Claude den Schulordner lesen darf und Schülerdaten gesperrt bleiben
+5. **Stellt dir bis zu 8 kurze Fragen**: Schulart, Fächer, Klassen, Klassenleitung …
+6. **Füllt die Vorlagen aus und legt deine Fach- und Klassenordner an**
 
 Bestätige jeden Schritt mit **Ja**, wenn Claude fragt.
 
-### Schritt 5: Neu starten und testen
-1. Claude beenden: `/exit` tippen (oder zweimal `Strg + C`)
-2. Ins Klassenordner wechseln und Claude neu starten, z. B.:
+### Schritt 5: Neu starten, Auto-Update einschalten, testen
+1. Claude beenden: `/exit`
+2. Claude wieder starten (`claude`) und **Auto-Update einschalten**:
    ```text
-   cd  ← Klassenordner ins Fenster ziehen, Enter
-   claude
+   /plugin
    ```
-3. Testen:
+   → **Marketplaces** → **lehrer-bw** → **Enable auto-update**
+3. In einen Klassenordner wechseln, Claude starten und testen:
    ```text
-   /memory              ← zeigt, welche CLAUDE.md-Dateien geladen sind
-   /einstieg Bruchrechnung
+   /memory                         ← zeigt, welche CLAUDE.md-Dateien geladen sind
+   /schule:einstieg Bruchrechnung
    ```
 
-**Fertig.** Danach nach und nach Bildungsplan-Auszüge und eigene Beispiele ergänzen (Abschnitt 8). Das macht die Ergebnisse deutlich besser.
-
-> **Neue Version der Vorlage?** Neue ZIP entpacken, darin Claude starten, `/einrichten` tippen und bei „ersetzen oder behalten?“ **ersetzen** wählen. Deine ausgefüllten Dateien bleiben unangetastet, wenn du weiter in deinem bisherigen `Schule`-Ordner arbeitest.
+**Fertig.** Danach nach und nach Bildungsplan-Auszüge und eigene Beispiele ergänzen (Abschnitt 9). Das macht die Ergebnisse deutlich besser.
 
 <details>
-<summary><b>Manuell einrichten (ohne /einrichten, für Fortgeschrittene)</b></summary>
+<summary><b>Manuell einrichten (für Fortgeschrittene)</b></summary>
 
-1. Inhalt von `Schule/.claude/skills/` nach `~/.claude/skills/` kopieren und `Schule/.claude/rules/` nach `~/.claude/rules/`
-2. `einrichtung/user-settings-beispiel.json` nach `~/.claude/settings.json` übernehmen (vorhandene Einträge behalten) und den Pfad anpassen:
+```bash
+# Plugin mit Updates
+claude plugin marketplace add NAME/lehrer-claude-code
+claude plugin install schule@lehrer-bw
+# dann in Claude: /plugin → Marketplaces → lehrer-bw → Enable auto-update
+
+# Regeln
+cp vorlage/.claude/rules/*.md ~/.claude/rules/
+```
+
+`~/.claude/settings.json` ergänzen (vorhandene Einträge behalten, Pfad anpassen; „Dokumente“ heißt technisch `Documents`):
 
 ```json
 {
@@ -135,90 +147,119 @@ Bestätige jeden Schritt mit **Ja**, wenn Claude fragt.
 }
 ```
 
-- Achtung: Der Ordner „Dokumente“ heißt technisch **`Documents`** (Mac und Windows)
-- `additionalDirectories` erlaubt Claude, den ganzen Schulordner ohne Rückfrage zu **lesen**, auch wenn du im Klassenordner startest
-- `deny` sperrt Schülerdaten überall
-- Prüfen mit `/status`: Unter „Setting sources“ muss „User settings“ stehen
+- `additionalDirectories`: Claude darf den ganzen Schulordner ohne Rückfrage **lesen**, auch beim Start im Klassenordner
+- `deny`: sperrt Schülerdaten überall
+- Prüfen mit `/status` („Setting sources“ muss „User settings“ enthalten)
 
 </details>
 
 ---
 
-## 3. Ordnerstruktur
+## 3. Updates und Neuigkeiten
 
-Mit ⚙ markierte Ordner **legen die Skills selbst an und befüllen sie**.
+### Automatisch
+Mit eingeschaltetem **Auto-Update** (Abschnitt 2, Schritt 5) prüft Claude Code nach dem Start im Hintergrund, ob es eine neue Version der Befehle gibt, und lädt sie. **Du musst nichts tun.** Deine eigenen Dateien (Profile, Logbücher, Klassenarbeiten) werden dabei **nie** verändert.
+
+### Was ist neu?
 
 ```text
-Schule/                                   ← alles, was Claude sehen darf
+/schule:neuigkeiten
+```
+
+zeigt die aktuelle Version, was sich geändert hat und ob du etwas tun musst. Claude bietet an, es gleich zu erledigen.
+
+### Von Hand aktualisieren
+Falls Auto-Update aus ist oder du sofort die neueste Version willst:
+
+```text
+/plugin marketplace update lehrer-bw
+```
+
+Danach Claude neu starten.
+
+### Wie erfahre ich von Updates?
+- Die Person, die das Paket verteilt, informiert über den üblichen Weg (E-Mail, Moodle, Messenger, Konferenz)
+- Mit GitHub-Konto: im Repo oben **„Watch“ → „Custom“ → „Releases“** wählen. Dann kommt bei jeder neuen Version eine E-Mail
+- `CHANGELOG.md` im Repo listet alle Änderungen
+
+### Was wird nicht automatisch aktualisiert?
+- **Regeln** (`~/.claude/rules/`) und **Einstellungen**: Ändern sich selten. Wenn doch, steht es unter `/schule:neuigkeiten` → „Zu tun“. Dann neue ZIP laden, im **neuen** `vorlage`-Ordner Claude starten und `/einrichten` ausführen, bei den Regeln **ersetzen** wählen. Deine Daten bleiben im bisherigen `Schule`-Ordner unberührt.
+- **Vorlagen im Schulordner** (z. B. `_Schule/Vorlagen/`): Das sind deine Dateien, die bleiben, wie du sie angepasst hast.
+
+---
+
+## 4. Ordnerstruktur
+
+Mit ⚙ markierte Ordner **legen die Befehle selbst an und befüllen sie**.
+
+```text
+Schule/                                   ← dein Schulordner (aus „vorlage“)
 ├── CLAUDE.md                             ← du, Schule, Grundregeln
 ├── CLAUDE.local.md                       ← optional, private Notizen
-├── .claude/                              ← Original der Skills/Regeln (installiert per /einrichten)
-├── einrichtung/
-├── Backup/                             ⚙ /sichern
+├── .claude/                              ← /einrichten, Regeln, Sperren
+├── einrichtung/                          ← Hilfsdateien für /einrichten
+├── Backup/                             ⚙ /schule:sichern
 │
 ├── _Schule/                              ← schulweite Vorgaben
 │   ├── Notenschluessel-Fachschaften.md
 │   ├── Jahresplan-2026-27.md
-│   ├── Schulcurriculum.md                (optional)
 │   ├── Vorlagen/                         ← KA-Kopf, Stundenentwurf, Briefkopf
-│   ├── Protokolle/                     ⚙ /protokoll
-│   └── Wochenplaene/                   ⚙ /wochenplan
+│   ├── Protokolle/                     ⚙ /schule:protokoll
+│   └── Wochenplaene/                   ⚙ /schule:wochenplan
 │
-├── Mathematik/                         ⚙ /neue-klasse (ein Ordner pro Fach)
+├── Mathematik/                         ⚙ /schule:neue-klasse (ein Ordner pro Fach)
 │   ├── CLAUDE.md                         ← Fachregeln, Lehrwerk, Fachschaftsbeschlüsse
 │   ├── _Bildungsplan/                    ← Auszüge als Markdown
 │   ├── _Beispiele/                       ← eigene gelungene Arbeiten („Goldstandard“)
-│   └── Klasse-7b/                      ⚙ /neue-klasse (ein Ordner pro Lerngruppe)
+│   └── Klasse-7b/                      ⚙ /schule:neue-klasse (ein Ordner pro Lerngruppe)
 │       ├── CLAUDE.md                     ← Klassenprofil (anonym!)
 │       ├── Stoffverteilungsplan.md
-│       ├── Logbuch.md                  ⚙ /logbuch
+│       ├── Logbuch.md                  ⚙ /schule:logbuch
 │       ├── Einheiten/
-│       │   └── 03-Lineare-Funktionen/  ⚙ /einheit
+│       │   └── 03-Lineare-Funktionen/  ⚙ /schule:einheit
 │       │       ├── Planung.md
-│       │       ├── Stunden/            ⚙ /stunde, /tafelbild, /exit-ticket
-│       │       └── Arbeitsblaetter/    ⚙ /stunde, /differenzieren
+│       │       ├── Stunden/            ⚙ /schule:stunde, :tafelbild, :exit-ticket
+│       │       └── Arbeitsblaetter/    ⚙ /schule:stunde, :differenzieren
 │       ├── Klassenarbeiten/
-│       │   ├── KA2-Lineare-Funktionen/ ⚙ /klassenarbeit, /fehleranalyse, /berichtigung, /lernlandkarte
-│       │   └── WH-2026-11-20-Steigung/ ⚙ /wiederholungsarbeit
-│       ├── Vertretung/                 ⚙ /vertretung
-│       ├── GFS/                        ⚙ /gfs
-│       └── Pruefung/                   ⚙ /pruefung (Abschlussklassen)
+│       │   ├── KA2-Lineare-Funktionen/ ⚙ /schule:klassenarbeit, :fehleranalyse, :berichtigung, :lernlandkarte
+│       │   └── WH-2026-11-20-Steigung/ ⚙ /schule:wiederholungsarbeit
+│       ├── Vertretung/                 ⚙ /schule:vertretung
+│       ├── GFS/                        ⚙ /schule:gfs
+│       └── Pruefung/                   ⚙ /schule:pruefung
 │
 └── Klassenleitung-7b/                  ⚙ /einrichten
-    ├── Elternbriefe/                   ⚙ /elternbrief
-    ├── Elterngespraeche/Vorlagen/      ⚙ /elterngespraech (nur Vorlagen, keine Inhalte)
-    └── Ausfluege/                      ⚙ /ausflug
+    ├── Elternbriefe/                   ⚙ /schule:elternbrief
+    ├── Elterngespraeche/Vorlagen/      ⚙ /schule:elterngespraech (nur Vorlagen)
+    └── Ausfluege/                      ⚙ /schule:ausflug
 ```
 
 > ⚠️ **Schülerdaten gehören NICHT in diesen Ordner.** Notenlisten, Namen, Förderpläne, Gutachten, Fotos usw. bleiben im dienstlichen System deiner Schule. Die Sperren sind nur ein zusätzliches Sicherheitsnetz.
 
-**Namenskonventionen** (die Skills verlassen sich darauf):
+**Namenskonventionen** (die Befehle verlassen sich darauf):
 - Fächer: `Mathematik/`, `Deutsch/` … · Klassen: `Klasse-7b/`, Kurse: `Kurs-J1-Mathe/` …
 - Dateien: `JJJJ-MM-TT_Thema.md`, keine Umlaute, keine Leerzeichen
 - Lösungen immer separat: `…_Loesung.md`
 
 ---
 
-## 4. Die drei CLAUDE.md-Ebenen
+## 5. Die drei CLAUDE.md-Ebenen
 
-`/einrichten` und `/neue-klasse` füllen diese Dateien mit dir aus. Du kannst sie jederzeit selbst ändern (sie sind einfache Textdateien) oder Claude bitten: *„Ergänze im Klassenprofil, dass Gruppenarbeit nach der 6. Stunde schlecht klappt.“*
+`/einrichten` und `/schule:neue-klasse` füllen diese Dateien mit dir aus. Du kannst sie jederzeit ändern (einfache Textdateien) oder Claude bitten: *„Ergänze im Klassenprofil, dass Gruppenarbeit nach der 6. Stunde schlecht klappt.“*
 
-### 4.1 `CLAUDE.md` (Schulordner): du und deine Schule
-- Schulart, Ort, Fächer, Klassenleitung
-- Anrede in Material (du/Sie)
+### 5.1 `CLAUDE.md` (Schulordner): du und deine Schule
+- Schulart, Ort, Fächer, Klassenleitung, Anrede (du/Sie)
 - Grundregeln: Bildungsplan BW, NVO, Operatoren, keine erfundenen Standards
 - Arbeitsweise: Dateien speichern, Dateinamen, Lösungen separat
 - Verweise mit `@_Schule/…` auf kurze, immer wichtige Dateien (Notenschlüssel, Jahresplan)
 
 > `@pfad` bindet eine Datei **immer** ein. Nur für kurze Dateien nutzen. Beim ersten Mal fragt Claude Code einmal nach Bestätigung.
 
-### 4.2 `Fach/CLAUDE.md`: das Fach
-- Lehrwerk(e) je Klassenstufe (für Seitenverweise, ohne Aufgaben abzuschreiben)
-- Kompetenzbereiche/Leitideen des Fachs laut Bildungsplan
+### 5.2 `Fach/CLAUDE.md`: das Fach
+- Lehrwerk(e) je Klassenstufe, Kompetenzbereiche laut Bildungsplan
 - Fachschaftsbeschlüsse: Notenschlüssel, Anzahl Klassenarbeiten, Hilfsmittel
 - Stil: Kontexte, AFB-Verteilung, Layoutwünsche
 
-### 4.3 `Klasse/CLAUDE.md`: das Klassenprofil (**anonym!**)
+### 5.3 `Klasse/CLAUDE.md`: das Klassenprofil (**anonym!**)
 - Schulart, Niveau (G/M/E), Wochenstunden, Doppelstunden
 - Lerngruppe **auf Klassenebene**: Anzahl, Förderbedarfe (ohne Namen), DaZ, Leistungsspitze
 - Was methodisch funktioniert und was nicht
@@ -227,9 +268,9 @@ Schule/                                   ← alles, was Claude sehen darf
 
 ---
 
-## 5. Rules: Regeln für bestimmte Ordner
+## 6. Rules: Regeln für bestimmte Ordner
 
-Rules sind kurze Regeldateien. Eine Rule **mit** `paths:` lädt nur, wenn Claude in passenden Ordnern arbeitet. Eine Rule **ohne** `paths:` gilt immer. `/einrichten` installiert sie nach `~/.claude/rules/`.
+Rules sind kurze Regeldateien, die `/einrichten` nach `~/.claude/rules/` installiert. Eine Rule **mit** `paths:` lädt nur in passenden Ordnern, eine Rule **ohne** `paths:` gilt immer.
 
 | Datei | Gilt | Inhalt |
 |---|---|---|
@@ -241,133 +282,134 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 
 ---
 
-## 6. Skill-Referenz: alle 25 Befehle
+## 7. Befehlsreferenz
 
-**So funktionieren Skills:** Du tippst `/name` und danach deine Angaben. Claude nutzt passende Skills auch **von selbst**, wenn deine Bitte zur Beschreibung passt (z. B. „mach mir eine Vertretungsstunde für die 9a“). Ausnahme: `/einrichten` und `/sichern` laufen nur, wenn du sie ausdrücklich aufrufst.
+**So funktionieren die Befehle:** `/schule:name` und danach deine Angaben. Claude nutzt passende Befehle auch **von selbst**, wenn deine Bitte passt. Ausnahmen: `/einrichten` und `/schule:sichern` laufen nur auf ausdrücklichen Aufruf.
 
-**Wo starten?** Fast alle Skills im **Klassenordner**. Ausnahmen stehen dabei.
+**Wo starten?** Fast alle im **Klassenordner**. Ausnahmen stehen dabei.
 
-### 6.1 Einrichtung und Verwaltung
+### 7.1 Einrichtung und Verwaltung
 
 | Befehl | Start | Was er tut |
 |---|---|---|
-| `/einrichten` | im entpackten Ordner `Schule` | Ersteinrichtung bzw. Aktualisierung: Befehle und Regeln installieren, Zugriff und Sperren, Interview, Ordner anlegen |
-| `/neue-klasse [Fach] [Klasse] …` | im Schulordner | z. B. `/neue-klasse Deutsch 5a Realschule M 5 Std.`: legt (falls nötig) das Fach und den Klassenordner mit Profil, Stoffverteilungsplan und Logbuch an |
-| `/sichern [Ziel]` | überall im Schulordner | datierte ZIP-Sicherung in `Backup/`, ohne Schülerdaten-Ordner, behält die letzten 10 |
+| `/einrichten` | im Schulordner | Ersteinrichtung bzw. Aktualisierung: Plugin, Regeln, Zugriff und Sperren, Interview, Ordner anlegen |
+| `/schule:neuigkeiten` | überall | was in der aktuellen Version neu ist und was zu tun ist |
+| `/schule:neue-klasse [Fach] [Klasse] …` | im Schulordner | z. B. `/schule:neue-klasse Deutsch 5a Realschule M 5 Std.`: legt Fach (falls nötig) und Klassenordner mit Profil, Stoffverteilungsplan, Logbuch an |
+| `/schule:sichern [Ziel]` | im Schulordner | datierte ZIP-Sicherung in `Backup/`, ohne Schülerdaten-Ordner, behält die letzten 10 |
 
-### 6.2 Grundlage
+### 7.2 Grundlage
 
 | Skill | Was er tut |
 |---|---|
-| `unterricht-bw` | Wissen zu Bildungsplan BW (inkl. G9 neu, Leitperspektiven), NVO, Operatoren/AFB, Niveaus G/M/E, Datenschutz. **Kein Befehl nötig**, Claude nutzt ihn automatisch. |
+| `schule:unterricht-bw` | Wissen zu Bildungsplan BW (inkl. G9 neu, Leitperspektiven), NVO, Operatoren/AFB, Niveaus G/M/E, Datenschutz. **Kein Aufruf nötig**, Claude nutzt ihn automatisch. |
 
-### 6.3 Planung
-
-| Befehl | Beispiel | Liest | Erzeugt |
-|---|---|---|---|
-| `/einheit [Thema] [Stunden]` | `/einheit Lineare Funktionen 14` | Stoffverteilung, Profil, Bildungsplan, Jahresplan | `Einheiten/NN-Thema/Planung.md` mit Stundenfolge, Leistungsfeststellung, Differenzierung |
-| `/stunde [Thema] [Min.]` | `/stunde Steigungsdreieck 90` | Profil, Logbuch (letzte 5), Bildungsplan, Beispiele | `Stunden/JJJJ-MM-TT_Thema.md` (Verlaufsplan) und `Arbeitsblaetter/AB_Thema.md` mit Lösung |
-| `/einstieg [Thema]` | `/einstieg Prozentrechnung` | Profil | **nur Chat:** 3 Einstiege (Problem · Bild/Objekt · Provokation) mit Empfehlung |
-| `/tafelbild [Thema oder Datei]` | `/tafelbild Steigung` | Stundenplanung | `…_Tafelbild.md` mit Merksatz, Beispiel, Farbhinweisen und Lückentext-Variante |
-| `/differenzieren [Datei] [Varianten]` | `/differenzieren Arbeitsblaetter/AB_Steigung.md G E DaZ` | Arbeitsblatt, Profil | `…_G.md`, `…_E.md`, `…_DaZ.md` … und eine gemeinsame Lösung |
-| `/vertretung [Klasse] [Fach] [Dauer] [Thema]` | `/vertretung 7b Mathe 45` | Logbuch | `Vertretung/Datum_Klasse/`: Ablaufzettel für die Vertretung, Arbeitsblatt, Lösung |
-| `/wochenplan [KW]` | `/wochenplan` · **Start im Schulordner** | Jahresplan, alle Logbücher und Stoffverteilungspläne | Übersicht und `_Schule/Wochenplaene/KW-NN.md` mit To-do-Liste und passenden Befehlen |
-| `/logbuch [Notiz]` | `/logbuch Steigung geübt, AB4, HA S. 85/6, fallende Geraden unsicher` | – | neue Zeile in `Logbuch.md` und ein Hinweis für die nächste Stunde |
-
-### 6.4 Leistungsfeststellung
+### 7.3 Planung
 
 | Befehl | Beispiel | Liest | Erzeugt |
 |---|---|---|---|
-| `/klassenarbeit [Thema] [Min.]` | `/klassenarbeit Lineare Funktionen 45` | Profil, Stoffverteilung, Logbuch (letzte 10), Bildungsplan, Beispiele, Notenschlüssel | `Klassenarbeiten/KAx-Thema/`: `KA.md`, `KA_B.md`, `Erwartungshorizont.md`, `Uebersicht.md` |
-| `/wiederholungsarbeit [Thema] [Min.]` | `/wiederholungsarbeit Steigung 15` | Logbuch (letzte 3–5) | `Klassenarbeiten/WH-Datum-Thema/`: `WH.md`, `WH_B.md`, `Loesung.md` |
-| `/exit-ticket [Thema]` | `/exit-ticket Steigung ablesen` | Logbuch bzw. Stunde | `…_ExitTicket.md`: 3 Fragen, Version A/B, Auswertungshilfe |
-| `/lernlandkarte [Thema]` | `/lernlandkarte KA2 Lineare Funktionen` | Stoffverteilung, Logbuch, KA-Übersicht | `Lernlandkarte.md` („Ich kann …“-Tabelle mit Smileys und Übungsverweisen) |
-| `/gfs [Thema] [Form]` | `/gfs Funktionen im Alltag Präsentation` | Profil, Stoffverteilung, Schulvorgaben | `GFS/`: Themenliste, Anforderungen, Bewertungsbogen, Kolloquium-Leitfaden |
-| `/pruefung [Abschluss] [Fach] [Thema]` | `/pruefung RSA Mathematik gesamt` | Bildungsplan, Jahresplan, Prüfungsvorgaben | `Pruefung/`: Themenüberblick, Wiederholungsplan, Übungsaufgaben, Lösungen, Tipps |
+| `/schule:einheit [Thema] [Std.]` | `/schule:einheit Lineare Funktionen 14` | Stoffverteilung, Profil, Bildungsplan, Jahresplan | `Einheiten/NN-Thema/Planung.md` mit Stundenfolge, Leistungsfeststellung, Differenzierung |
+| `/schule:stunde [Thema] [Min.]` | `/schule:stunde Steigungsdreieck 90` | Profil, Logbuch (letzte 5), Bildungsplan, Beispiele | `Stunden/JJJJ-MM-TT_Thema.md` (Verlaufsplan) und `Arbeitsblaetter/AB_Thema.md` mit Lösung |
+| `/schule:einstieg [Thema]` | `/schule:einstieg Prozentrechnung` | Profil | **nur Chat:** 3 Einstiege (Problem · Bild/Objekt · Provokation) mit Empfehlung |
+| `/schule:tafelbild [Thema/Datei]` | `/schule:tafelbild Steigung` | Stundenplanung | `…_Tafelbild.md` mit Merksatz, Beispiel, Farben und Lückentext-Variante |
+| `/schule:differenzieren [Datei] [Varianten]` | `/schule:differenzieren Arbeitsblaetter/AB_Steigung.md G E DaZ` | Arbeitsblatt, Profil | `…_G.md`, `…_E.md`, `…_DaZ.md` und eine gemeinsame Lösung |
+| `/schule:vertretung [Klasse] [Fach] [Dauer]` | `/schule:vertretung 7b Mathe 45` | Logbuch | `Vertretung/Datum_Klasse/`: Ablaufzettel, Arbeitsblatt, Lösung |
+| `/schule:wochenplan [KW]` | **Start im Schulordner** | Jahresplan, alle Logbücher und Stoffverteilungspläne | `_Schule/Wochenplaene/KW-NN.md` mit To-do-Liste und passenden Befehlen |
+| `/schule:logbuch [Notiz]` | `/schule:logbuch Steigung geübt, AB4, HA S. 85/6` | – | neue Zeile in `Logbuch.md` und ein Hinweis für die nächste Stunde |
 
-> Bei `/klassenarbeit` und `/wiederholungsarbeit` prüft Claude, ob alles laut Logbuch unterrichtet wurde. Die NVO-Regeln (Ankündigung, max. 1 KA/Tag, möglichst ≤ 3/Woche) sind in `unterricht-bw` hinterlegt.
+### 7.4 Leistungsfeststellung
 
-### 6.5 Korrektur und Rückmeldung (immer anonym)
+| Befehl | Beispiel | Liest | Erzeugt |
+|---|---|---|---|
+| `/schule:klassenarbeit [Thema] [Min.]` | `/schule:klassenarbeit Lineare Funktionen 45` | Profil, Stoffverteilung, Logbuch (letzte 10), Bildungsplan, Beispiele, Notenschlüssel | `Klassenarbeiten/KAx-Thema/`: `KA.md`, `KA_B.md`, `Erwartungshorizont.md`, `Uebersicht.md` |
+| `/schule:wiederholungsarbeit [Thema] [Min.]` | `/schule:wiederholungsarbeit Steigung 15` | Logbuch (letzte 3–5) | `Klassenarbeiten/WH-Datum-Thema/`: `WH.md`, `WH_B.md`, `Loesung.md` |
+| `/schule:exit-ticket [Thema]` | `/schule:exit-ticket Steigung ablesen` | Logbuch bzw. Stunde | `…_ExitTicket.md`: 3 Fragen, Version A/B, Auswertungshilfe |
+| `/schule:lernlandkarte [Thema]` | `/schule:lernlandkarte KA2 Lineare Funktionen` | Stoffverteilung, Logbuch, KA-Übersicht | `Lernlandkarte.md` („Ich kann …“-Tabelle mit Übungsverweisen) |
+| `/schule:gfs [Thema] [Form]` | `/schule:gfs Funktionen im Alltag Präsentation` | Profil, Stoffverteilung, Schulvorgaben | `GFS/`: Themenliste, Anforderungen, Bewertungsbogen, Kolloquium-Leitfaden |
+| `/schule:pruefung [Abschluss] [Fach] [Thema]` | `/schule:pruefung RSA Mathematik gesamt` | Bildungsplan, Jahresplan, Prüfungsvorgaben | `Pruefung/`: Themenüberblick, Wiederholungsplan, Übungsaufgaben, Lösungen, Tipps |
+
+> Bei Klassenarbeiten und Wiederholungsarbeiten prüft Claude, ob alles laut Logbuch unterrichtet wurde. Die NVO-Regeln (Ankündigung, max. 1 KA/Tag, möglichst ≤ 3/Woche) sind in `unterricht-bw` hinterlegt.
+
+### 7.5 Korrektur und Rückmeldung (immer anonym)
 
 | Befehl | Beispiel | Erzeugt |
 |---|---|---|
-| `/feedback [Stichworte]` | `/feedback Einleitung gut, Argumente ohne Beispiele, Schluss fehlt` | **nur Chat:** Rückmeldetext (Gelungen · Daran arbeiten · Tipp), keine Note |
-| `/fehleranalyse [KA-Ordner] [Stichworte]` | `/fehleranalyse Klassenarbeiten/KA2-… A3b: 15/27 verwechseln m und b` | `Fehleranalyse.md`: Fehler nach Ursache, Förderaufgaben, Plan für die nächsten Stunden |
-| `/berichtigung [KA-Ordner]` | `/berichtigung Klassenarbeiten/KA2-Lineare-Funktionen` | `Berichtigung.md` (gestufte Tipps und ähnliche Aufgaben) und `Berichtigung_Loesung.md` |
+| `/schule:feedback [Stichworte]` | `/schule:feedback Einleitung gut, Argumente ohne Beispiele, Schluss fehlt` | **nur Chat:** Rückmeldetext (Gelungen · Daran arbeiten · Tipp), keine Note |
+| `/schule:fehleranalyse [KA-Ordner] [Stichworte]` | `/schule:fehleranalyse Klassenarbeiten/KA2-… A3b: 15/27 verwechseln m und b` | `Fehleranalyse.md`: Fehler nach Ursache, Förderaufgaben, Plan für die nächsten Stunden |
+| `/schule:berichtigung [KA-Ordner]` | `/schule:berichtigung Klassenarbeiten/KA2-Lineare-Funktionen` | `Berichtigung.md` (gestufte Tipps und ähnliche Aufgaben) und Lösungen |
 
-### 6.6 Klassenleitung und Organisation
+### 7.6 Klassenleitung und Organisation
 
 | Befehl | Beispiel | Start | Erzeugt |
 |---|---|---|---|
-| `/elternbrief [Anlass, Fakten]` | `/elternbrief Elternabend 3.12. 19 Uhr Raum 112` | `Klassenleitung-…` | `Elternbriefe/Datum_Anlass.md` mit Briefkopf und Rückmeldeabschnitt, auf Wunsch in Leichter Sprache oder übersetzt |
-| `/elterngespraech [Anlass]` | `/elterngespraech Leistungsabfall, Hausaufgaben fehlen` | `Klassenleitung-…` | **Chat:** Leitfaden, Formulierungshilfen, Protokollvorlage, nur Platzhalter |
-| `/protokoll [Sitzung] [Stichpunkte]` | `/protokoll Fachkonferenz Mathe: TOP1 …` | Schulordner | `_Schule/Protokolle/Datum_Art.md` mit Beschlüssen und Aufgaben (Klassenkonferenzen nur im Chat) |
-| `/ausflug [Art] [Ziel] [Datum] [Klasse]` | `/ausflug Exkursion Wilhelma 14.05. 7b` | `Klassenleitung-…` | `Ausfluege/Datum_Ziel/`: Planung, Checkliste, Kosten, Elternbrief, Arbeitsauftrag |
+| `/schule:elternbrief [Anlass, Fakten]` | `/schule:elternbrief Elternabend 3.12. 19 Uhr Raum 112` | `Klassenleitung-…` | `Elternbriefe/Datum_Anlass.md` mit Briefkopf und Rückmeldeabschnitt, auf Wunsch in Leichter Sprache oder übersetzt |
+| `/schule:elterngespraech [Anlass]` | `/schule:elterngespraech Leistungsabfall, Hausaufgaben fehlen` | `Klassenleitung-…` | **Chat:** Leitfaden, Formulierungshilfen, Protokollvorlage, nur Platzhalter |
+| `/schule:protokoll [Sitzung] [Stichpunkte]` | `/schule:protokoll Fachkonferenz Mathe: TOP1 …` | Schulordner | `_Schule/Protokolle/Datum_Art.md` (Klassenkonferenzen nur im Chat) |
+| `/schule:ausflug [Art] [Ziel] [Datum] [Klasse]` | `/schule:ausflug Exkursion Wilhelma 14.05. 7b` | `Klassenleitung-…` | `Ausfluege/Datum_Ziel/`: Planung, Checkliste, Kosten, Elternbrief, Arbeitsauftrag |
 
 ---
 
-## 7. Arbeitsabläufe: Skills kombinieren
+## 8. Arbeitsabläufe: Befehle kombinieren
 
-### 7.1 Schuljahresbeginn
-1. Altes Schuljahr sichern: `/sichern`, dann Claude bitten: *„Verschiebe alle Klassenordner in Archiv/2025-26.“*
+### 8.1 Schuljahresbeginn
+1. Altes Schuljahr sichern: `/schule:sichern`, dann Claude bitten: *„Verschiebe alle Klassenordner in Archiv/2025-26.“*
 2. `_Schule/Jahresplan-…md` mit Ferien und Terminen füllen (Claude kann eine Vorlage erstellen)
-3. Für jede neue Lerngruppe: `/neue-klasse Mathematik 5c Gymnasium 4 Std.`
+3. Für jede neue Lerngruppe: `/schule:neue-klasse Mathematik 5c Gymnasium 4 Std.`
 4. Stoffverteilungsplan: *„Entwirf den Stoffverteilungsplan für die 5c nach Bildungsplan und Jahresplan.“*
-5. Erste Einheit: `/einheit …`
+5. Erste Einheit: `/schule:einheit …`
 
-### 7.2 Zyklus einer Unterrichtseinheit
+### 8.2 Zyklus einer Unterrichtseinheit
 
 ```text
-/einheit Lineare Funktionen 14         → Planung.md
+/schule:einheit Lineare Funktionen 14         → Planung.md
   └─ pro Stunde:
-     /einstieg …                       → Ideen (Chat)
-     /stunde …                         → Verlauf + Arbeitsblatt
-     /differenzieren Arbeitsblaetter/… → G/E/DaZ-Fassungen
-     /tafelbild …                      → Hefteintrag
-     /exit-ticket …                    → Lernstandscheck
-     /logbuch …                        → nach der Stunde eintragen (!)
+     /schule:einstieg …                       → Ideen (Chat)
+     /schule:stunde …                         → Verlauf + Arbeitsblatt
+     /schule:differenzieren Arbeitsblaetter/… → G/E/DaZ-Fassungen
+     /schule:tafelbild …                      → Hefteintrag
+     /schule:exit-ticket …                    → Lernstandscheck
+     /schule:logbuch …                        → nach der Stunde eintragen (!)
 ```
 
-### 7.3 Zyklus einer Klassenarbeit
+### 8.3 Zyklus einer Klassenarbeit
 
 ```text
-/wiederholungsarbeit …                 → zwischendurch Stand prüfen
-/lernlandkarte …                       → ca. 1 Woche vorher an die Klasse
-/klassenarbeit …                       → KA, Version B, Erwartungshorizont
+/schule:wiederholungsarbeit …                 → zwischendurch Stand prüfen
+/schule:lernlandkarte …                       → ca. 1 Woche vorher an die Klasse
+/schule:klassenarbeit …                       → KA, Version B, Erwartungshorizont
    (du korrigierst selbst)
-/feedback …                            → Rückmeldetexte (nacheinander, anonym)
-/fehleranalyse … [Stichworte]          → was lief schief, Förderaufgaben
-/berichtigung …                        → Berichtigungsblatt mit Tipps
-/logbuch KA2 zurückgegeben, Berichtigung als HA
+/schule:feedback …                            → Rückmeldetexte (nacheinander, anonym)
+/schule:fehleranalyse … [Stichworte]          → was lief schief, Förderaufgaben
+/schule:berichtigung …                        → Berichtigungsblatt mit Tipps
+/schule:logbuch KA2 zurückgegeben, Berichtigung als HA
 ```
 
-### 7.4 Die Woche im Griff
+### 8.4 Die Woche im Griff
 Sonntags im Schulordner:
 ```text
-/wochenplan
-/sichern
+/schule:wochenplan
+/schule:sichern
 ```
-→ To-do-Liste mit fertigen Befehlen, z. B. „`/stunde …` für 7b Dienstag“, „KA 9a ist angekündigt, aber noch nicht erstellt“.
+→ To-do-Liste mit fertigen Befehlen, z. B. „`/schule:stunde …` für 7b Dienstag“, „KA 9a ist angekündigt, aber noch nicht erstellt“.
 
-Fällt kurzfristig eine Stunde aus: `/vertretung 7b Mathe 45`, dann den Ablaufzettel weitergeben.
+Fällt kurzfristig eine Stunde aus: `/schule:vertretung 7b Mathe 45`, dann den Ablaufzettel weitergeben.
 
-### 7.5 GFS und Abschlussprüfung
-- GFS: `/gfs` → Themenliste für die Klasse, Bewertungsbogen für dich, Kolloquiumsfragen je Thema
-- Abschlussklassen: `/pruefung RSA Deutsch gesamt` → Wiederholungsplan und Übungsaufgaben im Prüfungsstil. **Aktuelle Prüfungsvorgaben** in `_Bildungsplan/` ablegen!
+### 8.5 GFS und Abschlussprüfung
+- GFS: `/schule:gfs` → Themenliste für die Klasse, Bewertungsbogen für dich, Kolloquiumsfragen
+- Abschlussklassen: `/schule:pruefung RSA Deutsch gesamt`. **Aktuelle Prüfungsvorgaben** in `_Bildungsplan/` ablegen!
 
-### 7.6 Klassenleitung
+### 8.6 Klassenleitung
 Im Ordner `Klassenleitung-7b`:
 ```text
-/ausflug Schullandheim Schwarzwald 22.–24.06. 7b
-/elternbrief Infoabend Schullandheim 12.03. 19 Uhr
-/elterngespraech Häufige Verspätungen, Rückzug in der Pause
+/schule:ausflug Schullandheim Schwarzwald 22.–24.06. 7b
+/schule:elternbrief Infoabend Schullandheim 12.03. 19 Uhr
+/schule:elterngespraech Häufige Verspätungen, Rückzug in der Pause
 ```
 
 ---
 
-## 8. Material aufbereiten
+## 9. Material aufbereiten
 
-Claude arbeitet am besten mit **Markdown**. Das ist einfacher Text mit `#` für Überschriften und `|` für Tabellen und lässt sich mit jedem Texteditor öffnen. PDFs und Word-Dateien gehen auch, werden aber ungenauer gelesen. **Claude kann sie dir umwandeln** (siehe unten).
+Claude arbeitet am besten mit **Markdown**. Das ist einfacher Text mit `#` für Überschriften und `|` für Tabellen und lässt sich mit jedem Texteditor öffnen. PDFs und Word-Dateien gehen auch, werden aber ungenauer gelesen. **Claude kann sie dir umwandeln.**
 
 | Material | Wohin | Tipp |
 |---|---|---|
@@ -380,7 +422,7 @@ Claude arbeitet am besten mit **Markdown**. Das ist einfacher Text mit `#` für 
 | **Eigene gelungene KAs/Stunden** | `Fach/_Beispiele/` | **Der größte Qualitätshebel.** Claude übernimmt Niveau, Länge, Layout |
 | **Lehrwerk** | `Fach/CLAUDE.md` | nur Titel und Inhaltsverzeichnis/Seitenzuordnung |
 
-**PDF oder Word umwandeln lassen.** Datei in den Ordner legen und Claude sagen:
+**Umwandeln lassen.** Datei in den Ordner legen und Claude sagen:
 
 ```text
 Wandle _Bildungsplan/BP2016_Mathe.pdf in Markdown um. Behalte nur Klassen 7/8,
@@ -394,37 +436,37 @@ entferne alle Namen. Speichere als KA-Beispiel-Kl7-Terme.md.
 ```
 
 ### Das Logbuch, der heimliche Star
-Fast alle Skills lesen das Logbuch. Nach jeder Stunde eine Zeile, am einfachsten mit `/logbuch`:
+Fast alle Befehle lesen das Logbuch. Nach jeder Stunde eine Zeile, am einfachsten mit `/schule:logbuch`:
 
 ```markdown
 - 2026-11-24 | Std. 5–6 | Steigungsdreieck eingeführt, AB3 bis Nr. 4 | HA: S. 84/3a–c | fallende Geraden noch unsicher
 ```
 
-So fragen Klassenarbeiten nichts ab, was gar nicht dran war. Folgestunden knüpfen an, Vertretungen passen zum Stand, und `/wochenplan` erkennt, ob du im Plan liegst.
+So fragen Klassenarbeiten nichts ab, was gar nicht dran war. Folgestunden knüpfen an, Vertretungen passen zum Stand, und der Wochenplan erkennt, ob du im Plan liegst.
 
 ---
 
-## 9. Datenschutz
+## 10. Datenschutz
 
-### 9.1 Technische Sperren
-- **Persönliche Einstellungen** (von `/einrichten` angelegt): Lesesperren für `Schuelerdaten/`, `Noten/`, `*Notenliste*`, `Foerderplan*` im ganzen Schulordner, egal wo du startest.
-- **Projektebene:** `.claude/settings.json` enthält dieselben Sperren als zweite Absicherung beim Start im Schulordner.
-- **Rule `datenschutz.md`:** Claude weist auf eingefügte Namen hin und arbeitet mit Platzhaltern weiter.
-- **`/sichern`** lässt diese Ordner aus jeder Sicherung weg.
+### 10.1 Technische Sperren
+- **Persönliche Einstellungen** (von `/einrichten` angelegt): Lesesperren für `Schuelerdaten/`, `Noten/`, `*Notenliste*`, `Foerderplan*` im ganzen Schulordner, egal wo du startest
+- **Schulordner:** `.claude/settings.json` enthält dieselben Sperren als zweite Absicherung
+- **Rule `datenschutz.md`:** Claude weist auf eingefügte Namen hin und arbeitet mit Platzhaltern weiter
+- **`/schule:sichern`** lässt diese Ordner aus jeder Sicherung weg
 
-### 9.2 Was die Skills tun
+### 10.2 Was die Befehle tun
 
-| Skill | Schutzmaßnahme |
+| Befehl | Schutzmaßnahme |
 |---|---|
-| `/feedback` | nur Stichworte, keine Namen, keine Note, nichts wird gespeichert |
-| `/fehleranalyse` | nur Angaben auf Klassenebene („15 von 27 …“) |
-| `/logbuch` | Beobachtungen nur für die ganze Klasse, Namen werden entfernt |
-| `/neue-klasse` | Profil nur auf Klassenebene, fragt ausdrücklich ohne Namen |
-| `/elterngespraech` | nur Platzhalter, Ausgabe im Chat |
-| `/protokoll` | Klassenkonferenzen nur im Chat |
-| `/ausflug`, `/elternbrief` | keine Namen, Gesundheitsdaten oder Notfallkontakte |
+| `feedback` | nur Stichworte, keine Namen, keine Note, nichts wird gespeichert |
+| `fehleranalyse` | nur Angaben auf Klassenebene („15 von 27 …“) |
+| `logbuch` | Beobachtungen nur für die ganze Klasse, Namen werden entfernt |
+| `neue-klasse` | Profil nur auf Klassenebene, fragt ausdrücklich ohne Namen |
+| `elterngespraech` | nur Platzhalter, Ausgabe im Chat |
+| `protokoll` | Klassenkonferenzen nur im Chat |
+| `ausflug`, `elternbrief` | keine Namen, Gesundheitsdaten oder Notfallkontakte |
 
-### 9.3 Organisatorisch
+### 10.3 Organisatorisch
 - Inhalte, die du Claude gibst, werden zur Verarbeitung an Anthropic übertragen. Für personenbezogene Daten sind die landeseigenen Werkzeuge (SCHULE@BW, F13) bzw. die Vorgaben deiner Schule maßgeblich.
 - Kläre, ob und wie du auf einem Privatgerät dienstlich arbeiten darfst.
 - Schülerarbeiten nur **vollständig anonymisiert** und ohne Handschrift-Fotos verwenden.
@@ -432,23 +474,26 @@ So fragen Klassenarbeiten nichts ab, was gar nicht dran war. Folgestunden knüpf
 
 ---
 
-## 10. Skills anpassen und eigene schreiben
+## 11. Befehle anpassen und eigene schreiben
+
+> **Wichtig:** Die Plugin-Befehle (`/schule:…`) werden bei jedem Update **ersetzt**. Änderungen direkt im Plugin gehen also verloren. Eigene Varianten legst du deshalb als **persönliche Skills** an. Die bleiben bei Updates erhalten.
 
 **Am einfachsten:** Sag Claude, was du willst:
 
 ```text
-Ändere den Skill /klassenarbeit so, dass er immer auch eine Variante mit
-Hilfekarten für den Nachteilsausgleich erstellt.
+Erstelle mir einen persönlichen Skill /meine-klassenarbeit auf Basis von
+/schule:klassenarbeit, der zusätzlich immer eine Variante mit Hilfekarten
+für den Nachteilsausgleich erstellt. Speichere ihn in ~/.claude/skills/.
 ```
 
 ```text
-Schreib mir einen neuen Skill /quiz nach dem Muster von /exit-ticket:
-10 Multiple-Choice-Fragen zum aktuellen Thema, als Tabelle für Kahoot.
+Schreib mir einen persönlichen Skill /quiz nach dem Muster von
+/schule:exit-ticket: 10 Multiple-Choice-Fragen zum aktuellen Thema, als Tabelle.
 ```
 
-> **Wichtig:** Die aktiven Skills liegen nach `/einrichten` in deinem persönlichen Ordner `~/.claude/skills/` (Windows: `C:\Users\NAME\.claude\skills\`). Sag Claude ausdrücklich, dass es **dort** ändern soll, oder ändere im Schulordner und führe danach `/einrichten` erneut aus.
+Persönliche Skills liegen in `~/.claude/skills/NAME/SKILL.md` (Windows: `C:\Users\NAME\.claude\skills\`) und heißen ohne Vorsilbe (`/quiz`).
 
-**So ist ein Skill aufgebaut** (eine Textdatei `SKILL.md` in einem eigenen Ordner):
+**So ist ein Skill aufgebaut:**
 
 ```markdown
 ---
@@ -471,115 +516,168 @@ Erstelle ein Quiz zu: $ARGUMENTS
 | `description` | **Wann** der Skill passt. Danach entscheidet Claude, ob es ihn von selbst nutzt |
 | `argument-hint` | Hinweis beim Tippen, z. B. `[Thema] [Minuten]` |
 | `$ARGUMENTS` | wird durch alles ersetzt, was du nach dem Befehl tippst |
-| `disable-model-invocation: true` | Claude nutzt den Skill **nie von selbst**, nur wenn du `/name` tippst |
+| `disable-model-invocation: true` | Claude nutzt den Skill **nie von selbst**, nur auf `/name` |
 
-**Ideen für eigene Skills:** `/quiz`, `/vokabeltest`, `/leseverstehen`, `/experiment` (mit Platzhalter für die Gefährdungsbeurteilung), `/stationenlernen`, `/projektwoche`, `/zeugnisbemerkung` (nur Formulierungsbausteine, keine Namen).
+**Gute Idee für alle?** Schick deinen Skill an die Person, die das Paket pflegt. Dann kommt er per Update zu allen.
 
 ---
 
-## 11. Tipps für optimale Ergebnisse
+## 12. Tipps für optimale Ergebnisse
 
 1. **Im Klassenordner starten.** Dann sind Schule, Fach und Klasse automatisch geladen.
 2. **Beispiele schlagen Beschreibungen.** Zwei gute eigene Klassenarbeiten in `_Beispiele/` bringen mehr als zehn Regeln.
-3. **Logbuch konsequent pflegen.** 30 Sekunden mit `/logbuch` nach jeder Stunde.
+3. **Logbuch konsequent pflegen.** 30 Sekunden mit `/schule:logbuch` nach jeder Stunde.
 4. **Ergebnisse als Dateien speichern lassen.** So wächst dein Materialarchiv von selbst.
 5. **Korrekturen zu Regeln machen.** Gefällt dir etwas nicht, sag: *„Nimm das als Regel in die Fach-CLAUDE.md auf.“*
-6. **Kurz halten.** CLAUDE.md unter 200 Zeilen. Selten Gebrauchtes gehört in Skills oder Rules.
-7. **Regelmäßig `/sichern`**, z. B. sonntags, und ab und zu die neueste Sicherung extern kopieren.
-8. **Drucken/Word:** Claude kann jede Datei in ein Word-Dokument oder PDF umwandeln: *„Mach aus KA.md eine Word-Datei mit Schulkopf.“*
-9. **Alles prüfen.** Fachliche Richtigkeit, Bildungsplanbezug und Bewertung verantwortest du.
+6. **Kurz halten.** CLAUDE.md unter 200 Zeilen.
+7. **Regelmäßig `/schule:sichern`**, und ab und zu die neueste Sicherung extern kopieren.
+8. **Drucken/Word:** *„Mach aus KA.md eine Word-Datei mit Schulkopf.“*
+9. **Ab und zu `/schule:neuigkeiten`**, um neue Befehle nicht zu verpassen.
+10. **Alles prüfen.** Fachliche Richtigkeit, Bildungsplanbezug und Bewertung verantwortest du.
 
 ---
 
-## 12. Häufige Probleme
+## 13. Häufige Probleme
 
 | Problem | Lösung |
 |---|---|
-| Ein Befehl wie `/klassenarbeit` erscheint nicht | `/einrichten` wurde noch nicht ausgeführt oder Claude wurde danach nicht neu gestartet. Im Schulordner `/einrichten` erneut ausführen, dann Claude neu starten. |
-| `/einrichten` erscheint nicht | Claude wurde nicht im entpackten Ordner `Schule` gestartet. Dort starten (Anhang A). |
-| Claude kennt mein Klassenprofil nicht | Nicht im Klassenordner gestartet. Mit `/memory` prüfen, welche CLAUDE.md geladen sind. |
-| Claude fragt ständig, ob es `_Schule/` oder `_Bildungsplan/` lesen darf | Zugriff fehlt. `/einrichten` erneut ausführen und Schritt 3 bestätigen. Prüfen mit `/status`. |
-| Sperren für Schülerdaten greifen nicht | Wie oben: `/einrichten` erneut ausführen. Wurde der Schulordner verschoben, stimmen die Pfade nicht mehr. |
-| Bildungsplan-Nummern stimmen nicht | Auszug fehlt in `_Bildungsplan/`. Claude markiert dann mit „[Standard prüfen]“. Auszug ablegen. |
-| Klassenarbeit fragt Unbehandeltes ab | Das Logbuch ist lückenhaft. Nachtragen und die KA neu erzeugen lassen. |
-| Ergebnisse zu lang oder zu schwer | Beispiele in `_Beispiele/` ablegen und die Regel in die Fach-CLAUDE.md schreiben (z. B. „KA Kl. 7: max. 2 Seiten“). |
-| Meldung „Settings Error“ beim Start | Die Einstellungsdatei ist beschädigt. Claude bietet an, sie zu reparieren: **mit Claude reparieren** wählen. |
-| Datei versehentlich überschrieben | Aus dem neuesten ZIP in `Backup/` wiederherstellen (Doppelklick, Datei zurückkopieren). |
+| `/schule:…`-Befehle erscheinen nicht | Claude nach `/einrichten` neu starten. Dann `/plugin` → **Installed**: Ist `schule` aktiviert? Sonst `/einrichten` erneut ausführen. |
+| `/einrichten` erscheint nicht | Claude wurde nicht im Schulordner (umbenannter Ordner `vorlage`) gestartet. Dort starten (Anhang A). |
+| `/einrichten` meldet, dass git fehlt | Claude hilft bei der Installation. Alternativ ohne Updates einrichten (Claude bietet das an). |
+| Updates kommen nicht an | `/plugin` → Marketplaces → lehrer-bw: Ist **auto-update** an? Sonst `/plugin marketplace update lehrer-bw` und neu starten. `/schule:neuigkeiten` zeigt die Version. |
+| Claude kennt mein Klassenprofil nicht | Nicht im Klassenordner gestartet. Mit `/memory` prüfen. |
+| Claude fragt ständig, ob es `_Schule/` oder `_Bildungsplan/` lesen darf | Zugriff fehlt oder der Schulordner wurde verschoben. `/einrichten` erneut ausführen und den Zugriffs-Schritt bestätigen. |
+| Bildungsplan-Nummern stimmen nicht | Auszug fehlt in `_Bildungsplan/`. Claude markiert dann mit „[Standard prüfen]“. |
+| Klassenarbeit fragt Unbehandeltes ab | Das Logbuch ist lückenhaft. Nachtragen und neu erzeugen lassen. |
+| Ergebnisse zu lang oder zu schwer | Beispiele in `_Beispiele/` ablegen, Regel in die Fach-CLAUDE.md schreiben. |
+| Befehl doppelt (`/klassenarbeit` und `/schule:klassenarbeit`) | Alte Kopie aus Version 1.0. `/einrichten` bietet das Aufräumen an. |
+| Meldung „Settings Error“ beim Start | Einstellungsdatei beschädigt. **Mit Claude reparieren** wählen. |
+| Datei versehentlich überschrieben | Aus dem neuesten ZIP in `Backup/` wiederherstellen. |
 
 ---
 
-## 13. Checkliste
+## 14. Checkliste
 
 - [ ] Claude Code installiert und angemeldet
-- [ ] Paket entpackt, Ordner in `Schule` umbenannt, an festen Platz verschoben
-- [ ] Im Ordner `Schule` Claude gestartet und `/einrichten` vollständig durchlaufen
-- [ ] Claude neu gestartet, im Klassenordner `/memory` und `/einstieg …` getestet
+- [ ] Ordner `vorlage` in `Schule` umbenannt und an festen Platz verschoben
+- [ ] Im Schulordner `/einrichten` vollständig durchlaufen
+- [ ] Claude neu gestartet, **Auto-Update eingeschaltet** (`/plugin` → Marketplaces → lehrer-bw)
+- [ ] Im Klassenordner `/memory` und `/schule:einstieg …` getestet
 - [ ] Notenschlüssel der Fachschaft eingetragen
-- [ ] Pro Fach: Bildungsplan-Auszug in `_Bildungsplan/`
-- [ ] Pro Fach: 1–2 eigene gelungene Arbeiten in `_Beispiele/`
-- [ ] Pro Klasse: Stoffverteilungsplan erstellt
-- [ ] Logbuch-Routine: `/logbuch` nach jeder Stunde
-- [ ] Sicherung: `/sichern` jede Woche
+- [ ] Pro Fach: Bildungsplan-Auszug und 1–2 eigene Beispiele
+- [ ] Pro Klasse: Stoffverteilungsplan
+- [ ] Routinen: `/schule:logbuch` nach jeder Stunde, `/schule:sichern` jede Woche
 
 ---
 
 ## Anhang A: Terminal-Mini-Kurs
 
-Das Terminal ist ein Fenster, in das man Befehle tippt. Für Claude Code brauchst du nur **drei Dinge**.
+Das Terminal ist ein Fenster, in das man Befehle tippt. Du brauchst nur **drei Dinge**.
 
 **1. Terminal öffnen**
 - **Mac:** `Cmd + Leertaste`, „Terminal“ tippen, Enter
 - **Windows:** Start-Menü, „Terminal“ oder „PowerShell“ tippen, Enter
 
 **2. In einen Ordner wechseln**
-`cd ` tippen (mit Leerzeichen danach!), dann den Ordner aus dem Finder bzw. Explorer **ins Terminal-Fenster ziehen**, Enter drücken.
+`cd ` tippen (mit Leerzeichen!), dann den Ordner aus dem Finder bzw. Explorer **ins Terminal-Fenster ziehen**, Enter drücken.
 
 **3. Claude starten und beenden**
 - Starten: `claude` + Enter
-- Beenden: `/exit` + Enter (oder zweimal `Strg + C`)
+- Beenden: `/exit` + Enter
 
 **Nützlich in Claude:**
 
 | Eingabe | Wirkung |
 |---|---|
-| `/` | Liste aller Befehle |
-| `/memory` | zeigt geladene CLAUDE.md-Dateien |
-| `/status` | zeigt, welche Einstellungen aktiv sind |
-| `/clear` | neues Gespräch im selben Ordner (bei Themenwechsel sinnvoll) |
+| `/` | Liste aller Befehle, weitertippen zum Filtern |
+| `/schule:neuigkeiten` | was ist neu? |
+| `/memory` | geladene CLAUDE.md-Dateien |
+| `/plugin` | Plugins und Updates verwalten |
+| `/status` | aktive Einstellungen |
+| `/clear` | neues Gespräch im selben Ordner (bei Themenwechsel) |
 | `Esc` | Claude unterbrechen |
 | Pfeil ↑ | letzte Eingabe wiederholen |
 
-**Tipp:** Du kannst Claude in normaler Sprache sagen, was es tun soll. Auch so etwas geht: *„Zeig mir, welche Dateien in diesem Ordner liegen“* oder *„Öffne mir die KA2 als Word-Datei.“*
+**Tipp:** Du kannst Claude in normaler Sprache sagen, was es tun soll: *„Zeig mir, welche Dateien in diesem Ordner liegen“* oder *„Öffne mir die KA2 als Word-Datei.“*
 
 ---
 
-## Anhang B: Für Verantwortliche – Verteilung über GitHub
+## Anhang B: Für Verantwortliche – Pflege, Versionen, Verteilung
 
-*Dieser Abschnitt richtet sich an die Person, die die Vorlage pflegt (z. B. Medienbeauftragte, Fachschaftsleitung). Lehrkräfte brauchen ihn nicht.*
+*Für die Person, die das Paket pflegt (z. B. Medienbeauftragte, Fachschaftsleitung). Lehrkräfte brauchen diesen Teil nicht.*
 
-- Die Vorlage als **öffentliches oder schulinternes Repo** veröffentlichen. Lehrkräfte laden sie über **„Code“ → „Download ZIP“** herunter, ganz ohne Git.
-- Persönliche, ausgefüllte Ordner von Lehrkräften gehören **nicht** in ein gemeinsames Repo. Die `.gitignore` schließt `CLAUDE.local.md`, `Backup/`, ZIP-Dateien und Schülerdaten-Ordner aus.
+### B.1 Aufbau
 
-**Repo anlegen:**
-
-```bash
-cd lehrer-claude-code
-gh repo create lehrer-claude-code --private --source=. --push
-# ohne gh: leeres Repo auf github.com anlegen, dann:
-git remote add origin https://github.com/NAME/lehrer-claude-code.git
-git push -u origin main
+```text
+lehrer-claude-code/                      ← dieses Repo = Plugin-Marketplace
+├── .claude-plugin/marketplace.json      ← Katalog: Marketplace „lehrer-bw“, Plugin „schule“
+├── plugins/schule/
+│   ├── .claude-plugin/plugin.json       ← Name, VERSION, Beschreibung
+│   └── skills/<name>/SKILL.md           ← die Befehle (/schule:<name>)
+├── vorlage/                             ← Schulordner-Vorlage inkl. /einrichten, Rules, Settings
+│   └── einrichtung/marketplace-quelle.txt  ← HIER die eigene Repo-Adresse eintragen
+├── CHANGELOG.md
+└── README.md
 ```
 
-**Neue Version verteilen:** Änderungen committen und pushen, dann Lehrkräfte informieren: „Neue ZIP laden, darin Claude starten, `/einrichten` und *ersetzen* wählen.“
+Warum so?
+- **Skills im Plugin** → zentral pflegbar, Updates über den Marketplace
+- **Rules und Settings in der Vorlage** → Plugins können keine Rules oder CLAUDE.md mitbringen, und aus der Plugin-`settings.json` werden nur wenige Schlüssel übernommen. Deshalb installiert `/einrichten` sie einmalig.
+- **`/einrichten` als Projekt-Skill der Vorlage** → funktioniert, bevor das Plugin installiert ist
 
-**Technischer Hintergrund:**
-- Projekt-Skills werden vom Startordner aufwärts nur bis zur Git-Wurzel gefunden. Deshalb installiert `/einrichten` die Skills als persönliche Skills (`~/.claude/skills/`), die unabhängig vom Startordner laden.
-- `.claude/settings.json` wird nur aus dem Startordner gelesen, ohne übergeordnete Ordner. Deshalb stehen `additionalDirectories` und die Sperren in `~/.claude/settings.json`.
-- Persönliche Rules in `~/.claude/rules/` gelten in jedem Projekt.
+### B.2 Erstveröffentlichung
+1. In `vorlage/einrichtung/marketplace-quelle.txt` die eigene Adresse eintragen, z. B. `meine-schule/lehrer-claude-code`
+2. In `.claude-plugin/marketplace.json` den `owner` anpassen
+3. Prüfen: `claude plugin validate .`
+4. Auf GitHub veröffentlichen:
+   ```bash
+   gh repo create lehrer-claude-code --public --source=. --push
+   ```
+   **Öffentlich** ist am einfachsten. Lehrkräfte brauchen dann kein GitHub-Konto, Updates laufen ohne Anmeldung. Das Repo enthält keine personenbezogenen Daten. Bei einem **privaten** Repo braucht jede Lehrkraft Lesezugriff und gespeicherte Zugangsdaten auf ihrem Rechner.
+5. Lehrkräften den Link zur ZIP (`Code → Download ZIP`) und diese README schicken
+
+### B.3 Neue Version veröffentlichen
+1. Skills in `plugins/schule/skills/` ändern oder hinzufügen
+2. **Version erhöhen** in `plugins/schule/.claude-plugin/plugin.json` (z. B. `1.1.0` → `1.2.0`). **Ohne neue Versionsnummer bekommen die Lehrkräfte die Änderung nicht.**
+3. `CHANGELOG.md` ergänzen **und** `plugins/schule/skills/neuigkeiten/SKILL.md` aktualisieren (das sehen die Lehrkräfte unter `/schule:neuigkeiten`). Was die Lehrkräfte selbst tun müssen, gehört unter „Zu tun“.
+4. `claude plugin validate .`, dann committen und pushen
+5. Optional ein GitHub-Release mit Versionsnummer anlegen. Wer das Repo mit „Watch → Releases“ beobachtet, bekommt eine E-Mail.
+6. Kurze Info über den üblichen Kanal (E-Mail, Moodle, Konferenz)
+
+**Sonderfälle:**
+- Änderungen an **Rules oder Settings** erreichen niemanden automatisch. In `neuigkeiten` unter „Zu tun“ beschreiben: „Neue ZIP laden, `/einrichten` ausführen, Regeln ersetzen.“
+- **Befehl umbenennen oder entfernen:** Für ganze Plugins gibt es in `marketplace.json` das Feld `renames`, für einzelne Skills im Plugin nicht. Alte Namen fallen einfach weg, also in `neuigkeiten` erwähnen.
+
+### B.4 Auto-Update für alle erzwingen (Schulträger / Claude Team oder Enterprise)
+Nutzt die Schule Claude über eine Organisation, kann ein Admin über **verwaltete Einstellungen** (claude.ai Admin-Konsole oder Geräteverwaltung) den Marketplace für alle registrieren, das Plugin aktivieren und Auto-Update erzwingen. Dann entfallen die Plugin-Installation in `/einrichten` und das manuelle Einschalten:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "lehrer-bw": {
+      "source": { "source": "github", "repo": "meine-schule/lehrer-claude-code" },
+      "autoUpdate": true
+    }
+  },
+  "enabledPlugins": {
+    "schule@lehrer-bw": true
+  }
+}
+```
+
+Details: [Manage plugins for your organization](https://code.claude.com/docs/en/plugins/org)
+
+### B.5 Testen vor dem Veröffentlichen
+```bash
+claude plugin validate .
+claude plugin marketplace add ./          # lokaler Test-Marketplace
+claude plugin install schule@lehrer-bw
+```
+Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bzw. mit `/reload-plugins`.
 
 ---
 
 **Offizielle Dokumentation:**
-[CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions)
+[CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions) · [Plugins](https://code.claude.com/docs/en/plugins) · [Marketplace erstellen](https://code.claude.com/docs/en/plugin-marketplaces) · [Marketplace hosten & Updates](https://code.claude.com/docs/en/plugins/host-marketplace)
 
 *Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetz, NVO, Bildungspläne) und die Vorgaben deiner Schule.*

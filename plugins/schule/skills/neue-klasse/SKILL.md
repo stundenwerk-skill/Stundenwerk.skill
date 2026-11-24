@@ -22,4 +22,4 @@ Vorgehen:
    - `Logbuch.md` – Überschrift und Formatzeile
    - leere Unterordner: `Einheiten/`, `Klassenarbeiten/` (mit `.gitkeep` oder kurzer `LIESMICH.md`)
 6. Abschluss: angelegte Struktur als Baum zeigen und den Startbefehl nennen:
-   „Zum Arbeiten in diesem Ordner Claude starten, z. B. dann `/einheit …` oder `/stunde …`.“
+   „Zum Arbeiten in diesem Ordner Claude starten, z. B. dann `/schule:einheit …` oder `/schule:stunde …`.“

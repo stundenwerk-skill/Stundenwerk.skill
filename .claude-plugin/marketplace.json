@@ -1,0 +1,14 @@
+{
+  "name": "lehrer-bw",
+  "description": "Claude Code für Lehrkräfte in Baden-Württemberg – Unterrichtsplanung, Klassenarbeiten, Korrektur und Klassenleitung",
+  "owner": {
+    "name": "DEIN NAME / DEINE SCHULE"
+  },
+  "plugins": [
+    {
+      "name": "schule",
+      "source": "./plugins/schule",
+      "description": "25 Skills für Lehrkräfte in BW: /schule:stunde, /schule:klassenarbeit, /schule:vertretung, /schule:elternbrief u. v. m."
+    }
+  ]
+}
