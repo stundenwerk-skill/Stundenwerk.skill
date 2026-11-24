@@ -1,0 +1,31 @@
+name: Lizenz-Anfrage
+description: Ausnahme für Lehrkräfte (ohne „Weitergabe unter gleichen Bedingungen“), kommerzielle Lizenz oder Kooperation anfragen.
+title: "[Lizenz] <kurz worum es geht>"
+labels: ["lizenz"]
+body:
+  - type: dropdown
+    id: art
+    attributes:
+      label: Was möchtest du?
+      options:
+        - Ausnahme für Lehrkräfte (CC BY-NC 4.0 ohne SA, kostenlos)
+        - Kommerzielle Lizenz (Unternehmen, kostenpflichtige Angebote)
+        - Kooperation / Support (Schulträger, Behörde, Landesinstitut)
+    validations:
+      required: true
+  - type: input
+    id: wer
+    attributes:
+      label: Wer bist du bzw. welche Organisation?
+      placeholder: "z. B. Lehrkraft, Gymnasium, Bayern / Firma XY / Landesinstitut Z"
+    validations:
+      required: true
+  - type: textarea
+    id: zweck
+    attributes:
+      label: Wofür möchtest du Kreide nutzen?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Bitte keine vertraulichen Angaben hier eintragen – Issues sind öffentlich. Für Details melden wir uns bei dir."

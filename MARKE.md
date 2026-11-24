@@ -1,6 +1,6 @@
 # Name und Logo von Kreide
 
-Die Inhalte von Kreide sind offen lizenziert (siehe [`LIZENZ.md`](LIZENZ.md)). **Der Name „Kreide“ für dieses Projekt, das Logo, die Wortmarke und das Vorschaubild sind davon ausgenommen.** Die Creative-Commons-Lizenz selbst stellt klar, dass Marken- und Patentrechte nicht mitlizenziert werden (CC BY-SA 4.0, Abschnitt 2 b 2).
+Die Inhalte von Kreide sind offen lizenziert (siehe [`LIZENZ.md`](LIZENZ.md)). **Der Name „Kreide“ für dieses Projekt, das Logo, die Wortmarke und das Vorschaubild sind davon ausgenommen.** Die Creative-Commons-Lizenz selbst stellt klar, dass Marken- und Patentrechte nicht mitlizenziert werden (CC BY-NC-SA 4.0, Abschnitt 2 b 2).
 
 Ziel: Lehrkräfte sollen sich darauf verlassen können, dass „Kreide“ mit diesem Logo die gepflegte Originalfassung ist – mit aktuellen Länderprofilen und Qualitätsregeln.
 
@@ -12,7 +12,7 @@ Ziel: Lehrkräfte sollen sich darauf verlassen können, dass „Kreide“ mit di
 ## Nicht erlaubt ohne Zustimmung
 - Veränderte Fassungen „Kreide“ nennen oder mit dem Kreide-Logo bzw. einem verwechselbar ähnlichen Logo versehen
 - Den Eindruck erwecken, eine Fassung, ein Produkt oder ein Angebot sei offiziell von Kreide oder von den Verantwortlichen unterstützt
-- Name oder Logo für eigene kommerzielle Produkte oder Dienstleistungen verwenden
+- Name oder Logo für eigene kommerzielle Produkte oder Dienstleistungen verwenden (Ausnahme: im Rahmen einer kommerziellen Lizenz nach Absprache, siehe [`KOMMERZIELL.md`](KOMMERZIELL.md))
 
 ## Eigene Fassung erstellen?
 Gern – die Inhalte sind dafür freigegeben. Gib ihr bitte einen eigenen Namen und ein eigenes Logo und nenne die Herkunft wie in [`LIZENZ.md`](LIZENZ.md) beschrieben. Noch besser: Verbesserungen als Issue oder Pull Request einreichen, dann haben alle etwas davon.

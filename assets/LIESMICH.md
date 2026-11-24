@@ -1,6 +1,6 @@
 # Logo und Bilder
 
-Logo, Wortmarke und Vorschaubild in diesem Ordner sind **nicht** Teil der CC-BY-SA-Lizenz. Nutzungsregeln: [`../MARKE.md`](../MARKE.md).
+Logo, Wortmarke und Vorschaubild in diesem Ordner sind **nicht** Teil der Creative-Commons-Lizenz. Nutzungsregeln: [`../MARKE.md`](../MARKE.md).
 
 | Datei | Verwendung |
 |---|---|

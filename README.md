@@ -16,7 +16,7 @@ Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
   <img alt="16 Bundesländer" src="https://img.shields.io/badge/Bundesl%C3%A4nder-16-2F4A3A">
   <img alt="25 Befehle" src="https://img.shields.io/badge/Befehle-25-2F4A3A">
   <img alt="Datenschutz eingebaut" src="https://img.shields.io/badge/Datenschutz-eingebaut-2F4A3A">
-  <img alt="Lizenz CC BY-SA 4.0" src="https://img.shields.io/badge/Lizenz-CC%20BY--SA%204.0-2F4A3A">
+  <img alt="Lizenz CC BY-NC-SA 4.0" src="https://img.shields.io/badge/Lizenz-CC%20BY--NC--SA%204.0-2F4A3A">
   <img alt="Evidenzbasiert" src="https://img.shields.io/badge/evidenzbasiert-nichts%20erfunden-F2C14E">
 </p>
 
@@ -653,7 +653,9 @@ Erstelle ein Quiz zu: $ARGUMENTS
 
 ## Lizenz, Name und Logo
 
-- **Inhalte** (Befehle, Länderprofile, Regeln, Vorlagen, Anleitungen): **CC BY-SA 4.0**. Du darfst sie teilen und anpassen, auch für deine Schule oder dein Land. Bedingungen: Urheber nennen und veränderte Fassungen unter derselben Lizenz weitergeben. → [`LICENSE`](LICENSE), Kurzfassung in [`LIZENZ.md`](LIZENZ.md)
+- **Für Lehrkräfte kostenlos.** Die Inhalte (Befehle, Länderprofile, Regeln, Vorlagen, Anleitungen) stehen unter **CC BY-NC-SA 4.0**: teilen und anpassen für nicht-kommerzielle Zwecke, mit Namensnennung und unter gleichen Bedingungen. → [`LICENSE`](LICENSE), Kurzfassung in [`LIZENZ.md`](LIZENZ.md)
+- **Ausnahme für Lehrkräfte:** Auf Anfrage gibt es kostenlos eine Zusatzerlaubnis **ohne „Weitergabe unter gleichen Bedingungen“** (CC BY-NC 4.0). → Issue „Lizenz-Anfrage“
+- **Unternehmen und kommerzielle Nutzung:** nur mit **kostenpflichtiger Lizenz**. **Schulträger, Behörden, Landesinstitute:** für landes- oder trägerweiten Einsatz bitte Kontakt aufnehmen, es gibt kostenpflichtige Kooperations- und Supportverträge. → [`KOMMERZIELL.md`](KOMMERZIELL.md)
 - **Skripte** (`scripts/`): **MIT** → [`scripts/LICENSE`](scripts/LICENSE)
 - **Name „Kreide“, Logo und Wortmarke** sind **nicht** frei lizenziert. Unveränderte Weitergabe und Berichte sind erlaubt. Veränderte Fassungen brauchen einen eigenen Namen und ein eigenes Logo. → [`MARKE.md`](MARKE.md)
 - **Was du mit Kreide erstellst** (Klassenarbeiten, Arbeitsblätter, Briefe), ist dein Material.
@@ -707,7 +709,9 @@ kreide/                      ← dieses Repo = Plugin-Marketplace
 ├── vorlage/                             ← Schulordner-Vorlage inkl. /einrichten, Rules, Settings
 │   └── einrichtung/marketplace-quelle.txt  ← HIER die eigene Repo-Adresse eintragen
 ├── CHANGELOG.md
-├── LICENSE, LIZENZ.md, MARKE.md         ← CC BY-SA 4.0 · Kurzfassung · Name/Logo
+├── LICENSE, LIZENZ.md                   ← CC BY-NC-SA 4.0 · Kurzfassung
+├── KOMMERZIELL.md, MARKE.md            ← Firmenlizenz/Kooperation · Name/Logo
+├── BEITRAGSVEREINBARUNG.md             ← Voraussetzung für Beiträge (Doppellizenz)
 └── README.md
 ```
 
@@ -784,6 +788,6 @@ Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bz
 **Offizielle Dokumentation:**
 [CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions) · [Plugins](https://code.claude.com/docs/en/plugins) · [Marketplace erstellen](https://code.claude.com/docs/en/plugin-marketplaces) · [Marketplace hosten & Updates](https://code.claude.com/docs/en/plugins/host-marketplace)
 
-*Kreide © 2026 [DEIN NAME] und Mitwirkende · Inhalte: CC BY-SA 4.0 · Skripte: MIT · Name und Logo: siehe MARKE.md*
+*Kreide © 2026 [DEIN NAME] und Mitwirkende · Inhalte: CC BY-NC-SA 4.0 (kostenlos für Lehrkräfte, kommerziell nur mit Lizenz) · Skripte: MIT · Name und Logo: siehe MARKE.md*
 
 *Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetze, Verordnungen, Lehrpläne deines Landes) und die Vorgaben deiner Schule.*

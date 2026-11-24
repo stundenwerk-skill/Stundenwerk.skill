@@ -11,7 +11,7 @@ In `plugins/kreide/skills/unterricht/laender/` liegt für jedes Bundesland ein P
 Issue **„Neuer Befehl oder Verbesserung“**. Ein eigener Skill-Entwurf (SKILL.md) ist willkommen.
 
 ## Regeln
-- Mit deinem Beitrag stimmst du zu, dass er unter der Lizenz des Projekts veröffentlicht wird (Inhalte: CC BY-SA 4.0, Skripte: MIT).
+- Mit deinem Beitrag stimmst du der [Beitragsvereinbarung](BEITRAGSVEREINBARUNG.md) zu: Er steht unter der Lizenz des Projekts (Inhalte: CC BY-NC-SA 4.0, Skripte: MIT) und darf zusätzlich unter anderen Bedingungen lizenziert werden, auch kommerziell.
 - **Keine personenbezogenen Daten** von Schülerinnen, Schülern, Eltern oder Kolleginnen und Kollegen – nirgends, auch nicht in Screenshots.
 - Keine urheberrechtlich geschützten Inhalte (z. B. Aufgaben aus Schulbüchern, Prüfungsaufgaben).
 - Angaben zu Schulrecht nur mit Quelle; Unsicheres mit „[prüfen]“ markieren.

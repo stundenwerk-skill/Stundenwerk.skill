@@ -10,7 +10,7 @@ AUTOR="${2:-}"
 DESCRIPTION="Kreide – KI-Kollegium für Lehrkräfte: Claude-Code-Plugin für Unterrichtsplanung, Klassenarbeiten, Differenzierung, Korrektur und Elternbriefe. Länderprofile für alle 16 Bundesländer, Datenschutz eingebaut, automatische Updates."
 
 TOPICS=(
-  claude-code claude-code-plugin claude-plugin agent-skills oer
+  claude-code claude-code-plugin claude-plugin agent-skills claude-skills
   lehrer lehrkraefte schule unterricht unterrichtsplanung
   unterrichtsvorbereitung klassenarbeit lehrplan bildung ki-in-der-schule
   education teachers lesson-planning germany edtech
@@ -36,7 +36,7 @@ sed -i.bak "s#DEIN-GITHUB-NAME/kreide#$REPO#g" \
 rm -f vorlage/einrichtung/marketplace-quelle.txt.bak plugins/kreide/.claude-plugin/plugin.json.bak README.md.bak
 if [ -n "$AUTOR" ]; then
   echo "→ Urheber „$AUTOR“ eintragen"
-  for f in README.md LIZENZ.md scripts/LICENSE; do sed -i.bak "s#\[DEIN NAME\]#$AUTOR#g" "$f"; rm -f "$f.bak"; done
+  for f in README.md LIZENZ.md BEITRAGSVEREINBARUNG.md scripts/LICENSE; do sed -i.bak "s#\[DEIN NAME\]#$AUTOR#g" "$f"; rm -f "$f.bak"; done
   sed -i.bak "s#DEIN NAME / DEINE SCHULE#$AUTOR#g" plugins/kreide/.claude-plugin/plugin.json .claude-plugin/marketplace.json
   rm -f plugins/kreide/.claude-plugin/plugin.json.bak .claude-plugin/marketplace.json.bak
 fi
