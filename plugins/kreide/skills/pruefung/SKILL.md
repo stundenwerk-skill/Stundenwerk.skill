@@ -4,6 +4,8 @@ description: Vorbereitung auf Abschlussprüfungen in allen Bundesländern (Erste
 argument-hint: "[Abschluss: ESA/MSA/Abitur oder Landesbezeichnung] [Fach] [Thema oder 'gesamt']"
 ---
 
+> **Qualität (verbindlich):** Nichts erfinden – keine Studien, Zahlen, Lehrplan-Nummern, Paragrafen oder Quellen ohne Beleg; Unsicheres offen sagen und mit „[prüfen]“ kennzeichnen. Fehlen Angaben, die das Ergebnis inhaltlich verändern, oder widersprechen sich Anfrage und Dateien: **zuerst nachfragen** (max. 3 kurze Fragen), statt zu raten. Pädagogische Begründungen nur mit gut belegten Prinzipien (Skill `kreide:unterricht`, `evidenz.md`). Verständlich für die Zielgruppe schreiben, Lösungen nachrechnen, am Ende „Bitte prüfen:“ mit offenen Punkten. Ausführlich: `qualitaet.md` im Skill `kreide:unterricht`.
+
 Erstelle Prüfungsvorbereitung für: $ARGUMENTS
 
 Vorher: Länderprofil lesen (über den Skill `unterricht`) und die **Abschlussbezeichnung des Landes** verwenden (z. B. Berufsbildungsreife in Berlin, Realschulabschluss in Sachsen, Qualifizierter Sekundarabschluss I in Rheinland-Pfalz).

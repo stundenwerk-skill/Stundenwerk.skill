@@ -11,11 +11,12 @@
 Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
 
 <p align="center">
-  <img alt="Version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-2F4A3A">
+  <img alt="Version 1.3.0" src="https://img.shields.io/badge/version-1.3.0-2F4A3A">
   <img alt="Claude Code Plugin" src="https://img.shields.io/badge/Claude%20Code-Plugin-F2C14E">
   <img alt="16 Bundesländer" src="https://img.shields.io/badge/Bundesl%C3%A4nder-16-2F4A3A">
   <img alt="25 Befehle" src="https://img.shields.io/badge/Befehle-25-2F4A3A">
   <img alt="Datenschutz eingebaut" src="https://img.shields.io/badge/Datenschutz-eingebaut-2F4A3A">
+  <img alt="Evidenzbasiert" src="https://img.shields.io/badge/evidenzbasiert-nichts%20erfunden-F2C14E">
 </p>
 
 <p align="center"><i>KI für Lehrerinnen und Lehrer · Unterrichtsvorbereitung · Klassenarbeiten mit Erwartungshorizont · Differenzierung · Vertretungsstunden · Elternbriefe · Lehrplanbezug für alle Bundesländer</i></p>
@@ -28,6 +29,7 @@ Kreide ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stof
 
 0. [Was ist in diesem Paket?](#0-was-ist-in-diesem-paket)
 1. [Grundidee](#1-grundidee)
+   - [Qualität: evidenzbasiert, ehrlich, verständlich](#1a-qualität-evidenzbasiert-ehrlich-verständlich)
 2. [Einrichtung in 15 Minuten](#2-einrichtung-in-15-minuten)
 3. [Updates und Neuigkeiten](#3-updates-und-neuigkeiten)
 4. [Ordnerstruktur](#4-ordnerstruktur)
@@ -84,6 +86,26 @@ Du tippst nur:
 Claude liest dann selbst Logbuch, Stoffverteilungsplan, Lehrplan-Auszug und Beispiele und legt die fertigen Dateien im richtigen Ordner ab. Du kannst auch einfach in normaler Sprache schreiben: *„Mach mir eine Klassenarbeit zu linearen Funktionen, 45 Minuten.“* Claude nimmt dann den passenden Befehl selbst.
 
 > **Tipp:** Tippe `/` und die ersten Buchstaben, z. B. `/klass`. Claude zeigt dir passende Befehle zur Auswahl.
+
+---
+
+## 1a. Qualität: evidenzbasiert, ehrlich, verständlich
+
+Kreide arbeitet in **jedem Befehl** nach festen Qualitätsregeln (`qualitaet.md`):
+
+| Regel | Was das für dich heißt |
+|---|---|
+| **Nichts erfinden** | Keine ausgedachten Studien, Zahlen, Lehrplan-Nummern, Paragrafen, Links oder Buchseiten. Was Kreide nicht sicher weiß, sagt es offen und markiert es mit **[prüfen]**. |
+| **Herkunft kennzeichnen** | Du siehst, worauf eine Aussage beruht: **Beleg** (mit Quelle) · **fachlich anerkannt** · **Vorschlag/Erfahrungswert** · **[prüfen]**. |
+| **Evidenzbasiert begründen** | Methodische Vorschläge stützen sich auf gut belegte Lernforschung, z. B. Abrufübung, verteiltes Üben, kognitive Belastung, Lösungsbeispiele, formatives Feedback (Quellen in `evidenz.md`). Schlecht belegte Ideen wie „Lerntypen“ werden nicht als Begründung verwendet. |
+| **Erst fragen, dann machen** | Fehlen Angaben, die das Ergebnis verändern (z. B. Niveau, Thema, Dauer), oder passen Anfrage und Logbuch nicht zusammen, fragt Kreide zuerst nach: höchstens 3 kurze Fragen, oft mit Antwortvorschlägen. Was in deinen Dateien steht, wird nicht erneut gefragt. |
+| **Verständlich** | Ergebnis zuerst, kurze Sätze. Schülermaterial altersgerecht, Elternbriefe ohne Fachbegriffe. |
+| **Nachrechnen** | Lösungen und Punktsummen werden geprüft. |
+| **„Bitte prüfen:“** | Am Ende längerer Ergebnisse stehen die Punkte, die du gegenlesen solltest. |
+
+> **Ehrlich gesagt:** Keine KI arbeitet fehlerfrei. Die Regeln senken das Risiko deutlich und machen Unsicherheiten sichtbar. Die fachliche Prüfung und die Verantwortung bleiben bei dir.
+
+Willst du Annahmen statt Rückfragen? Schreib einfach „mach einfach“. Dann trifft Kreide Annahmen und listet sie oben deutlich auf.
 
 ---
 
@@ -295,6 +317,7 @@ Rules sind kurze Regeldateien, die `/einrichten` nach `~/.claude/rules/` install
 
 | Datei | Gilt | Inhalt |
 |---|---|---|
+| `qualitaet.md` | immer | nichts erfinden, Herkunft kennzeichnen, bei Unklarheiten nachfragen, verständlich schreiben |
 | `datenschutz.md` | immer | keine personenbezogenen Daten, Platzhalter, keine Notenentscheidungen |
 | `klassenarbeiten.md` | Ordner `Klassenarbeiten` | KA-Kopf, Operator + AFB + Punkte, Summe prüfen, Version B, Erwartungshorizont separat |
 | `arbeitsblatt-layout.md` | Ordner `Arbeitsblaetter` | Kopfzeile, Operatoren fett, Platz zum Schreiben, ★-Aufgabe, Lösung separat |
@@ -577,6 +600,8 @@ Erstelle ein Quiz zu: $ARGUMENTS
 
 ## 12. Tipps für optimale Ergebnisse
 
+1. **Auf Rückfragen antworten.** Kreide fragt nach, wenn etwas Wichtiges fehlt. Je genauer deine Antwort, desto besser das Ergebnis.
+1. **„Bitte prüfen:“ ernst nehmen.** Dort stehen die Punkte, die Kreide nicht sicher belegen konnte.
 1. **Im Klassenordner starten.** Dann sind Schule, Fach und Klasse automatisch geladen.
 2. **Beispiele schlagen Beschreibungen.** Zwei gute eigene Klassenarbeiten in `_Beispiele/` bringen mehr als zehn Regeln.
 3. **Logbuch konsequent pflegen.** 30 Sekunden mit `/kreide:logbuch` nach jeder Stunde.
@@ -690,7 +715,7 @@ Warum so?
    **Öffentlich** ist am einfachsten. Lehrkräfte brauchen dann kein GitHub-Konto, Updates laufen ohne Anmeldung. Das Repo enthält keine personenbezogenen Daten. Bei einem **privaten** Repo braucht jede Lehrkraft Lesezugriff und gespeicherte Zugangsdaten auf ihrem Rechner.
 5. Auffindbarkeit einrichten (Beschreibung, 20 Topics, Release, Repo-Adresse in den Dateien):
    ```bash
-   git tag -a v1.2.0 -m "Kreide 1.2.0" && git push --tags
+   git push --tags   # Versions-Tags (z. B. v1.3.0) sind schon gesetzt
    bash scripts/github-einrichten.sh NAME/kreide
    ```
    Danach im Browser unter **Settings → Social preview** das Bild `assets/social-preview.png` hochladen.

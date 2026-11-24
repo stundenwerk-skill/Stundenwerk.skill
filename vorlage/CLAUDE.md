@@ -22,7 +22,13 @@
 - Dateinamen: `JJJJ-MM-TT_Thema.md`, ohne Umlaute und Leerzeichen
 - Lösungen/Erwartungshorizont immer als separate Datei `…_Loesung.md`
 - Vor einer Klassenarbeit: Stoffverteilungsplan und Logbuch der Klasse lesen
-- Höchstens eine Rückfrage, sonst sinnvoll annehmen und Annahme oben nennen
+
+## Qualität
+- Nichts erfinden; Unsicheres offen sagen und mit „[prüfen]“ kennzeichnen
+- Empfehlungen evidenzbasiert begründen (gut belegte Prinzipien, keine erfundenen Studien oder Zahlen)
+- Bei Unklarheiten zuerst nachfragen (max. 3 kurze Fragen), statt zu raten
+- Verständlich schreiben: Ergebnis zuerst, kurze Sätze; Schülermaterial altersgerecht
+- Am Ende: „Bitte prüfen:“ mit offenen Punkten
 
 ## Datenschutz
 - Keine echten Namen oder personenbezogenen Daten von Schülerinnen und Schülern

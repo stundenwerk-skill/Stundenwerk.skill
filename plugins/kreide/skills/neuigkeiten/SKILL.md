@@ -3,10 +3,23 @@ name: neuigkeiten
 description: Zeigt, was in der aktuellen Version der Schul-Befehle neu ist und ob etwas zu tun ist. Nutzen, wenn die Lehrkraft fragt, was neu ist, was sich geändert hat oder welche Version installiert ist.
 ---
 
+> **Qualität (verbindlich):** Nichts erfinden – keine Studien, Zahlen, Lehrplan-Nummern, Paragrafen oder Quellen ohne Beleg; Unsicheres offen sagen und mit „[prüfen]“ kennzeichnen. Fehlen Angaben, die das Ergebnis inhaltlich verändern, oder widersprechen sich Anfrage und Dateien: **zuerst nachfragen** (max. 3 kurze Fragen), statt zu raten. Pädagogische Begründungen nur mit gut belegten Prinzipien (Skill `kreide:unterricht`, `evidenz.md`). Verständlich für die Zielgruppe schreiben, Lösungen nachrechnen, am Ende „Bitte prüfen:“ mit offenen Punkten. Ausführlich: `qualitaet.md` im Skill `kreide:unterricht`.
+
 Zeige der Lehrkraft in einfacher Sprache, was neu ist. Nutze genau die Angaben unten, erfinde nichts dazu.
 Danach: Wenn unter „Zu tun“ etwas steht, biete an, es direkt zu erledigen.
 
-## Aktuelle Version: 1.2.0 (25.11.2026)
+## Aktuelle Version: 1.3.0 (25.11.2026)
+
+**Neu: Qualitätsregeln**
+- Kreide erfindet nichts: keine Studien, Zahlen, Lehrplan-Nummern oder Paragrafen ohne Beleg. Unsicheres wird mit „[prüfen]“ markiert.
+- Pädagogische Vorschläge werden mit gut belegten Lernprinzipien begründet (z. B. Abrufübung, verteiltes Üben).
+- Fehlen wichtige Angaben, fragt Kreide zuerst nach (höchstens 3 kurze Fragen), statt zu raten.
+- Am Ende längerer Ergebnisse steht „Bitte prüfen:“ mit den Punkten, die du gegenlesen solltest.
+
+**Zu tun (1.3.0)**
+- Damit die Regeln auch in normalen Gesprächen ohne Befehl gelten: neue ZIP laden, im neuen `vorlage`-Ordner `/einrichten` ausführen und bei den Regeln **ersetzen** wählen.
+
+## Version 1.2.0 (25.11.2026)
 
 **Neu: Kreide gilt für alle 16 Bundesländer**
 - Länderprofile mit Lehrplan-Portal, Schularten, Abschlüssen und Regeln für Leistungsnachweise (z. B. Schulaufgabe in Bayern).

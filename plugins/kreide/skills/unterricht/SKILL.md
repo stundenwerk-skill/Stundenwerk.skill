@@ -5,6 +5,8 @@ description: Grundwissen für Unterrichtsmaterial in Deutschland, alle 16 Bundes
 
 # Unterricht in Deutschland – Grundlagen für alle Bundesländer
 
+> **Verbindlich zuerst lesen:** `qualitaet.md` (nichts erfinden, Herkunft kennzeichnen, bei Unklarheiten nachfragen, verständlich schreiben). Pädagogische Begründungen nur mit den Prinzipien und Quellen aus `evidenz.md`.
+
 Antworte auf Deutsch, in der Fachsprache der Schulverwaltung („Schülerinnen und Schüler“, „Lehrkraft“, „Jahrgangsstufe/Klassenstufe“).
 
 ## 1. Bundesland bestimmen – immer zuerst
@@ -30,10 +32,11 @@ Antworte auf Deutsch, in der Fachsprache der Schulverwaltung („Schülerinnen u
 - **Niemals** Lehrplan-Nummern, Standardformulierungen, Paragrafen oder Fristen erfinden. Ohne Beleg: „[Lehrplanbezug prüfen]“.
 - Schulrecht ändert sich. Bei Unsicherheit auf die aktuelle Fassung und auf Schulleitung bzw. Schulaufsicht verweisen.
 
-## 3. Zuerst klären (max. 1–2 Rückfragen)
-- **Schulart** und **Bildungsgang/Niveau** (Bezeichnungen laut Länderprofil)
-- **Fach, Jahrgangsstufe**, Thema bzw. Kompetenz, Stundenumfang
-Fehlt etwas: sinnvoll annehmen, Annahme in einer Zeile nennen, loslegen.
+## 3. Zuerst klären
+Nötig sind: **Schulart**, **Bildungsgang/Niveau** (Bezeichnungen laut Länderprofil), **Fach, Jahrgangsstufe**, Thema bzw. Kompetenzziel, Dauer.
+- Zuerst in den Dateien nachsehen (CLAUDE.md der Ebenen, Logbuch, Stoffverteilungsplan).
+- Fehlt danach etwas, das das Ergebnis inhaltlich verändert: **nachfragen**, bevor du etwas erstellst – höchstens 3 kurze Fragen, möglichst mit Antwortvorschlägen (Details in `qualitaet.md`, Abschnitt 3).
+- Nur Nebensächliches (Layout, Anzahl Beispielaufgaben) selbst festlegen und in einer Zeile nennen.
 
 ## 4. Länderübergreifende Grundlagen
 - **Bildungsstandards der KMK** (Primarbereich, Erster Schulabschluss, Mittlerer Schulabschluss, Allgemeine Hochschulreife) gelten in allen Ländern. Die Länderlehrpläne setzen sie um.

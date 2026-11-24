@@ -4,6 +4,8 @@ description: Kurze schriftliche Lernkontrolle zum unmittelbar vorangegangenen Un
 argument-hint: "[Thema der letzten Stunde(n)] [Dauer in Minuten, Standard 15]"
 ---
 
+> **Qualität (verbindlich):** Nichts erfinden – keine Studien, Zahlen, Lehrplan-Nummern, Paragrafen oder Quellen ohne Beleg; Unsicheres offen sagen und mit „[prüfen]“ kennzeichnen. Fehlen Angaben, die das Ergebnis inhaltlich verändern, oder widersprechen sich Anfrage und Dateien: **zuerst nachfragen** (max. 3 kurze Fragen), statt zu raten. Pädagogische Begründungen nur mit gut belegten Prinzipien (Skill `kreide:unterricht`, `evidenz.md`). Verständlich für die Zielgruppe schreiben, Lösungen nachrechnen, am Ende „Bitte prüfen:“ mit offenen Punkten. Ausführlich: `qualitaet.md` im Skill `kreide:unterricht`.
+
 Erstelle eine kurze schriftliche Lernkontrolle zu: $ARGUMENTS
 
 Vorher: Länderprofil lesen (über den Skill `unterricht`) und den **Begriff und die Regeln des Landes** verwenden, z. B.:
