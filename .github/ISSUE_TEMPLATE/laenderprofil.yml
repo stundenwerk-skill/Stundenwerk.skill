@@ -1,0 +1,33 @@
+name: Länderprofil korrigieren oder ergänzen
+description: Eine Angabe für dein Bundesland stimmt nicht, fehlt oder ist mit „[prüfen]“ markiert.
+title: "[Länderprofil] <Bundesland>: <kurz worum es geht>"
+labels: ["länderprofil"]
+body:
+  - type: dropdown
+    id: land
+    attributes:
+      label: Bundesland
+      options: [Baden-Württemberg, Bayern, Berlin, Brandenburg, Bremen, Hamburg, Hessen, Mecklenburg-Vorpommern, Niedersachsen, Nordrhein-Westfalen, Rheinland-Pfalz, Saarland, Sachsen, Sachsen-Anhalt, Schleswig-Holstein, Thüringen]
+    validations:
+      required: true
+  - type: textarea
+    id: was
+    attributes:
+      label: Was ist falsch oder fehlt?
+      placeholder: "z. B. In Hessen heißt … ; Höchstzahl der Klassenarbeiten pro Woche ist …"
+    validations:
+      required: true
+  - type: input
+    id: quelle
+    attributes:
+      label: Quelle (Vorschrift, Link, Stand)
+      description: Am besten eine offizielle Seite des Landes oder die Fundstelle der Verordnung.
+    validations:
+      required: true
+  - type: checkboxes
+    id: datenschutz
+    attributes:
+      label: Datenschutz
+      options:
+        - label: Mein Beitrag enthält keine personenbezogenen Daten von Schülerinnen, Schülern oder Kolleginnen und Kollegen.
+          required: true

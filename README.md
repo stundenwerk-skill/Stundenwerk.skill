@@ -10,6 +10,16 @@
 <p align="center"><b>Dein KI-Kollegium für den Schulalltag – in allen 16 Bundesländern.</b><br>
 Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
 
+<p align="center">
+  <img alt="Version 1.2.0" src="https://img.shields.io/badge/version-1.2.0-2F4A3A">
+  <img alt="Claude Code Plugin" src="https://img.shields.io/badge/Claude%20Code-Plugin-F2C14E">
+  <img alt="16 Bundesländer" src="https://img.shields.io/badge/Bundesl%C3%A4nder-16-2F4A3A">
+  <img alt="25 Befehle" src="https://img.shields.io/badge/Befehle-25-2F4A3A">
+  <img alt="Datenschutz eingebaut" src="https://img.shields.io/badge/Datenschutz-eingebaut-2F4A3A">
+</p>
+
+<p align="center"><i>KI für Lehrerinnen und Lehrer · Unterrichtsvorbereitung · Klassenarbeiten mit Erwartungshorizont · Differenzierung · Vertretungsstunden · Elternbriefe · Lehrplanbezug für alle Bundesländer</i></p>
+
 Kreide ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben und erstellt daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr. Für alle Bundesländer, Schularten und Fächer. Ohne Programmierkenntnisse, mit automatischen Updates.
 
 ---
@@ -678,7 +688,14 @@ Warum so?
    gh repo create kreide --public --source=. --push
    ```
    **Öffentlich** ist am einfachsten. Lehrkräfte brauchen dann kein GitHub-Konto, Updates laufen ohne Anmeldung. Das Repo enthält keine personenbezogenen Daten. Bei einem **privaten** Repo braucht jede Lehrkraft Lesezugriff und gespeicherte Zugangsdaten auf ihrem Rechner.
-5. Lehrkräften den Link zur ZIP (`Code → Download ZIP`) und diese README schicken
+5. Auffindbarkeit einrichten (Beschreibung, 20 Topics, Release, Repo-Adresse in den Dateien):
+   ```bash
+   git tag -a v1.2.0 -m "Kreide 1.2.0" && git push --tags
+   bash scripts/github-einrichten.sh NAME/kreide
+   ```
+   Danach im Browser unter **Settings → Social preview** das Bild `assets/social-preview.png` hochladen.
+6. Optional: Kreide im **Plugin-Verzeichnis von Anthropic** einreichen (Einreichungsformular auf claude.com/plugins). Nach einer Prüfung finden Lehrkräfte Kreide dann auch direkt in Claude.
+7. Lehrkräften den Link zur ZIP (`Code → Download ZIP`) und diese README schicken
 
 ### B.3 Neue Version veröffentlichen
 1. Skills in `plugins/kreide/skills/` ändern oder hinzufügen

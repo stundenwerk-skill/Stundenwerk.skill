@@ -1,0 +1,29 @@
+name: Etwas funktioniert nicht
+description: Ein Befehl, die Einrichtung oder ein Update klappt nicht.
+title: "[Fehler] <kurz>"
+labels: ["fehler"]
+body:
+  - type: textarea
+    id: was
+    attributes:
+      label: Was hast du gemacht, was ist passiert?
+      placeholder: "z. B. /einrichten → Meldung „…“"
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Kreide-Version
+      description: Steht unter /kreide:neuigkeiten
+  - type: dropdown
+    id: system
+    attributes:
+      label: Betriebssystem
+      options: [macOS, Windows, Linux]
+  - type: checkboxes
+    id: datenschutz
+    attributes:
+      label: Datenschutz
+      options:
+        - label: Ich habe keine Namen oder Daten von Schülerinnen und Schülern eingefügt (auch nicht in Screenshots).
+          required: true

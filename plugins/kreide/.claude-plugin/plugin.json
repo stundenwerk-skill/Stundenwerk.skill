@@ -5,5 +5,20 @@
   "description": "Kreide – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern: Unterrichtsplanung, Klassenarbeiten nach Landesvorgaben, Differenzierung, Korrektur, Klassenleitung. Länderprofile, Lehrplanbezug und Datenschutz eingebaut.",
   "author": {
     "name": "DEIN NAME / DEINE SCHULE"
-  }
+  },
+  "repository": "https://github.com/DEIN-GITHUB-NAME/kreide",
+  "keywords": [
+    "lehrer",
+    "lehrkraefte",
+    "schule",
+    "unterricht",
+    "unterrichtsplanung",
+    "klassenarbeit",
+    "lehrplan",
+    "bundeslaender",
+    "education",
+    "teachers",
+    "lesson-planning",
+    "germany"
+  ]
 }

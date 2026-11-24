@@ -1,0 +1,26 @@
+name: Neuer Befehl oder Verbesserung
+description: Du hast eine Idee für einen neuen /kreide-Befehl oder willst einen bestehenden verbessern.
+title: "[Idee] <kurz>"
+labels: ["idee"]
+body:
+  - type: textarea
+    id: idee
+    attributes:
+      label: Was soll Kreide können?
+      placeholder: "z. B. /kreide:quiz – 10 Multiple-Choice-Fragen zum aktuellen Thema"
+    validations:
+      required: true
+  - type: textarea
+    id: alltag
+    attributes:
+      label: In welcher Situation im Schulalltag hilft das?
+  - type: input
+    id: schulart
+    attributes:
+      label: Schulart, Fach, Bundesland (optional)
+  - type: textarea
+    id: skill
+    attributes:
+      label: Eigener Skill-Entwurf (optional)
+      description: Wenn du schon eine SKILL.md geschrieben hast, füge sie hier ein.
+      render: markdown
