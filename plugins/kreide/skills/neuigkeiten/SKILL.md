@@ -10,13 +10,13 @@ Danach: Wenn unter „Zu tun“ etwas steht, biete an, es direkt zu erledigen.
 
 **Neu**
 - Die Befehle aktualisieren sich jetzt automatisch, wenn Auto-Update eingeschaltet ist.
-- `/schule:neuigkeiten` (dieser Befehl) zeigt Änderungen an.
-- `/schule:neue-klasse` legt neue Klassen- oder Kursordner an.
-- `/schule:sichern` erstellt eine Sicherungskopie des Schulordners.
-- Alle Befehle beginnen jetzt mit `schule:`, z. B. `/schule:klassenarbeit`. Tipp: `/` tippen und den Anfang des Namens eingeben.
+- `/kreide:neuigkeiten` (dieser Befehl) zeigt Änderungen an.
+- `/kreide:neue-klasse` legt neue Klassen- oder Kursordner an.
+- `/kreide:sichern` erstellt eine Sicherungskopie des Schulordners.
+- Das Paket heißt jetzt **Kreide**. Alle Befehle beginnen mit `kreide:`, z. B. `/kreide:klassenarbeit`. Tipp: `/` tippen und den Anfang des Namens eingeben.
 
 **Zu tun**
-- Falls noch nicht geschehen: Auto-Update einschalten (`/plugin` → Marketplaces → `lehrer-bw` → Enable auto-update).
+- Falls noch nicht geschehen: Auto-Update einschalten (`/plugin` → Marketplaces → `kreide-bw` → Enable auto-update).
 - Wer vorher Version 1.0 hatte: Alte Kopien der Befehle in `~/.claude/skills/` entfernen. `/einrichten` im Schulordner bietet das an.
 
 ## Frühere Versionen

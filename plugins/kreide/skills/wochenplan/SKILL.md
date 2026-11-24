@@ -15,4 +15,4 @@ Ausgabe im Chat (und als `_Schule/Wochenplaene/KW-NN.md`):
 - Termine der Woche
 - Tabelle pro Klasse: Klasse | Fach | Stand | geplante Themen diese Woche | Abweichung vom Plan | To-do
 - Leistungsfeststellungen der Woche (NVO beachten: max. 1 KA/Tag, möglichst ≤ 3/Woche pro Klasse – soweit aus den Daten erkennbar)
-- Priorisierte To-do-Liste für die Vorbereitung (was zuerst), mit passendem Skill-Befehl, z. B. `/schule:stunde …`, `/schule:klassenarbeit …`
+- Priorisierte To-do-Liste für die Vorbereitung (was zuerst), mit passendem Skill-Befehl, z. B. `/kreide:stunde …`, `/kreide:klassenarbeit …`

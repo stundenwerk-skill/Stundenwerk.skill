@@ -1,6 +1,6 @@
 ---
 name: einrichten
-description: Ersteinrichtung bzw. Aktualisierung für Lehrkräfte – installiert das Plugin „schule“ mit automatischen Updates, die Regeln, Zugriff und Datenschutz-Sperren, füllt die Vorlagen per kurzem Interview und legt Fächer und Klassen an. Nur auf ausdrücklichen Aufruf.
+description: Ersteinrichtung bzw. Aktualisierung für Lehrkräfte – installiert das Plugin „Kreide“ mit automatischen Updates, die Regeln, Zugriff und Datenschutz-Sperren, füllt die Vorlagen per kurzem Interview und legt Fächer und Klassen an. Nur auf ausdrücklichen Aufruf.
 disable-model-invocation: true
 ---
 
@@ -17,19 +17,19 @@ Der aktuelle Ordner ist der **Schulordner**. Prüfe zuerst, dass hier `_Schule/`
     - Windows: Download von https://git-scm.com/download/win nennen, Installation mit Standardoptionen, danach Claude neu starten und `/einrichten` erneut aufrufen.
   - Will die Lehrkraft das nicht: mit **Schritt 2b** weitermachen.
 
-## Schritt 2a – Plugin „schule“ installieren (mit Updates)
+## Schritt 2a – Plugin „Kreide“ installieren (mit Updates)
 1. Quelle aus `einrichtung/marketplace-quelle.txt` lesen (Format `name/repo` oder eine URL). Steht dort noch `DEIN-GITHUB-NAME`: nach der richtigen Quelle fragen (bekommt man von der Person, die das Paket verteilt) oder Schritt 2b nehmen.
 2. Ausführen:
    - `claude plugin marketplace add <Quelle>`
-   - `claude plugin install schule@lehrer-bw`
+   - `claude plugin install kreide@kreide-bw`
    Schlägt das Hinzufügen fehl, weil kein GitHub-Schlüssel vorhanden ist, einmal mit gesetzter Umgebungsvariable `CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1` wiederholen.
-3. Prüfen mit `claude plugin list`: `schule@lehrer-bw` muss als aktiviert erscheinen.
+3. Prüfen mit `claude plugin list`: `kreide@kreide-bw` muss als aktiviert erscheinen.
 4. **Auto-Update einschalten**: Das kann nur die Lehrkraft selbst. Anleitung geben:
-   „Tippe nach dem Neustart `/plugin`, wähle **Marketplaces** → **lehrer-bw** → **Enable auto-update**.“
+   „Tippe nach dem Neustart `/plugin`, wähle **Marketplaces** → **kreide-bw** → **Enable auto-update**.“
 5. Alte Kopien aufräumen: Liegen in `~/.claude/skills/` Ordner mit denselben Namen wie die Plugin-Befehle (z. B. `klassenarbeit`, `stunde` – von Version 1.0), auflisten und anbieten, sie zu entfernen. Ist Löschen nicht erlaubt: in `~/.claude/skills/_alt/` verschieben.
 
 ## Schritt 2b – Ohne git (keine automatischen Updates)
-- Hat die Lehrkraft das komplette Paket (ZIP) vorliegen: den Ordner `plugins/schule/skills/` aus dem Paket nach `~/.claude/skills/` kopieren. Die Befehle heißen dann ohne Vorsilbe (`/klassenarbeit` statt `/schule:klassenarbeit`).
+- Hat die Lehrkraft das komplette Paket (ZIP) vorliegen: den Ordner `plugins/kreide/skills/` aus dem Paket nach `~/.claude/skills/` kopieren. Die Befehle heißen dann ohne Vorsilbe (`/klassenarbeit` statt `/kreide:klassenarbeit`).
 - Deutlich sagen: Updates gibt es dann nur, wenn man eine neue ZIP holt und `/einrichten` erneut ausführt.
 
 ## Schritt 3 – Regeln installieren
@@ -63,7 +63,7 @@ Wird `/einrichten` erneut aufgerufen und sind die Vorlagen schon ausgefüllt: In
 - `CLAUDE.md` mit den Antworten ausfüllen (Platzhalter in eckigen Klammern ersetzen, unbekannte stehen lassen).
 - `_Schule/Vorlagen/Briefkopf-Elternbrief.md` und `Kopf-Klassenarbeit.md` mit dem Schulnamen füllen.
 - Für jedes Fach: Ordner nach dem Muster `Mathematik/` anlegen (`CLAUDE.md`, `_Bildungsplan/`, `_Beispiele/`) und die Fach-CLAUDE.md auf das Fach anpassen (Kompetenzbereiche laut Bildungsplan BW, sonst „[prüfen]“).
-- Für jede Lerngruppe: Klassenordner mit Profil, `Stoffverteilungsplan.md`, `Logbuch.md`, `Einheiten/`, `Klassenarbeiten/` (wie bei `/schule:neue-klasse`). Unbekanntes als Platzhalter lassen.
+- Für jede Lerngruppe: Klassenordner mit Profil, `Stoffverteilungsplan.md`, `Logbuch.md`, `Einheiten/`, `Klassenarbeiten/` (wie bei `/kreide:neue-klasse`). Unbekanntes als Platzhalter lassen.
 - Bei Klassenleitung: `Klassenleitung-<Klasse>/` mit `Elternbriefe/`, `Ausfluege/`, `Elterngespraeche/Vorlagen/`.
 - Beispielordner `Mathematik/Klasse-7b` und `Klassenleitung-7b`: fragen, ob sie entfernt werden sollen. Ist Löschen nicht erlaubt: nach `_Archiv_Beispiele/` verschieben.
 
@@ -73,6 +73,6 @@ Kurze Zusammenfassung in einfacher Sprache:
 - welche Ordner angelegt wurden
 - was noch auszufüllen ist, wichtigstes zuerst: Bildungsplan-Auszüge, eigene Beispiele, Notenschlüssel
 - **Claude beenden (`/exit`) und neu starten**, dann:
-  1. `/plugin` → Marketplaces → lehrer-bw → **Enable auto-update** (falls Schritt 2a)
-  2. im Klassenordner testen: `/schule:einstieg <Thema>`
-- Hinweise: `/schule:neuigkeiten` zeigt Änderungen, `/schule:sichern` regelmäßig nutzen
+  1. `/plugin` → Marketplaces → kreide-bw → **Enable auto-update** (falls Schritt 2a)
+  2. im Klassenordner testen: `/kreide:einstieg <Thema>`
+- Hinweise: `/kreide:neuigkeiten` zeigt Änderungen, `/kreide:sichern` regelmäßig nutzen

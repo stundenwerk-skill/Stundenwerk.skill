@@ -1,14 +1,14 @@
 {
-  "name": "lehrer-bw",
-  "description": "Claude Code für Lehrkräfte in Baden-Württemberg – Unterrichtsplanung, Klassenarbeiten, Korrektur und Klassenleitung",
+  "name": "kreide-bw",
+  "description": "Kreide – KI-Kollegium für Lehrkräfte in Baden-Württemberg",
   "owner": {
     "name": "DEIN NAME / DEINE SCHULE"
   },
   "plugins": [
     {
-      "name": "schule",
-      "source": "./plugins/schule",
-      "description": "25 Skills für Lehrkräfte in BW: /schule:stunde, /schule:klassenarbeit, /schule:vertretung, /schule:elternbrief u. v. m."
+      "name": "kreide",
+      "source": "./plugins/kreide",
+      "description": "25 Skills für Lehrkräfte in BW: /kreide:stunde, /kreide:klassenarbeit, /kreide:vertretung, /kreide:elternbrief u. v. m."
     }
   ]
 }

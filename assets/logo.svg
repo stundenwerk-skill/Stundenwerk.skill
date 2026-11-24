@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kreide Logo"><g transform="translate(0 0) scale(1.0)">
+  <rect width="512" height="512" rx="112" fill="#22412F"/>
+  <rect x="64" y="404" width="384" height="16" rx="8" fill="#335A43"/>
+  <g stroke="#F6F1E3" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M182 118 L178 352"/>
+    <path d="M318 196 L196 284"/>
+    <path d="M236 258 L322 350"/>
+  </g>
+  <path d="M372 92 C376 120 384 128 412 132 C384 136 376 144 372 172 C368 144 360 136 332 132 C360 128 368 120 372 92 Z" fill="#F2C14E"/>
+  <circle cx="420" cy="196" r="11" fill="#F2C14E"/>
+  <rect x="300" y="384" width="104" height="24" rx="12" fill="#F6F1E3" transform="rotate(-6 352 396)"/>
+</g></svg>
