@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "additionalDirectories": ["/Users/DEINNAME/Documents/Schule"],
+    "deny": [
+      "Read(~/Documents/Schule/**/Schuelerdaten/**)",
+      "Read(~/Documents/Schule/**/Noten/**)",
+      "Read(~/Documents/Schule/**/*Notenliste*)",
+      "Read(~/Documents/Schule/**/Foerderplan*)"
+    ]
+  }
+}
