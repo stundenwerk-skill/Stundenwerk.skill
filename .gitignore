@@ -1,0 +1,15 @@
+# Persönliche, nicht zu teilende Dateien
+CLAUDE.local.md
+**/CLAUDE.local.md
+.claude/settings.local.json
+
+# Schülerdaten gehören NIE in dieses Repo – zusätzliche Sicherung
+**/Schuelerdaten/
+**/Noten/
+**/*Notenliste*
+**/Foerderplan*
+
+# System
+.DS_Store
+Thumbs.db
+~$*
