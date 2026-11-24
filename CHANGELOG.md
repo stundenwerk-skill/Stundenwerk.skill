@@ -6,6 +6,7 @@ Neueste Version oben. Bei jeder Änderung an den Befehlen: Version in `plugins/k
 - **Qualitätsregeln** in allen Befehlen: nichts erfinden, Herkunft kennzeichnen (Beleg – anerkannt – Vorschlag – [prüfen]), bei Unklarheiten zuerst nachfragen (max. 3 Fragen), verständlich schreiben, Lösungen nachrechnen, „Bitte prüfen:“ am Ende
 - Neu: `unterricht/qualitaet.md` und `unterricht/evidenz.md` (gut belegte Prinzipien mit Quellen)
 - Neue Regel `qualitaet.md` für jedes Gespräch (wird mit `/einrichten` installiert)
+- Lizenz: Inhalte CC BY-SA 4.0, Skripte MIT; Name und Logo geschützt (`LIZENZ.md`, `MARKE.md`)
 
 ## 1.2.0 – 2026-11-25
 - **Bundesweit**: Länderprofile für alle 16 Bundesländer (`skills/unterricht/laender/`), Skill `unterricht-bw` → `unterricht`

@@ -16,6 +16,7 @@ Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
   <img alt="16 Bundesländer" src="https://img.shields.io/badge/Bundesl%C3%A4nder-16-2F4A3A">
   <img alt="25 Befehle" src="https://img.shields.io/badge/Befehle-25-2F4A3A">
   <img alt="Datenschutz eingebaut" src="https://img.shields.io/badge/Datenschutz-eingebaut-2F4A3A">
+  <img alt="Lizenz CC BY-SA 4.0" src="https://img.shields.io/badge/Lizenz-CC%20BY--SA%204.0-2F4A3A">
   <img alt="Evidenzbasiert" src="https://img.shields.io/badge/evidenzbasiert-nichts%20erfunden-F2C14E">
 </p>
 
@@ -43,6 +44,7 @@ Kreide ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stof
 12. [Tipps für optimale Ergebnisse](#12-tipps-für-optimale-ergebnisse)
 13. [Häufige Probleme](#13-häufige-probleme)
 14. [Checkliste](#14-checkliste)
+- [Lizenz, Name und Logo](#lizenz-name-und-logo)
 - [Anhang A: Terminal-Mini-Kurs](#anhang-a-terminal-mini-kurs)
 - [Anhang B: Für Verantwortliche – Pflege, Versionen, Verteilung](#anhang-b-für-verantwortliche--pflege-versionen-verteilung)
 
@@ -649,6 +651,15 @@ Erstelle ein Quiz zu: $ARGUMENTS
 
 ---
 
+## Lizenz, Name und Logo
+
+- **Inhalte** (Befehle, Länderprofile, Regeln, Vorlagen, Anleitungen): **CC BY-SA 4.0**. Du darfst sie teilen und anpassen, auch für deine Schule oder dein Land. Bedingungen: Urheber nennen und veränderte Fassungen unter derselben Lizenz weitergeben. → [`LICENSE`](LICENSE), Kurzfassung in [`LIZENZ.md`](LIZENZ.md)
+- **Skripte** (`scripts/`): **MIT** → [`scripts/LICENSE`](scripts/LICENSE)
+- **Name „Kreide“, Logo und Wortmarke** sind **nicht** frei lizenziert. Unveränderte Weitergabe und Berichte sind erlaubt. Veränderte Fassungen brauchen einen eigenen Namen und ein eigenes Logo. → [`MARKE.md`](MARKE.md)
+- **Was du mit Kreide erstellst** (Klassenarbeiten, Arbeitsblätter, Briefe), ist dein Material.
+
+---
+
 ## Anhang A: Terminal-Mini-Kurs
 
 Das Terminal ist ein Fenster, in das man Befehle tippt. Du brauchst nur **drei Dinge**.
@@ -696,6 +707,7 @@ kreide/                      ← dieses Repo = Plugin-Marketplace
 ├── vorlage/                             ← Schulordner-Vorlage inkl. /einrichten, Rules, Settings
 │   └── einrichtung/marketplace-quelle.txt  ← HIER die eigene Repo-Adresse eintragen
 ├── CHANGELOG.md
+├── LICENSE, LIZENZ.md, MARKE.md         ← CC BY-SA 4.0 · Kurzfassung · Name/Logo
 └── README.md
 ```
 
@@ -771,5 +783,7 @@ Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bz
 
 **Offizielle Dokumentation:**
 [CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions) · [Plugins](https://code.claude.com/docs/en/plugins) · [Marketplace erstellen](https://code.claude.com/docs/en/plugin-marketplaces) · [Marketplace hosten & Updates](https://code.claude.com/docs/en/plugins/host-marketplace)
+
+*Kreide © 2026 [DEIN NAME] und Mitwirkende · Inhalte: CC BY-SA 4.0 · Skripte: MIT · Name und Logo: siehe MARKE.md*
 
 *Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetze, Verordnungen, Lehrpläne deines Landes) und die Vorgaben deiner Schule.*
