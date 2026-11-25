@@ -1,13 +1,13 @@
 name: Neuer Befehl oder Verbesserung
-description: Du hast eine Idee für einen neuen /klassenkompass-Befehl oder willst einen bestehenden verbessern.
+description: Du hast eine Idee für einen neuen /stundenweise-Befehl oder willst einen bestehenden verbessern.
 title: "[Idee] <kurz>"
 labels: ["idee"]
 body:
   - type: textarea
     id: idee
     attributes:
-      label: Was soll Klassenkompass können?
-      placeholder: "z. B. /klassenkompass:quiz – 10 Multiple-Choice-Fragen zum aktuellen Thema"
+      label: Was soll Stundenweise können?
+      placeholder: "z. B. /stundenweise:quiz – 10 Multiple-Choice-Fragen zum aktuellen Thema"
     validations:
       required: true
   - type: textarea

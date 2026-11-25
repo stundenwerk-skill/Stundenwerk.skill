@@ -1,9 +1,9 @@
-# Mitmachen bei Klassenkompass
+# Mitmachen bei Stundenweise
 
-Danke, dass du Klassenkompass besser machen willst! Du brauchst dafür keine Programmierkenntnisse.
+Danke, dass du Stundenweise besser machen willst! Du brauchst dafür keine Programmierkenntnisse.
 
 ## Am wertvollsten: Länderprofile verbessern
-In `plugins/klassenkompass/skills/unterricht/laender/` liegt für jedes Bundesland ein Profil. Angaben mit **„[prüfen]“** sind noch nicht sicher belegt.
+In `plugins/stundenweise/skills/unterricht/laender/` liegt für jedes Bundesland ein Profil. Angaben mit **„[prüfen]“** sind noch nicht sicher belegt.
 - Weißt du es genau (mit Quelle)? → Issue **„Länderprofil korrigieren oder ergänzen“** anlegen.
 - Hast du in deinem Schulordner `_Schule/Landesvorgaben.md` gepflegt? Teile die Angaben mit Quelle, dann profitieren alle Lehrkräfte deines Landes.
 

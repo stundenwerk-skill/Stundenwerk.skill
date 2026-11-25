@@ -13,8 +13,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: Klassenkompass-Version
-      description: Steht unter /klassenkompass:neuigkeiten
+      label: Stundenweise-Version
+      description: Steht unter /stundenweise:neuigkeiten
   - type: dropdown
     id: system
     attributes:

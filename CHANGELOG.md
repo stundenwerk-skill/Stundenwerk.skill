@@ -1,9 +1,9 @@
 # Änderungen
 
-Neueste Version oben. Bei jeder Änderung an den Befehlen: Version in `plugins/klassenkompass/.claude-plugin/plugin.json` erhöhen, hier eintragen **und** den Abschnitt in `plugins/klassenkompass/skills/neuigkeiten/SKILL.md` aktualisieren.
+Neueste Version oben. Bei jeder Änderung an den Befehlen: Version in `plugins/stundenweise/.claude-plugin/plugin.json` erhöhen, hier eintragen **und** den Abschnitt in `plugins/stundenweise/skills/neuigkeiten/SKILL.md` aktualisieren.
 
 ## 1.3.0 – 2026-11-25
-- **Neuer Name: Klassenkompass** (Arbeitstitel war „Kreide“; geändert wegen Verwechslungsgefahr mit einem bestehenden Produkt). Befehle: `/klassenkompass:…`, Installation: `klassenkompass@klassenkompass`
+- **Neuer Name: Stundenweise** (Arbeitstitel waren „Kreide“ und „Klassenkompass“; beide geändert, weil es diese Namen schon gibt). Befehle: `/stundenweise:…`, Installation: `stundenweise@stundenweise`
 - **Qualitätsregeln** in allen Befehlen: nichts erfinden, Herkunft kennzeichnen (Beleg – anerkannt – Vorschlag – [prüfen]), bei Unklarheiten zuerst nachfragen (max. 3 Fragen), verständlich schreiben, Lösungen nachrechnen, „Bitte prüfen:“ am Ende
 - Neu: `unterricht/qualitaet.md` und `unterricht/evidenz.md` (gut belegte Prinzipien mit Quellen)
 - Neue Regel `qualitaet.md` für jedes Gespräch (wird mit `/einrichten` installiert)
@@ -14,14 +14,14 @@ Neueste Version oben. Bei jeder Änderung an den Befehlen: Version in `plugins/k
 - Neu: `_Schule/Landesvorgaben.md` für eigene, geprüfte Angaben (Vorrang vor dem Länderprofil)
 - `/einrichten` fragt das Bundesland ab
 - Umbenannt: `wiederholungsarbeit` → `kurztest`, `gfs` → `praesentation`, `_Bildungsplan/` → `_Lehrplan/`
-- Marketplace heißt jetzt `klassenkompass` (Installation: `klassenkompass@klassenkompass`)
+- Marketplace heißt jetzt `stundenweise` (Installation: `stundenweise@stundenweise`)
 
 ## 1.1.0 – 2026-11-24
-- Neu: automatische Updates über den Plugin-Marketplace `klassenkompass`
-- Neu: `/klassenkompass:neuigkeiten` zeigt, was sich geändert hat
-- Neu: `/klassenkompass:neue-klasse`, `/klassenkompass:sichern`
+- Neu: automatische Updates über den Plugin-Marketplace `stundenweise`
+- Neu: `/stundenweise:neuigkeiten` zeigt, was sich geändert hat
+- Neu: `/stundenweise:neue-klasse`, `/stundenweise:sichern`
 - `/einrichten` installiert das Plugin und richtet Zugriff und Datenschutz-Sperren ein
-- Neuer Name: **Klassenkompass** (Plugin `klassenkompass`, Marketplace `klassenkompass`), Befehle heißen `/klassenkompass:…` (z. B. `/klassenkompass:klassenarbeit`)
+- Neuer Name: **Stundenweise** (Plugin `stundenweise`, Marketplace `stundenweise`), Befehle heißen `/stundenweise:…` (z. B. `/stundenweise:klassenarbeit`)
 - Logo in `assets/`
 
 ## 1.0.0 – 2026-11-24

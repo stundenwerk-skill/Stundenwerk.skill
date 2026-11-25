@@ -1,15 +1,15 @@
 {
-  "name": "klassenkompass",
-  "description": "Klassenkompass – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
+  "name": "stundenweise",
+  "description": "Stundenweise – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
   "owner": {
     "name": "[DEIN NAME]",
     "email": "kreide.skill@gmail.com"
   },
   "plugins": [
     {
-      "name": "klassenkompass",
-      "source": "./plugins/klassenkompass",
-      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /klassenkompass:stunde, /klassenkompass:klassenarbeit, /klassenkompass:vertretung u. v. m."
+      "name": "stundenweise",
+      "source": "./plugins/stundenweise",
+      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /stundenweise:stunde, /stundenweise:klassenarbeit, /stundenweise:vertretung u. v. m."
     }
   ]
 }

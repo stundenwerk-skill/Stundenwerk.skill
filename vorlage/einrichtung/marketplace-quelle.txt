@@ -1,1 +1,1 @@
-DEIN-GITHUB-NAME/klassenkompass
+DEIN-GITHUB-NAME/stundenweise

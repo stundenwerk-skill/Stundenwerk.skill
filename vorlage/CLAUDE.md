@@ -10,7 +10,7 @@
 - Anrede der Lernenden in Material: „du“ (Sek I), „Sie“ (Oberstufe)
 
 ## Grundlagen
-- Lehrplan, Leistungsnachweise und Abschlüsse nach den Vorgaben des Bundeslandes (Länderprofil im Skill `klassenkompass:unterricht`)
+- Lehrplan, Leistungsnachweise und Abschlüsse nach den Vorgaben des Bundeslandes (Länderprofil im Skill `stundenweise:unterricht`)
 - Eigene, geprüfte Landesangaben haben Vorrang: @_Schule/Landesvorgaben.md
 - Immer Operatoren und Anforderungsbereiche I–III verwenden
 - Lehrplan-Standards NIE erfinden; ohne Beleg „[Lehrplanbezug prüfen]“ schreiben
