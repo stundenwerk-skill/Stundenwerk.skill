@@ -4,7 +4,7 @@ description: Legt einen neuen Klassen- oder Kursordner an (bei Bedarf auch das F
 argument-hint: "[Fach] [Klasse/Kurs] [optional: Schulart/Niveau, Wochenstunden]"
 ---
 
-> **Qualität (verbindlich):** Nichts erfinden – keine Studien, Zahlen, Lehrplan-Nummern, Paragrafen oder Quellen ohne Beleg; Unsicheres offen sagen und mit „[prüfen]“ kennzeichnen. Fehlen Angaben, die das Ergebnis inhaltlich verändern, oder widersprechen sich Anfrage und Dateien: **zuerst nachfragen** (max. 3 kurze Fragen), statt zu raten. Pädagogische Begründungen nur mit gut belegten Prinzipien (Skill `stundenwerk:unterricht`, `evidenz.md`). Verständlich für die Zielgruppe schreiben, Lösungen nachrechnen, am Ende „Bitte prüfen:“ mit offenen Punkten. Ausführlich: `qualitaet.md` im Skill `stundenwerk:unterricht`.
+> **Qualität (verbindlich):** Nichts erfinden – keine Studien, Zahlen, Lehrplan-Nummern, Paragrafen oder Quellen ohne Beleg; Unsicheres offen sagen und mit „[prüfen]“ kennzeichnen. Fehlen Angaben, die das Ergebnis inhaltlich verändern, oder widersprechen sich Anfrage und Dateien: **zuerst nachfragen** (max. 3 kurze Fragen), statt zu raten. Pädagogische Begründungen nur mit gut belegten Prinzipien (Skill `stundenwerk:unterricht`, `evidenz.md`). Verständlich für die Zielgruppe schreiben, Lösungen nachrechnen, am Ende „Bitte prüfen:“ mit offenen Punkten. Sprache: Schülermaterial passend zur Klassenstufe nach `sprache.md`, Texte für Erwachsene nach `schreibstil.md`. Ausführlich: `qualitaet.md` im Skill `stundenwerk:unterricht`.
 
 Lege eine neue Lerngruppe an: $ARGUMENTS
 
@@ -25,3 +25,6 @@ Vorgehen:
    - leere Unterordner: `Einheiten/`, `Klassenarbeiten/` (mit `.gitkeep` oder kurzer `LIESMICH.md`)
 6. Abschluss: angelegte Struktur als Baum zeigen und den Startbefehl nennen:
    „Zum Arbeiten in diesem Ordner Claude starten, z. B. dann `/stundenwerk:einheit …` oder `/stundenwerk:stunde …`.“
+
+## Schreibstil (verbindlich)
+Texte für Eltern, Kollegium oder die Lehrkraft nach `schreibstil.md` (Skill `stundenwerk:unterricht`) schreiben: Ergebnis zuerst, alle Fakten (Was? Wann? Wo? Wer? Was ist zu tun, bis wann?), aktiv formulieren, keine Floskeln und keine aufgeblasenen Wörter, Fettdruck nur für Fristen, Beträge und Treffpunkte. Vor der Ausgabe die Prüfschritte aus `schreibstil.md` durchgehen.

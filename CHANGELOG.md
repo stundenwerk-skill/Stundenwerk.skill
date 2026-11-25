@@ -2,6 +2,14 @@
 
 Neueste Version oben. Bei jeder Änderung an den Befehlen: Version in `plugins/stundenwerk/.claude-plugin/plugin.json` erhöhen, hier eintragen **und** den Abschnitt in `plugins/stundenwerk/skills/neuigkeiten/SKILL.md` aktualisieren.
 
+## 1.3.1 – 2026-11-25
+- **Sprache passend zur Klassenstufe:** neue Datei `unterricht/sprache.md` mit Richtwerten von Klasse 1 bis zur Oberstufe, Regeln für Arbeitsaufträge, Operatoren in Schülersprache, Aufbau von Fach- und Bildungssprache, Unterschied Einfache/Leichte Sprache (DIN 8581-1, DIN SPEC 33429), Lesbarkeits-Abschätzung (Wiener Sachtextformel) und Sprach-Check
+- **Klarer Schreibstil:** neue Datei `unterricht/schreibstil.md` für Texte an Eltern und Kollegium (ohne Floskeln, aufgeblasene Wörter und typische KI-Muster)
+- Alle Befehle mit verbindlichem Abschnitt „Sprache und Aufgabenstellung“ bzw. „Schreibstil“
+- Klarere Anweisungen in `stunde` (Aufbau des Arbeitsblatts, Stundenziel in Schülersprache), `klassenarbeit` (Kopf, Version B, nur eingeführte Begriffe, Zeitschätzung), `kurztest`, `differenzieren` (Sprache je Niveau, DaZ-Hilfen), `tafelbild`, `vertretung`, `berichtigung`, `elternbrief`
+- `evidenz.md` um Gestaltung von Text und Bild (Mayer), Scaffolding (Gibbons, Leisen), Bildungssprache (Gogolin & Lange) und Verständlichkeit (Langer, Schulz von Thun & Tausch) ergänzt
+- Regeln `qualitaet.md` und `arbeitsblatt-layout.md` in der Vorlage angepasst
+
 ## 1.3.0 – 2026-11-25
 - **Neuer Name: Stundenwerk** (Arbeitstitel waren „Kreide“ und „Klassenkompass“; beide geändert, weil es diese Namen schon gibt). Befehle: `/stundenwerk:…`, Installation: `stundenwerk@stundenwerk`
 - **Qualitätsregeln** in allen Befehlen: nichts erfinden, Herkunft kennzeichnen (Beleg – anerkannt – Vorschlag – [prüfen]), bei Unklarheiten zuerst nachfragen (max. 3 Fragen), verständlich schreiben, Lösungen nachrechnen, „Bitte prüfen:“ am Ende

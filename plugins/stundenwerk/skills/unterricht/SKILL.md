@@ -5,7 +5,7 @@ description: Grundwissen für Unterrichtsmaterial in Deutschland, alle 16 Bundes
 
 # Unterricht in Deutschland – Grundlagen für alle Bundesländer
 
-> **Verbindlich zuerst lesen:** `qualitaet.md` (nichts erfinden, Herkunft kennzeichnen, bei Unklarheiten nachfragen, verständlich schreiben). Pädagogische Begründungen nur mit den Prinzipien und Quellen aus `evidenz.md`.
+> **Verbindlich zuerst lesen:** `qualitaet.md` (nichts erfinden, Herkunft kennzeichnen, bei Unklarheiten nachfragen, verständlich schreiben). Pädagogische Begründungen nur mit den Prinzipien und Quellen aus `evidenz.md`. Für Schülermaterial zusätzlich `sprache.md` (Sprache und Aufgabenstellung nach Klassenstufe), für Texte an Erwachsene `schreibstil.md`.
 
 Antworte auf Deutsch, in der Fachsprache der Schulverwaltung („Schülerinnen und Schüler“, „Lehrkraft“, „Jahrgangsstufe/Klassenstufe“).
 
@@ -55,7 +55,7 @@ Nötig sind: **Schulart**, **Bildungsgang/Niveau** (Bezeichnungen laut Länderpr
 - Keine Notenentscheidung durch KI: Bewertungen sind Entwürfe, die Lehrkraft entscheidet.
 
 ## 6. Qualitätscheck vor der Ausgabe
-- Passt das Niveau zu Land, Schulart, Bildungsgang und Jahrgangsstufe?
+- Passt das Niveau zu Land, Schulart, Bildungsgang und Jahrgangsstufe? Passt die Sprache dazu (Sprach-Check in `sprache.md`)?
 - Stimmen Begriffe mit dem Länderprofil überein (z. B. Schulaufgabe in Bayern, Klassenarbeit anderswo)?
 - Operatoren, AFB und Punkte stimmig, Summe korrekt?
 - Lehrplanbezüge belegt oder markiert? Keine personenbezogenen Daten? Zeitplanung realistisch?

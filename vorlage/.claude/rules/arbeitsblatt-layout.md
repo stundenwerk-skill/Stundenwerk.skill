@@ -12,3 +12,5 @@ paths:
 - Sternchen-Aufgabe ★ für Schnelle am Ende
 - Lösungen immer in separater Datei `…_Loesung.md`
 - Maximal eine Seite (Unterstufe), zwei Seiten (Oberstufe)
+- Bei neuen Fachbegriffen ein Wortspeicher oben (Begriff mit Artikel und kurzer Erklärung)
+- Sprache nach Klassenstufe: siehe `sprache.md` im Skill `stundenwerk:unterricht`

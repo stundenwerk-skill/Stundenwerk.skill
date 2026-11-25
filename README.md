@@ -11,7 +11,7 @@
 Damit die Vorbereitung am Schreibtisch schneller geht.</p>
 
 <p align="center">
-  <img alt="Version 1.3.0" src="https://img.shields.io/badge/version-1.3.0-2F4A3A">
+  <img alt="Version 1.3.1" src="https://img.shields.io/badge/version-1.3.1-2F4A3A">
   <img alt="Claude Code Plugin" src="https://img.shields.io/badge/Claude%20Code-Plugin-F2C14E">
   <img alt="16 Bundesländer" src="https://img.shields.io/badge/Bundesl%C3%A4nder-16-2F4A3A">
   <img alt="25 Befehle" src="https://img.shields.io/badge/Befehle-25-2F4A3A">
@@ -103,7 +103,8 @@ Jeder Befehl arbeitet nach denselben Regeln (`qualitaet.md`):
 | Herkunft kennzeichnen | Du siehst, worauf eine Aussage beruht: Beleg (mit Quelle), fachlich anerkannt, Vorschlag oder Erfahrungswert, [prüfen]. |
 | Mit Forschung begründen | Methodische Vorschläge stützen sich auf gut belegte Lernforschung, etwa Abrufübung, verteiltes Üben, kognitive Belastung, Lösungsbeispiele und formatives Feedback (Quellen in `evidenz.md`). Schlecht belegte Ideen wie „Lerntypen“ dienen nicht als Begründung. |
 | Erst fragen, dann machen | Fehlen Angaben, die das Ergebnis verändern (Niveau, Thema, Dauer), oder passen Anfrage und Logbuch nicht zusammen, fragt Stundenwerk zuerst nach. Es stellt höchstens 3 kurze Fragen, oft mit Antwortvorschlägen, und fragt nichts, was schon in deinen Dateien steht. |
-| Verständlich schreiben | Das Ergebnis kommt zuerst, die Sätze sind kurz. Schülermaterial ist altersgerecht, Elternbriefe kommen ohne Fachbegriffe aus. |
+| Sprache passend zur Klasse | Schülermaterial richtet sich nach Klassenstufe, Niveau und Sprachstand: Operator am Satzanfang, ein Auftrag pro Satz, neue Fachbegriffe werden erklärt und danach gleich benannt. Vereinfacht wird nur die Sprache, nicht der Fachinhalt (Regeln in `sprache.md`, gestützt auf Verständlichkeits- und Sprachbildungsforschung). |
+| Klar schreiben | Texte für Eltern und Kollegium bringen das Ergebnis zuerst und alle Fakten, ohne Floskeln und aufgeblasene Wörter (`schreibstil.md`). |
 | Nachrechnen | Lösungen und Punktsummen werden geprüft. |
 | „Bitte prüfen:“ | Am Ende längerer Ergebnisse stehen die Punkte, die du gegenlesen solltest. |
 
@@ -322,7 +323,7 @@ Rules sind kurze Regeldateien, die `/einrichten` nach `~/.claude/rules/` kopiert
 
 | Datei | Gilt | Inhalt |
 |---|---|---|
-| `qualitaet.md` | immer | nichts erfinden, Herkunft kennzeichnen, bei Unklarheiten nachfragen, verständlich schreiben |
+| `qualitaet.md` | immer | nichts erfinden, Herkunft kennzeichnen, bei Unklarheiten nachfragen, Sprache passend zur Klasse, klar schreiben |
 | `datenschutz.md` | immer | keine personenbezogenen Daten, Platzhalter, keine Notenentscheidungen |
 | `klassenarbeiten.md` | Ordner `Klassenarbeiten` | KA-Kopf, Operator, AFB und Punkte je Aufgabe, Summe prüfen, Version B, Erwartungshorizont separat |
 | `arbeitsblatt-layout.md` | Ordner `Arbeitsblaetter` | Kopfzeile, Operatoren fett, Platz zum Schreiben, ★-Aufgabe, Lösung separat |

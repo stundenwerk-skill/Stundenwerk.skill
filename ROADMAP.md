@@ -1,6 +1,6 @@
 # Roadmap Stundenwerk
 
-Stand: 25. November 2026 · aktuelle Version: 1.3.0 (25 Befehle, 16 Länderprofile)
+Stand: 25. November 2026 · aktuelle Version: 1.3.1 (25 Befehle, 16 Länderprofile)
 
 Das ist ein Plan, kein Versprechen. Reihenfolge und Inhalt richten sich auch danach, was Lehrkräfte zurückmelden. Wünsche bitte als [Issue „Befehl-Wunsch“](https://github.com/stundenwerk-skill/Stundenwerk.skill/issues/new/choose) einreichen.
 
