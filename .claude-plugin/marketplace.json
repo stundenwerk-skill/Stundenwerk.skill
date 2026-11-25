@@ -2,7 +2,7 @@
   "name": "kreide",
   "description": "Kreide – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
   "owner": {
-    "name": "DEIN NAME / DEINE SCHULE",
+    "name": "kreide.skill",
     "email": "kreide.skill@gmail.com"
   },
   "plugins": [

@@ -37,7 +37,7 @@ rm -f vorlage/einrichtung/marketplace-quelle.txt.bak plugins/kreide/.claude-plug
 if [ -n "$AUTOR" ]; then
   echo "→ Urheber „$AUTOR“ eintragen"
   for f in README.md LIZENZ.md BEITRAGSVEREINBARUNG.md scripts/LICENSE; do sed -i.bak "s#\[DEIN NAME\]#$AUTOR#g" "$f"; rm -f "$f.bak"; done
-  sed -i.bak "s#DEIN NAME / DEINE SCHULE#$AUTOR#g" plugins/kreide/.claude-plugin/plugin.json .claude-plugin/marketplace.json
+  sed -i.bak "s#kreide.skill#$AUTOR#g" plugins/kreide/.claude-plugin/plugin.json .claude-plugin/marketplace.json
   rm -f plugins/kreide/.claude-plugin/plugin.json.bak .claude-plugin/marketplace.json.bak
 fi
 

@@ -4,7 +4,7 @@
   "version": "1.3.0",
   "description": "Kreide – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern: Unterrichtsplanung, Klassenarbeiten nach Landesvorgaben, Differenzierung, Korrektur, Klassenleitung. Länderprofile, Lehrplanbezug und Datenschutz eingebaut.",
   "author": {
-    "name": "DEIN NAME / DEINE SCHULE",
+    "name": "kreide.skill",
     "email": "kreide.skill@gmail.com"
   },
   "repository": "https://github.com/DEIN-GITHUB-NAME/kreide",
