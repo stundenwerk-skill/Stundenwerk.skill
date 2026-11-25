@@ -23,7 +23,7 @@ body:
   - type: textarea
     id: zweck
     attributes:
-      label: Wofür möchtest du Kreide nutzen?
+      label: Wofür möchtest du Klassenkompass nutzen?
     validations:
       required: true
   - type: markdown

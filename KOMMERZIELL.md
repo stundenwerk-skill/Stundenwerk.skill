@@ -1,11 +1,11 @@
 # Kommerzielle Lizenz und Kooperationen
 
-Kreide ist für **Lehrkräfte kostenlos**. Für kommerzielle Nutzung ist eine **kostenpflichtige Lizenz** nötig; für Schulträger, Behörden und Landesinstitute gibt es **Kooperations- und Supportverträge**.
+Klassenkompass ist für **Lehrkräfte kostenlos**. Für kommerzielle Nutzung ist eine **kostenpflichtige Lizenz** nötig; für Schulträger, Behörden und Landesinstitute gibt es **Kooperations- und Supportverträge**.
 
 ## Wann brauche ich eine kommerzielle Lizenz?
-Wenn du Kreide oder Teile davon **vorrangig mit geschäftlichem Interesse oder gegen Bezahlung** nutzt, zum Beispiel:
+Wenn du Klassenkompass oder Teile davon **vorrangig mit geschäftlichem Interesse oder gegen Bezahlung** nutzt, zum Beispiel:
 - Einbau in ein Produkt, eine App, eine Plattform oder einen KI-Dienst (Edtech, Verlage, Softwareanbieter)
-- kostenpflichtige Kurse, Fortbildungen oder Beratung, die auf Kreide aufbauen
+- kostenpflichtige Kurse, Fortbildungen oder Beratung, die auf Klassenkompass aufbauen
 - Weiterverkauf oder Bündelung mit kostenpflichtigen Angeboten
 - Nutzung der Inhalte ohne die Pflichten aus CC BY-NC-SA (z. B. ohne Weitergabe unter gleichen Bedingungen)
 

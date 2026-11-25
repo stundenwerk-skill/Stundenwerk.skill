@@ -6,7 +6,7 @@
 | **Schulen, Schulträger, Behörden, Landesinstitute** | Nicht-kommerzielle Nutzung ist nach CC BY-NC-SA 4.0 erlaubt. Für **landes- oder trägerweite Bereitstellung** (z. B. Einbindung in Landesplattformen, Rollout an viele Schulen) bitten wir um Kontaktaufnahme: Dafür gibt es **kostenpflichtige Kooperations- und Supportverträge** (z. B. gepflegte Länderprofile, Anpassungen, Schulungen). |
 | **Unternehmen und andere kommerzielle Nutzung** (z. B. Edtech-Produkte, Verlage, kostenpflichtige Kurse oder Fortbildungen, Einbau in Software oder Dienste) | **Nur mit kostenpflichtiger kommerzieller Lizenz.** → [`KOMMERZIELL.md`](KOMMERZIELL.md) |
 
-Urheber: © 2026 kreide.skill und Mitwirkende.
+Urheber: © 2026 [DEIN NAME] und Mitwirkende.
 
 ## Was die Lizenzen im Einzelnen bedeuten
 
@@ -14,21 +14,21 @@ Urheber: © 2026 kreide.skill und Mitwirkende.
 |---|---|---|
 | Inhalte: Befehle (Skills), Länderprofile, Regeln, Vorlagen, Anleitungen | **CC BY-NC-SA 4.0** – Namensnennung, nicht kommerziell, Weitergabe unter gleichen Bedingungen | [`LICENSE`](LICENSE) |
 | Skripte im Ordner `scripts/` | **MIT** | [`scripts/LICENSE`](scripts/LICENSE) |
-| Name „Kreide“ für dieses Projekt, Logo, Wortmarke, Vorschaubild | **nicht frei lizenziert** | [`MARKE.md`](MARKE.md) |
+| Name „Klassenkompass“ für dieses Projekt, Logo, Wortmarke, Vorschaubild | **nicht frei lizenziert** | [`MARKE.md`](MARKE.md) |
 
 **CC BY-NC-SA 4.0 erlaubt** – für nicht-kommerzielle Zwecke –: teilen, kopieren, verändern, für die eigene Schule oder das eigene Land anpassen.
 **Bedingungen:**
 - **Namensnennung**: Urheber nennen, auf die Lizenz verlinken, Änderungen angeben. Vorschlag:
-  > Basiert auf „Kreide“ von kreide.skill, lizenziert unter CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de). Änderungen: …
+  > Basiert auf „Klassenkompass“ von [DEIN NAME], lizenziert unter CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de). Änderungen: …
 - **Nicht kommerziell**: keine Nutzung, die vorrangig auf geschäftlichen Vorteil oder Bezahlung ausgerichtet ist.
 - **Weitergabe unter gleichen Bedingungen**: Veränderte Fassungen ebenfalls unter CC BY-NC-SA 4.0.
-- **Eigener Name**: Veränderte Fassungen dürfen nicht „Kreide“ heißen und nicht das Kreide-Logo tragen ([`MARKE.md`](MARKE.md)).
+- **Eigener Name**: Veränderte Fassungen dürfen nicht „Klassenkompass“ heißen und nicht das Klassenkompass-Logo tragen ([`MARKE.md`](MARKE.md)).
 
 ## Ausnahme für Lehrkräfte: ohne „Weitergabe unter gleichen Bedingungen“
-Du willst Teile von Kreide (z. B. eine angepasste Vorlage oder einen eigenen Befehl auf Basis von Kreide) in Material einbauen, das unter einer anderen Lizenz steht? Als Lehrkraft bekommst du **auf Anfrage kostenlos** eine Zusatzerlaubnis nach **CC BY-NC 4.0** (ohne SA) für deine nicht-kommerzielle Arbeit.
+Du willst Teile von Klassenkompass (z. B. eine angepasste Vorlage oder einen eigenen Befehl auf Basis von Klassenkompass) in Material einbauen, das unter einer anderen Lizenz steht? Als Lehrkraft bekommst du **auf Anfrage kostenlos** eine Zusatzerlaubnis nach **CC BY-NC 4.0** (ohne SA) für deine nicht-kommerzielle Arbeit.
 → Anfrage per Issue „Lizenz-Anfrage“ im Repo oder über [kreide.skill@gmail.com](mailto:kreide.skill@gmail.com). Kurz angeben: wer du bist (Lehrkraft, Bundesland), wofür.
 
-## Und das, was ich mit Kreide erstelle?
-Klassenarbeiten, Arbeitsblätter, Elternbriefe usw., die du mit Kreide erzeugst, sind **dein Material**. Die Lizenz von Kreide gilt für die Befehle und Vorlagen selbst, nicht automatisch für deine Ergebnisse.
+## Und das, was ich mit Klassenkompass erstelle?
+Klassenarbeiten, Arbeitsblätter, Elternbriefe usw., die du mit Klassenkompass erzeugst, sind **dein Material**. Die Lizenz von Klassenkompass gilt für die Befehle und Vorlagen selbst, nicht automatisch für deine Ergebnisse.
 
 *Dies ist eine Zusammenfassung zur Orientierung, keine Rechtsberatung. Verbindlich sind [`LICENSE`](LICENSE), [`scripts/LICENSE`](scripts/LICENSE) und gesondert vereinbarte Lizenzen.*

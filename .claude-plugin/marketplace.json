@@ -1,15 +1,15 @@
 {
-  "name": "kreide",
-  "description": "Kreide – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
+  "name": "klassenkompass",
+  "description": "Klassenkompass – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
   "owner": {
-    "name": "kreide.skill",
+    "name": "[DEIN NAME]",
     "email": "kreide.skill@gmail.com"
   },
   "plugins": [
     {
-      "name": "kreide",
-      "source": "./plugins/kreide",
-      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /kreide:stunde, /kreide:klassenarbeit, /kreide:vertretung u. v. m."
+      "name": "klassenkompass",
+      "source": "./plugins/klassenkompass",
+      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /klassenkompass:stunde, /klassenkompass:klassenarbeit, /klassenkompass:vertretung u. v. m."
     }
   ]
 }

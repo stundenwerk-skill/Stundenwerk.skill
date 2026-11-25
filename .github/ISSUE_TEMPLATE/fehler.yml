@@ -13,8 +13,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: Kreide-Version
-      description: Steht unter /kreide:neuigkeiten
+      label: Klassenkompass-Version
+      description: Steht unter /klassenkompass:neuigkeiten
   - type: dropdown
     id: system
     attributes:

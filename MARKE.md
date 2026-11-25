@@ -1,17 +1,17 @@
-# Name und Logo von Kreide
+# Name und Logo von Klassenkompass
 
-Die Inhalte von Kreide sind offen lizenziert (siehe [`LIZENZ.md`](LIZENZ.md)). **Der Name „Kreide“ für dieses Projekt, das Logo, die Wortmarke und das Vorschaubild sind davon ausgenommen.** Die Creative-Commons-Lizenz selbst stellt klar, dass Marken- und Patentrechte nicht mitlizenziert werden (CC BY-NC-SA 4.0, Abschnitt 2 b 2).
+Die Inhalte von Klassenkompass sind offen lizenziert (siehe [`LIZENZ.md`](LIZENZ.md)). **Der Name „Klassenkompass“ für dieses Projekt, das Logo, die Wortmarke und das Vorschaubild sind davon ausgenommen.** Die Creative-Commons-Lizenz selbst stellt klar, dass Marken- und Patentrechte nicht mitlizenziert werden (CC BY-NC-SA 4.0, Abschnitt 2 b 2).
 
-Ziel: Lehrkräfte sollen sich darauf verlassen können, dass „Kreide“ mit diesem Logo die gepflegte Originalfassung ist – mit aktuellen Länderprofilen und Qualitätsregeln.
+Ziel: Lehrkräfte sollen sich darauf verlassen können, dass „Klassenkompass“ mit diesem Logo die gepflegte Originalfassung ist – mit aktuellen Länderprofilen und Qualitätsregeln.
 
 ## Erlaubt, ohne zu fragen
-- Kreide **unverändert** weitergeben (z. B. die ZIP oder den Link zum Repo) und dabei Name und Logo zeigen
-- Über Kreide berichten, es in Fortbildungen, Präsentationen, Artikeln oder Moodle-Kursen vorstellen und dafür Name und Logo verwenden
-- Bei eigenen, veränderten Fassungen sachlich auf die Herkunft hinweisen: „basiert auf Kreide“
+- Klassenkompass **unverändert** weitergeben (z. B. die ZIP oder den Link zum Repo) und dabei Name und Logo zeigen
+- Über Klassenkompass berichten, es in Fortbildungen, Präsentationen, Artikeln oder Moodle-Kursen vorstellen und dafür Name und Logo verwenden
+- Bei eigenen, veränderten Fassungen sachlich auf die Herkunft hinweisen: „basiert auf Klassenkompass“
 
 ## Nicht erlaubt ohne Zustimmung
-- Veränderte Fassungen „Kreide“ nennen oder mit dem Kreide-Logo bzw. einem verwechselbar ähnlichen Logo versehen
-- Den Eindruck erwecken, eine Fassung, ein Produkt oder ein Angebot sei offiziell von Kreide oder von den Verantwortlichen unterstützt
+- Veränderte Fassungen „Klassenkompass“ nennen oder mit dem Klassenkompass-Logo bzw. einem verwechselbar ähnlichen Logo versehen
+- Den Eindruck erwecken, eine Fassung, ein Produkt oder ein Angebot sei offiziell von Klassenkompass oder von den Verantwortlichen unterstützt
 - Name oder Logo für eigene kommerzielle Produkte oder Dienstleistungen verwenden (Ausnahme: im Rahmen einer kommerziellen Lizenz nach Absprache, siehe [`KOMMERZIELL.md`](KOMMERZIELL.md))
 
 ## Eigene Fassung erstellen?

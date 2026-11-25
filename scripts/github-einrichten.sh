@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-# Kreide – GitHub-Repo für gute Auffindbarkeit einrichten.
+# Klassenkompass – GitHub-Repo für gute Auffindbarkeit einrichten.
 # Voraussetzung: gh ist installiert und angemeldet (gh auth login).
-# Aufruf im Repo-Ordner:  bash scripts/github-einrichten.sh NAME/kreide
+# Aufruf im Repo-Ordner:  bash scripts/github-einrichten.sh NAME/klassenkompass "Urheber (Name oder Schule)"
 set -euo pipefail
 
-REPO="${1:?Bitte Repo angeben, z. B.: bash scripts/github-einrichten.sh meine-schule/kreide}"
+REPO="${1:?Bitte Repo angeben, z. B.: bash scripts/github-einrichten.sh meine-schule/klassenkompass}"
 
-DESCRIPTION="Kreide – KI-Kollegium für Lehrkräfte: Claude-Code-Plugin für Unterrichtsplanung, Klassenarbeiten, Differenzierung, Korrektur und Elternbriefe. Länderprofile für alle 16 Bundesländer, Datenschutz eingebaut, automatische Updates."
+AUTOR="${2:-}"
+
+DESCRIPTION="Klassenkompass – KI-Kollegium für Lehrkräfte: Claude-Code-Plugin für Unterrichtsplanung, Klassenarbeiten, Differenzierung, Korrektur und Elternbriefe. Länderprofile für alle 16 Bundesländer, Datenschutz eingebaut, automatische Updates."
 
 TOPICS=(
   claude-code claude-code-plugin claude-plugin agent-skills claude-skills
@@ -29,18 +31,28 @@ for t in "${TOPICS[@]}"; do ARGS+=(--add-topic "$t"); done
 gh repo edit "$REPO" "${ARGS[@]}"
 
 echo "→ Repo-Adresse in den Dateien eintragen"
-sed -i.bak "s#DEIN-GITHUB-NAME/kreide#$REPO#g" \
+sed -i.bak "s#DEIN-GITHUB-NAME/klassenkompass#$REPO#g" \
   vorlage/einrichtung/marketplace-quelle.txt \
-  plugins/kreide/.claude-plugin/plugin.json README.md
-rm -f vorlage/einrichtung/marketplace-quelle.txt.bak plugins/kreide/.claude-plugin/plugin.json.bak README.md.bak
+  plugins/klassenkompass/.claude-plugin/plugin.json README.md
+rm -f vorlage/einrichtung/marketplace-quelle.txt.bak plugins/klassenkompass/.claude-plugin/plugin.json.bak README.md.bak
 
-VERSION=$(python3 -c "import json;print(json.load(open('plugins/kreide/.claude-plugin/plugin.json'))['version'])")
+if [ -n "$AUTOR" ]; then
+  echo "→ Urheber „$AUTOR“ eintragen"
+  for f in README.md LIZENZ.md BEITRAGSVEREINBARUNG.md scripts/LICENSE plugins/klassenkompass/.claude-plugin/plugin.json .claude-plugin/marketplace.json; do
+    python3 - "$f" "$AUTOR" <<'PY'
+import sys; p,a=sys.argv[1],sys.argv[2]
+s=open(p,encoding='utf-8').read(); open(p,'w',encoding='utf-8').write(s.replace('[DEIN NAME]',a))
+PY
+  done
+fi
+
+VERSION=$(python3 -c "import json;print(json.load(open('plugins/klassenkompass/.claude-plugin/plugin.json'))['version'])")
 echo "→ Release v$VERSION anlegen (Notizen aus CHANGELOG.md)"
 NOTES=$(awk -v v="## $VERSION" '$0 ~ "^"v {f=1; next} /^## / && f {exit} f' CHANGELOG.md)
 if git rev-parse "v$VERSION" >/dev/null 2>&1; then
-  gh release create "v$VERSION" --repo "$REPO" --title "Kreide $VERSION" --notes "$NOTES" --verify-tag || true
+  gh release create "v$VERSION" --repo "$REPO" --title "Klassenkompass $VERSION" --notes "$NOTES" --verify-tag || true
 else
-  echo "   Tag v$VERSION fehlt lokal – bitte zuerst: git tag -a v$VERSION -m 'Kreide $VERSION' && git push --tags"
+  echo "   Tag v$VERSION fehlt lokal – bitte zuerst: git tag -a v$VERSION -m 'Klassenkompass $VERSION' && git push --tags"
 fi
 
 cat <<'HINWEIS'
