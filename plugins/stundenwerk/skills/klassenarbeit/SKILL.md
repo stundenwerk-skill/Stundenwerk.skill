@@ -1,6 +1,6 @@
 ---
 name: klassenarbeit
-description: Erstellt eine Klassenarbeit (Bayern: Schulaufgabe, Oberstufe: Klausur) mit Erwartungshorizont, Notenschlüssel-Vorschlag und Version B für die aktuelle Klasse – nach den Vorgaben des jeweiligen Bundeslandes.
+description: "Erstellt eine Klassenarbeit (Bayern: Schulaufgabe, Oberstufe: Klausur) mit Erwartungshorizont, Notenschlüssel-Vorschlag und Version B für die aktuelle Klasse – nach den Vorgaben des jeweiligen Bundeslandes."
 argument-hint: "[Thema] [Dauer in Minuten]"
 ---
 

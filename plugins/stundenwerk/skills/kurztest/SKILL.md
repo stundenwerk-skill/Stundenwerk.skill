@@ -1,6 +1,6 @@
 ---
 name: kurztest
-description: Kurze schriftliche Lernkontrolle zum unmittelbar vorangegangenen Unterricht (BW: schriftliche Wiederholungsarbeit, BY: Stegreifaufgabe bzw. Kurzarbeit u. a.) – mit Version B, Lösung und Punkten.
+description: "Kurze schriftliche Lernkontrolle zum unmittelbar vorangegangenen Unterricht (BW: schriftliche Wiederholungsarbeit, BY: Stegreifaufgabe bzw. Kurzarbeit u. a.) – mit Version B, Lösung und Punkten."
 argument-hint: "[Thema der letzten Stunde(n)] [Dauer in Minuten, Standard 15]"
 ---
 

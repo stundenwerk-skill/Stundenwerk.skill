@@ -1,6 +1,6 @@
 ---
 name: praesentation
-description: Präsentationsleistung vorbereiten (BW: GFS, BY: Referat/Präsentation als kleiner Leistungsnachweis, SN: Komplexe Leistung u. a.) – Themenvorschläge, Anforderungen, Bewertungsbogen und Leitfaden für Kolloquium bzw. Nachfragen.
+description: "Präsentationsleistung vorbereiten (BW: GFS, BY: Referat/Präsentation als kleiner Leistungsnachweis, SN: Komplexe Leistung u. a.) – Themenvorschläge, Anforderungen, Bewertungsbogen und Leitfaden für Kolloquium bzw. Nachfragen."
 argument-hint: "[Thema oder Themenbereich] [Form: Referat/Präsentation/Projekt/Experiment …]"
 ---
 
