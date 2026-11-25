@@ -32,6 +32,8 @@ Stundenwerk ist ein Plugin für Claude Code. Es liest deine Fächer, Klassen, St
 1. [So funktioniert Stundenwerk](#1-so-funktioniert-stundenwerk)
    - [Qualitätsregeln](#1a-qualitätsregeln)
 2. [Einrichtung in 15 Minuten](#2-einrichtung-in-15-minuten)
+   - [In der Claude-Desktop-App, ohne Konsole](#einrichtung-in-der-claude-desktop-app-ohne-konsole)
+   - [Mit dem Terminal und der Ordnervorlage](#einrichtung-mit-dem-terminal-und-der-ordnervorlage)
 3. [Updates und Neuigkeiten](#3-updates-und-neuigkeiten)
 4. [Ordnerstruktur](#4-ordnerstruktur)
 5. [Die drei CLAUDE.md-Ebenen](#5-die-drei-claudemd-ebenen)
@@ -116,7 +118,53 @@ Lieber Annahmen statt Rückfragen? Schreib „mach einfach“. Stundenwerk triff
 
 ## 2. Einrichtung in 15 Minuten
 
-Programmierkenntnisse brauchst du nicht. Wenn du noch nie mit dem Terminal gearbeitet hast, lies zuerst [Anhang A](#anhang-a-terminal-mini-kurs); das dauert etwa zwei Minuten.
+Programmierkenntnisse brauchst du nicht. Es gibt zwei Wege: Die Claude-Desktop-App kommt ganz ohne Konsole aus und eignet sich auch, wenn du schon einen eigenen Schulordner hast. Der Weg über das Terminal bringt zusätzlich die fertige Ordnervorlage und die Datenschutz-Sperren mit.
+
+### Einrichtung in der Claude-Desktop-App, ohne Konsole
+
+Du brauchst die Claude-Desktop-App (claude.ai/download) und ein bezahltes Claude-Abo, z. B. Pro. Unter Windows braucht der Code-Reiter einmalig Git für Windows: von git-scm.com herunterladen, mit den Standardeinstellungen installieren, danach die App neu starten.
+
+Dein Schulordner kann beliebig heißen und überall liegen, auch in Google Drive, OneDrive oder iCloud, wenn deine Schule das erlaubt. Ordner aus der Cloud vorher „offline verfügbar“ machen.
+
+1. Claude-App öffnen und oben auf **Code** klicken.
+2. Als Umgebung **Local** wählen, nicht Cloud. Plugins funktionieren nur lokal, und Cloud verlangt eine Anmeldung bei GitHub.
+3. Deinen Schulordner auswählen, z. B. `Dokumente/Schule`.
+4. Ins Eingabefeld tippen und abschicken:
+   ```text
+   /plugin marketplace add stundenwerk-skill/Stundenwerk.skill
+   ```
+5. Nach der Bestätigung tippen:
+   ```text
+   /plugin install stundenwerk@stundenwerk
+   ```
+   Bei der Frage nach dem Umfang „für dich“ (user) wählen. Dann gilt Stundenwerk in allen Ordnern.
+6. Zeigt `/plugin` ein Menü: Marketplaces → stundenwerk → Enable auto-update. Dann kommen neue Versionen von selbst.
+7. Die App neu starten oder `/reload-plugins` eingeben.
+8. Testen: `/stund` tippen. Erscheinen die Stundenwerk-Befehle, ist das Plugin eingerichtet.
+
+Einmalig danach, im Schulordner:
+
+```text
+Leg hier eine CLAUDE.md an. Bundesland: …, Schulart: …, meine Fächer: …, meine Klassen: …, Anrede der Schüler: du.
+```
+
+Ohne die Zeile mit dem Bundesland kennt Stundenwerk weder Lehrplan noch Landesregeln.
+
+Für jede Klasse, die du gerade unterrichtest, einen Klassenordner anlegen. Dazu den Schulordner wählen und z. B. tippen:
+
+```text
+/stundenwerk:neue-klasse Mathematik 7a Realschule 4 Std.
+```
+
+Das legt den Fachordner (falls nötig) und darin `Klasse-7a` mit Klassenprofil, Stoffverteilungsplan und Logbuch an. Liegen deine Fächer in einem Unterordner wie `Fächer`, wählst du stattdessen diesen.
+
+Zum Arbeiten wählst du in der App immer den Klassenordner, z. B. `Schule/Mathematik/Klasse-7a`. Dann kennt Claude Schule, Fach und Klasse. Nach jeder Stunde kurz `/stundenwerk:logbuch` mit dem, was ihr gemacht habt.
+
+Schülerdaten gehören nicht in den Schulordner. Willst du Ordner zusätzlich für Claude sperren, schreib im Schulordner: *„Sperr für dich das Lesen der Ordner Schuelerdaten und Noten sowie aller Dateien mit Notenliste oder Foerderplan im Namen.“*
+
+### Einrichtung mit dem Terminal und der Ordnervorlage
+
+Wenn du noch nie mit dem Terminal gearbeitet hast, lies zuerst [Anhang A](#anhang-a-terminal-mini-kurs); das dauert etwa zwei Minuten.
 
 ### Schritt 1: Claude Code installieren
 Die Anleitung steht unter https://code.claude.com/docs. Du brauchst ein Claude-Konto.
