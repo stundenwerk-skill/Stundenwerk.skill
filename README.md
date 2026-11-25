@@ -225,6 +225,7 @@ Danach Claude neu starten.
 - Die Person, die das Paket verteilt, informiert über den üblichen Weg (E-Mail, Moodle, Messenger, Konferenz)
 - Mit GitHub-Konto: im Repo oben **„Watch“ → „Custom“ → „Releases“** wählen. Dann kommt bei jeder neuen Version eine E-Mail
 - `CHANGELOG.md` im Repo listet alle Änderungen
+- `ROADMAP.md` zeigt, welche Versionen und Befehle als Nächstes geplant sind
 
 ### Was wird nicht automatisch aktualisiert?
 - **Regeln** (`~/.claude/rules/`) und **Einstellungen**: Ändern sich selten. Wenn doch, steht es unter `/stundenwerk:neuigkeiten` → „Zu tun“. Dann neue ZIP laden, im **neuen** `vorlage`-Ordner Claude starten und `/einrichten` ausführen, bei den Regeln **ersetzen** wählen. Deine Daten bleiben im bisherigen `Schule`-Ordner unberührt.
