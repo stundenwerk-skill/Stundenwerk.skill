@@ -1,11 +1,11 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/logo-wordmark-dark.svg">
-    <img src="assets/logo-wordmark.svg" alt="Stundenweise – KI-Kollegium für Lehrkräfte" width="520">
+    <img src="assets/logo-wordmark.svg" alt="Stundenwerk – KI-Kollegium für Lehrkräfte" width="520">
   </picture>
 </p>
 
-<h1 align="center">Stundenweise</h1>
+<h1 align="center">Stundenwerk</h1>
 
 <p align="center"><b>Dein KI-Kollegium für den Schulalltag – in allen 16 Bundesländern.</b><br>
 Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
@@ -22,7 +22,7 @@ Weniger Vorbereitung am Schreibtisch, mehr Zeit für den Unterricht.</p>
 
 <p align="center"><i>KI für Lehrerinnen und Lehrer · Unterrichtsvorbereitung · Klassenarbeiten mit Erwartungshorizont · Differenzierung · Vertretungsstunden · Elternbriefe · Lehrplanbezug für alle Bundesländer</i></p>
 
-Stundenweise ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben und erstellt daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr. Für alle Bundesländer, Schularten und Fächer. Ohne Programmierkenntnisse, mit automatischen Updates.
+Stundenwerk ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen, Stoffverteilungspläne und Schulvorgaben und erstellt daraus Klassenarbeiten, Stunden, Differenzierungen, Elternbriefe und vieles mehr. Für alle Bundesländer, Schularten und Fächer. Ohne Programmierkenntnisse, mit automatischen Updates.
 
 ---
 
@@ -55,7 +55,7 @@ Stundenweise ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen
 | Teil | Was es ist | Für wen |
 |---|---|---|
 | `vorlage/` | **Dein Schulordner**: Vorlagen für dich, deine Fächer und Klassen, Regeln, Datenschutz-Einstellungen und der Befehl `/einrichten` | Lehrkräfte: wird zu `Schule` umbenannt |
-| `plugins/stundenweise/` | **Das Plugin „Stundenweise“** mit 25 Skills (`/stundenweise:stunde`, `/stundenweise:klassenarbeit` …). Wird bei der Einrichtung installiert und **aktualisiert sich automatisch** | wird installiert, nicht angefasst |
+| `plugins/stundenwerk/` | **Das Plugin „Stundenwerk“** mit 25 Skills (`/stundenwerk:stunde`, `/stundenwerk:klassenarbeit` …). Wird bei der Einrichtung installiert und **aktualisiert sich automatisch** | wird installiert, nicht angefasst |
 | `.claude-plugin/marketplace.json` | Katalog, über den Claude Code das Plugin findet und Updates bezieht | Verantwortliche |
 | `CHANGELOG.md` | Liste aller Änderungen | alle |
 | `README.md` | diese Anleitung | alle |
@@ -69,7 +69,7 @@ Stundenweise ist ein Paket für **Claude Code**: Es kennt deine Fächer, Klassen
 | Teil | Wo | Ändert sich … |
 |---|---|---|
 | **Dein Wissen**: Schule, Fächer, Klassen, Logbuch, Stoffverteilung | Schulordner (`CLAUDE.md`-Dateien und deine Dateien) | durch dich |
-| **Die Befehle**: wie man eine Klassenarbeit, Stunde, Vertretung … erstellt | Plugin `stundenweise` | durch Updates, automatisch |
+| **Die Befehle**: wie man eine Klassenarbeit, Stunde, Vertretung … erstellt | Plugin `stundenwerk` | durch Updates, automatisch |
 
 Claude Code liest beim Start die `CLAUDE.md`-Dateien **des Ordners, in dem du startest, und aller übergeordneten Ordner**. Startest du in `Mathematik/Klasse-7b`, kennt es:
 
@@ -82,7 +82,7 @@ Claude Code liest beim Start die `CLAUDE.md`-Dateien **des Ordners, in dem du st
 Du tippst nur:
 
 ```text
-/stundenweise:klassenarbeit Lineare Funktionen 45
+/stundenwerk:klassenarbeit Lineare Funktionen 45
 ```
 
 Claude liest dann selbst Logbuch, Stoffverteilungsplan, Lehrplan-Auszug und Beispiele und legt die fertigen Dateien im richtigen Ordner ab. Du kannst auch einfach in normaler Sprache schreiben: *„Mach mir eine Klassenarbeit zu linearen Funktionen, 45 Minuten.“* Claude nimmt dann den passenden Befehl selbst.
@@ -93,21 +93,21 @@ Claude liest dann selbst Logbuch, Stoffverteilungsplan, Lehrplan-Auszug und Beis
 
 ## 1a. Qualität: evidenzbasiert, ehrlich, verständlich
 
-Stundenweise arbeitet in **jedem Befehl** nach festen Qualitätsregeln (`qualitaet.md`):
+Stundenwerk arbeitet in **jedem Befehl** nach festen Qualitätsregeln (`qualitaet.md`):
 
 | Regel | Was das für dich heißt |
 |---|---|
-| **Nichts erfinden** | Keine ausgedachten Studien, Zahlen, Lehrplan-Nummern, Paragrafen, Links oder Buchseiten. Was Stundenweise nicht sicher weiß, sagt es offen und markiert es mit **[prüfen]**. |
+| **Nichts erfinden** | Keine ausgedachten Studien, Zahlen, Lehrplan-Nummern, Paragrafen, Links oder Buchseiten. Was Stundenwerk nicht sicher weiß, sagt es offen und markiert es mit **[prüfen]**. |
 | **Herkunft kennzeichnen** | Du siehst, worauf eine Aussage beruht: **Beleg** (mit Quelle) · **fachlich anerkannt** · **Vorschlag/Erfahrungswert** · **[prüfen]**. |
 | **Evidenzbasiert begründen** | Methodische Vorschläge stützen sich auf gut belegte Lernforschung, z. B. Abrufübung, verteiltes Üben, kognitive Belastung, Lösungsbeispiele, formatives Feedback (Quellen in `evidenz.md`). Schlecht belegte Ideen wie „Lerntypen“ werden nicht als Begründung verwendet. |
-| **Erst fragen, dann machen** | Fehlen Angaben, die das Ergebnis verändern (z. B. Niveau, Thema, Dauer), oder passen Anfrage und Logbuch nicht zusammen, fragt Stundenweise zuerst nach: höchstens 3 kurze Fragen, oft mit Antwortvorschlägen. Was in deinen Dateien steht, wird nicht erneut gefragt. |
+| **Erst fragen, dann machen** | Fehlen Angaben, die das Ergebnis verändern (z. B. Niveau, Thema, Dauer), oder passen Anfrage und Logbuch nicht zusammen, fragt Stundenwerk zuerst nach: höchstens 3 kurze Fragen, oft mit Antwortvorschlägen. Was in deinen Dateien steht, wird nicht erneut gefragt. |
 | **Verständlich** | Ergebnis zuerst, kurze Sätze. Schülermaterial altersgerecht, Elternbriefe ohne Fachbegriffe. |
 | **Nachrechnen** | Lösungen und Punktsummen werden geprüft. |
 | **„Bitte prüfen:“** | Am Ende längerer Ergebnisse stehen die Punkte, die du gegenlesen solltest. |
 
 > **Ehrlich gesagt:** Keine KI arbeitet fehlerfrei. Die Regeln senken das Risiko deutlich und machen Unsicherheiten sichtbar. Die fachliche Prüfung und die Verantwortung bleiben bei dir.
 
-Willst du Annahmen statt Rückfragen? Schreib einfach „mach einfach“. Dann trifft Stundenweise Annahmen und listet sie oben deutlich auf.
+Willst du Annahmen statt Rückfragen? Schreib einfach „mach einfach“. Dann trifft Stundenwerk Annahmen und listet sie oben deutlich auf.
 
 ---
 
@@ -138,7 +138,7 @@ Anleitung: https://code.claude.com/docs. Du brauchst ein Claude-Konto.
 
 Claude erledigt alles Schritt für Schritt und fragt vorher nach:
 1. **Prüft, ob alles da ist**, und hilft, falls ein kleines Hilfsprogramm (git) für Updates fehlt
-2. **Installiert das Plugin „Stundenweise“** mit allen Befehlen
+2. **Installiert das Plugin „Stundenwerk“** mit allen Befehlen
 3. **Installiert die Regeln** für Datenschutz, Klassenarbeiten und Arbeitsblätter
 4. **Richtet Zugriff und Datenschutz-Sperren ein**, damit Claude den Schulordner lesen darf und Schülerdaten gesperrt bleiben
 5. **Stellt dir bis zu 8 kurze Fragen**: Schulart, Fächer, Klassen, Klassenleitung …
@@ -152,11 +152,11 @@ Bestätige jeden Schritt mit **Ja**, wenn Claude fragt.
    ```text
    /plugin
    ```
-   → **Marketplaces** → **stundenweise** → **Enable auto-update**
+   → **Marketplaces** → **stundenwerk** → **Enable auto-update**
 3. In einen Klassenordner wechseln, Claude starten und testen:
    ```text
    /memory                         ← zeigt, welche CLAUDE.md-Dateien geladen sind
-   /stundenweise:einstieg Bruchrechnung
+   /stundenwerk:einstieg Bruchrechnung
    ```
 
 **Fertig.** Danach nach und nach Lehrplan-Auszüge und eigene Beispiele ergänzen (Abschnitt 9). Das macht die Ergebnisse deutlich besser.
@@ -166,9 +166,9 @@ Bestätige jeden Schritt mit **Ja**, wenn Claude fragt.
 
 ```bash
 # Plugin mit Updates
-claude plugin marketplace add NAME/stundenweise
-claude plugin install stundenweise@stundenweise
-# dann in Claude: /plugin → Marketplaces → stundenweise → Enable auto-update
+claude plugin marketplace add NAME/stundenwerk
+claude plugin install stundenwerk@stundenwerk
+# dann in Claude: /plugin → Marketplaces → stundenwerk → Enable auto-update
 
 # Regeln
 cp vorlage/.claude/rules/*.md ~/.claude/rules/
@@ -207,7 +207,7 @@ Mit eingeschaltetem **Auto-Update** (Abschnitt 2, Schritt 5) prüft Claude Code 
 ### Was ist neu?
 
 ```text
-/stundenweise:neuigkeiten
+/stundenwerk:neuigkeiten
 ```
 
 zeigt die aktuelle Version, was sich geändert hat und ob du etwas tun musst. Claude bietet an, es gleich zu erledigen.
@@ -216,7 +216,7 @@ zeigt die aktuelle Version, was sich geändert hat und ob du etwas tun musst. Cl
 Falls Auto-Update aus ist oder du sofort die neueste Version willst:
 
 ```text
-/plugin marketplace update stundenweise
+/plugin marketplace update stundenwerk
 ```
 
 Danach Claude neu starten.
@@ -227,7 +227,7 @@ Danach Claude neu starten.
 - `CHANGELOG.md` im Repo listet alle Änderungen
 
 ### Was wird nicht automatisch aktualisiert?
-- **Regeln** (`~/.claude/rules/`) und **Einstellungen**: Ändern sich selten. Wenn doch, steht es unter `/stundenweise:neuigkeiten` → „Zu tun“. Dann neue ZIP laden, im **neuen** `vorlage`-Ordner Claude starten und `/einrichten` ausführen, bei den Regeln **ersetzen** wählen. Deine Daten bleiben im bisherigen `Schule`-Ordner unberührt.
+- **Regeln** (`~/.claude/rules/`) und **Einstellungen**: Ändern sich selten. Wenn doch, steht es unter `/stundenwerk:neuigkeiten` → „Zu tun“. Dann neue ZIP laden, im **neuen** `vorlage`-Ordner Claude starten und `/einrichten` ausführen, bei den Regeln **ersetzen** wählen. Deine Daten bleiben im bisherigen `Schule`-Ordner unberührt.
 - **Vorlagen im Schulordner** (z. B. `_Schule/Vorlagen/`): Das sind deine Dateien, die bleiben, wie du sie angepasst hast.
 
 ---
@@ -242,39 +242,39 @@ Schule/                                   ← dein Schulordner (aus „vorlage�
 ├── CLAUDE.local.md                       ← optional, private Notizen
 ├── .claude/                              ← /einrichten, Regeln, Sperren
 ├── einrichtung/                          ← Hilfsdateien für /einrichten
-├── Backup/                             ⚙ /stundenweise:sichern
+├── Backup/                             ⚙ /stundenwerk:sichern
 │
 ├── _Schule/                              ← schulweite Vorgaben
 │   ├── Notenschluessel-Fachschaften.md
 │   ├── Jahresplan-2026-27.md
 │   ├── Vorlagen/                         ← KA-Kopf, Stundenentwurf, Briefkopf
-│   ├── Protokolle/                     ⚙ /stundenweise:protokoll
-│   └── Wochenplaene/                   ⚙ /stundenweise:wochenplan
+│   ├── Protokolle/                     ⚙ /stundenwerk:protokoll
+│   └── Wochenplaene/                   ⚙ /stundenwerk:wochenplan
 │
-├── Mathematik/                         ⚙ /stundenweise:neue-klasse (ein Ordner pro Fach)
+├── Mathematik/                         ⚙ /stundenwerk:neue-klasse (ein Ordner pro Fach)
 │   ├── CLAUDE.md                         ← Fachregeln, Lehrwerk, Fachschaftsbeschlüsse
 │   ├── _Lehrplan/                    ← Auszüge als Markdown
 │   ├── _Beispiele/                       ← eigene gelungene Arbeiten („Goldstandard“)
-│   └── Klasse-7b/                      ⚙ /stundenweise:neue-klasse (ein Ordner pro Lerngruppe)
+│   └── Klasse-7b/                      ⚙ /stundenwerk:neue-klasse (ein Ordner pro Lerngruppe)
 │       ├── CLAUDE.md                     ← Klassenprofil (anonym!)
 │       ├── Stoffverteilungsplan.md
-│       ├── Logbuch.md                  ⚙ /stundenweise:logbuch
+│       ├── Logbuch.md                  ⚙ /stundenwerk:logbuch
 │       ├── Einheiten/
-│       │   └── 03-Lineare-Funktionen/  ⚙ /stundenweise:einheit
+│       │   └── 03-Lineare-Funktionen/  ⚙ /stundenwerk:einheit
 │       │       ├── Planung.md
-│       │       ├── Stunden/            ⚙ /stundenweise:stunde, :tafelbild, :exit-ticket
-│       │       └── Arbeitsblaetter/    ⚙ /stundenweise:stunde, :differenzieren
+│       │       ├── Stunden/            ⚙ /stundenwerk:stunde, :tafelbild, :exit-ticket
+│       │       └── Arbeitsblaetter/    ⚙ /stundenwerk:stunde, :differenzieren
 │       ├── Klassenarbeiten/
-│       │   ├── KA2-Lineare-Funktionen/ ⚙ /stundenweise:klassenarbeit, :fehleranalyse, :berichtigung, :lernlandkarte
-│       │   └── KT-2026-11-20-Steigung/ ⚙ /stundenweise:kurztest
-│       ├── Vertretung/                 ⚙ /stundenweise:vertretung
-│       ├── Praesentation/              ⚙ /stundenweise:praesentation
-│       └── Pruefung/                   ⚙ /stundenweise:pruefung
+│       │   ├── KA2-Lineare-Funktionen/ ⚙ /stundenwerk:klassenarbeit, :fehleranalyse, :berichtigung, :lernlandkarte
+│       │   └── KT-2026-11-20-Steigung/ ⚙ /stundenwerk:kurztest
+│       ├── Vertretung/                 ⚙ /stundenwerk:vertretung
+│       ├── Praesentation/              ⚙ /stundenwerk:praesentation
+│       └── Pruefung/                   ⚙ /stundenwerk:pruefung
 │
 └── Klassenleitung-7b/                  ⚙ /einrichten
-    ├── Elternbriefe/                   ⚙ /stundenweise:elternbrief
-    ├── Elterngespraeche/Vorlagen/      ⚙ /stundenweise:elterngespraech (nur Vorlagen)
-    └── Ausfluege/                      ⚙ /stundenweise:ausflug
+    ├── Elternbriefe/                   ⚙ /stundenwerk:elternbrief
+    ├── Elterngespraeche/Vorlagen/      ⚙ /stundenwerk:elterngespraech (nur Vorlagen)
+    └── Ausfluege/                      ⚙ /stundenwerk:ausflug
 ```
 
 > ⚠️ **Schülerdaten gehören NICHT in diesen Ordner.** Notenlisten, Namen, Förderpläne, Gutachten, Fotos usw. bleiben im dienstlichen System deiner Schule. Die Sperren sind nur ein zusätzliches Sicherheitsnetz.
@@ -288,7 +288,7 @@ Schule/                                   ← dein Schulordner (aus „vorlage�
 
 ## 5. Die drei CLAUDE.md-Ebenen
 
-`/einrichten` und `/stundenweise:neue-klasse` füllen diese Dateien mit dir aus. Du kannst sie jederzeit ändern (einfache Textdateien) oder Claude bitten: *„Ergänze im Klassenprofil, dass Gruppenarbeit nach der 6. Stunde schlecht klappt.“*
+`/einrichten` und `/stundenwerk:neue-klasse` füllen diese Dateien mit dir aus. Du kannst sie jederzeit ändern (einfache Textdateien) oder Claude bitten: *„Ergänze im Klassenprofil, dass Gruppenarbeit nach der 6. Stunde schlecht klappt.“*
 
 ### 5.1 `CLAUDE.md` (Schulordner): du und deine Schule
 - Schulart, Ort, Fächer, Klassenleitung, Anrede (du/Sie)
@@ -330,7 +330,7 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 
 ## 7. Befehlsreferenz
 
-**So funktionieren die Befehle:** `/stundenweise:name` und danach deine Angaben. Claude nutzt passende Befehle auch **von selbst**, wenn deine Bitte passt. Ausnahmen: `/einrichten` und `/stundenweise:sichern` laufen nur auf ausdrücklichen Aufruf.
+**So funktionieren die Befehle:** `/stundenwerk:name` und danach deine Angaben. Claude nutzt passende Befehle auch **von selbst**, wenn deine Bitte passt. Ausnahmen: `/einrichten` und `/stundenwerk:sichern` laufen nur auf ausdrücklichen Aufruf.
 
 **Wo starten?** Fast alle im **Klassenordner**. Ausnahmen stehen dabei.
 
@@ -339,39 +339,39 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 | Befehl | Start | Was er tut |
 |---|---|---|
 | `/einrichten` | im Schulordner | Ersteinrichtung bzw. Aktualisierung: Plugin, Regeln, Zugriff und Sperren, Interview, Ordner anlegen |
-| `/stundenweise:neuigkeiten` | überall | was in der aktuellen Version neu ist und was zu tun ist |
-| `/stundenweise:neue-klasse [Fach] [Klasse] …` | im Schulordner | z. B. `/stundenweise:neue-klasse Deutsch 5a Realschule M 5 Std.`: legt Fach (falls nötig) und Klassenordner mit Profil, Stoffverteilungsplan, Logbuch an |
-| `/stundenweise:sichern [Ziel]` | im Schulordner | datierte ZIP-Sicherung in `Backup/`, ohne Schülerdaten-Ordner, behält die letzten 10 |
+| `/stundenwerk:neuigkeiten` | überall | was in der aktuellen Version neu ist und was zu tun ist |
+| `/stundenwerk:neue-klasse [Fach] [Klasse] …` | im Schulordner | z. B. `/stundenwerk:neue-klasse Deutsch 5a Realschule M 5 Std.`: legt Fach (falls nötig) und Klassenordner mit Profil, Stoffverteilungsplan, Logbuch an |
+| `/stundenwerk:sichern [Ziel]` | im Schulordner | datierte ZIP-Sicherung in `Backup/`, ohne Schülerdaten-Ordner, behält die letzten 10 |
 
 ### 7.2 Grundlage
 
 | Skill | Was er tut |
 |---|---|
-| `stundenweise:unterricht` | Grundwissen für alle Länder (KMK-Bildungsstandards, Operatoren/AFB, Abschlüsse, Datenschutz) **plus Länderprofil** deines Bundeslandes (Lehrplan, Schularten, Leistungsnachweise). **Kein Aufruf nötig**, Claude nutzt ihn automatisch. Siehe Abschnitt 7.7. |
+| `stundenwerk:unterricht` | Grundwissen für alle Länder (KMK-Bildungsstandards, Operatoren/AFB, Abschlüsse, Datenschutz) **plus Länderprofil** deines Bundeslandes (Lehrplan, Schularten, Leistungsnachweise). **Kein Aufruf nötig**, Claude nutzt ihn automatisch. Siehe Abschnitt 7.7. |
 
 ### 7.3 Planung
 
 | Befehl | Beispiel | Liest | Erzeugt |
 |---|---|---|---|
-| `/stundenweise:einheit [Thema] [Std.]` | `/stundenweise:einheit Lineare Funktionen 14` | Stoffverteilung, Profil, Lehrplan, Jahresplan | `Einheiten/NN-Thema/Planung.md` mit Stundenfolge, Leistungsfeststellung, Differenzierung |
-| `/stundenweise:stunde [Thema] [Min.]` | `/stundenweise:stunde Steigungsdreieck 90` | Profil, Logbuch (letzte 5), Lehrplan, Beispiele | `Stunden/JJJJ-MM-TT_Thema.md` (Verlaufsplan) und `Arbeitsblaetter/AB_Thema.md` mit Lösung |
-| `/stundenweise:einstieg [Thema]` | `/stundenweise:einstieg Prozentrechnung` | Profil | **nur Chat:** 3 Einstiege (Problem · Bild/Objekt · Provokation) mit Empfehlung |
-| `/stundenweise:tafelbild [Thema/Datei]` | `/stundenweise:tafelbild Steigung` | Stundenplanung | `…_Tafelbild.md` mit Merksatz, Beispiel, Farben und Lückentext-Variante |
-| `/stundenweise:differenzieren [Datei] [Varianten]` | `/stundenweise:differenzieren Arbeitsblaetter/AB_Steigung.md G E DaZ` | Arbeitsblatt, Profil | `…_G.md`, `…_E.md`, `…_DaZ.md` und eine gemeinsame Lösung |
-| `/stundenweise:vertretung [Klasse] [Fach] [Dauer]` | `/stundenweise:vertretung 7b Mathe 45` | Logbuch | `Vertretung/Datum_Klasse/`: Ablaufzettel, Arbeitsblatt, Lösung |
-| `/stundenweise:wochenplan [KW]` | **Start im Schulordner** | Jahresplan, alle Logbücher und Stoffverteilungspläne | `_Schule/Wochenplaene/KW-NN.md` mit To-do-Liste und passenden Befehlen |
-| `/stundenweise:logbuch [Notiz]` | `/stundenweise:logbuch Steigung geübt, AB4, HA S. 85/6` | – | neue Zeile in `Logbuch.md` und ein Hinweis für die nächste Stunde |
+| `/stundenwerk:einheit [Thema] [Std.]` | `/stundenwerk:einheit Lineare Funktionen 14` | Stoffverteilung, Profil, Lehrplan, Jahresplan | `Einheiten/NN-Thema/Planung.md` mit Stundenfolge, Leistungsfeststellung, Differenzierung |
+| `/stundenwerk:stunde [Thema] [Min.]` | `/stundenwerk:stunde Steigungsdreieck 90` | Profil, Logbuch (letzte 5), Lehrplan, Beispiele | `Stunden/JJJJ-MM-TT_Thema.md` (Verlaufsplan) und `Arbeitsblaetter/AB_Thema.md` mit Lösung |
+| `/stundenwerk:einstieg [Thema]` | `/stundenwerk:einstieg Prozentrechnung` | Profil | **nur Chat:** 3 Einstiege (Problem · Bild/Objekt · Provokation) mit Empfehlung |
+| `/stundenwerk:tafelbild [Thema/Datei]` | `/stundenwerk:tafelbild Steigung` | Stundenplanung | `…_Tafelbild.md` mit Merksatz, Beispiel, Farben und Lückentext-Variante |
+| `/stundenwerk:differenzieren [Datei] [Varianten]` | `/stundenwerk:differenzieren Arbeitsblaetter/AB_Steigung.md G E DaZ` | Arbeitsblatt, Profil | `…_G.md`, `…_E.md`, `…_DaZ.md` und eine gemeinsame Lösung |
+| `/stundenwerk:vertretung [Klasse] [Fach] [Dauer]` | `/stundenwerk:vertretung 7b Mathe 45` | Logbuch | `Vertretung/Datum_Klasse/`: Ablaufzettel, Arbeitsblatt, Lösung |
+| `/stundenwerk:wochenplan [KW]` | **Start im Schulordner** | Jahresplan, alle Logbücher und Stoffverteilungspläne | `_Schule/Wochenplaene/KW-NN.md` mit To-do-Liste und passenden Befehlen |
+| `/stundenwerk:logbuch [Notiz]` | `/stundenwerk:logbuch Steigung geübt, AB4, HA S. 85/6` | – | neue Zeile in `Logbuch.md` und ein Hinweis für die nächste Stunde |
 
 ### 7.4 Leistungsfeststellung
 
 | Befehl | Beispiel | Liest | Erzeugt |
 |---|---|---|---|
-| `/stundenweise:klassenarbeit [Thema] [Min.]`<br>(Bayern: Schulaufgabe) | `/stundenweise:klassenarbeit Lineare Funktionen 45` | Länderprofil, Profil, Stoffverteilung, Logbuch (letzte 10), Lehrplan, Beispiele, Notenschlüssel | `Klassenarbeiten/KAx-Thema/`: `KA.md`, `KA_B.md`, `Erwartungshorizont.md`, `Uebersicht.md` |
-| `/stundenweise:kurztest [Thema] [Min.]`<br>(BW: Wiederholungsarbeit, BY: Stegreifaufgabe/Kurzarbeit) | `/stundenweise:kurztest Steigung 15` | Länderprofil, Logbuch (letzte 3–5) | `Klassenarbeiten/KT-Datum-Thema/`: `Test.md`, `Test_B.md`, `Loesung.md` |
-| `/stundenweise:exit-ticket [Thema]` | `/stundenweise:exit-ticket Steigung ablesen` | Logbuch bzw. Stunde | `…_ExitTicket.md`: 3 Fragen, Version A/B, Auswertungshilfe |
-| `/stundenweise:lernlandkarte [Thema]` | `/stundenweise:lernlandkarte KA2 Lineare Funktionen` | Stoffverteilung, Logbuch, KA-Übersicht | `Lernlandkarte.md` („Ich kann …“-Tabelle mit Übungsverweisen) |
-| `/stundenweise:praesentation [Thema] [Form]`<br>(BW: GFS, SN: Komplexe Leistung …) | `/stundenweise:praesentation Funktionen im Alltag Präsentation` | Länderprofil, Profil, Stoffverteilung, Schulvorgaben | `Praesentation/`: Themenliste, Anforderungen, Bewertungsbogen, Kolloquium-Leitfaden |
-| `/stundenweise:pruefung [Abschluss] [Fach] [Thema]` | `/stundenweise:pruefung MSA Mathematik gesamt` | Länderprofil, Lehrplan, Jahresplan, Prüfungsvorgaben | `Pruefung/`: Themenüberblick, Wiederholungsplan, Übungsaufgaben, Lösungen, Tipps |
+| `/stundenwerk:klassenarbeit [Thema] [Min.]`<br>(Bayern: Schulaufgabe) | `/stundenwerk:klassenarbeit Lineare Funktionen 45` | Länderprofil, Profil, Stoffverteilung, Logbuch (letzte 10), Lehrplan, Beispiele, Notenschlüssel | `Klassenarbeiten/KAx-Thema/`: `KA.md`, `KA_B.md`, `Erwartungshorizont.md`, `Uebersicht.md` |
+| `/stundenwerk:kurztest [Thema] [Min.]`<br>(BW: Wiederholungsarbeit, BY: Stegreifaufgabe/Kurzarbeit) | `/stundenwerk:kurztest Steigung 15` | Länderprofil, Logbuch (letzte 3–5) | `Klassenarbeiten/KT-Datum-Thema/`: `Test.md`, `Test_B.md`, `Loesung.md` |
+| `/stundenwerk:exit-ticket [Thema]` | `/stundenwerk:exit-ticket Steigung ablesen` | Logbuch bzw. Stunde | `…_ExitTicket.md`: 3 Fragen, Version A/B, Auswertungshilfe |
+| `/stundenwerk:lernlandkarte [Thema]` | `/stundenwerk:lernlandkarte KA2 Lineare Funktionen` | Stoffverteilung, Logbuch, KA-Übersicht | `Lernlandkarte.md` („Ich kann …“-Tabelle mit Übungsverweisen) |
+| `/stundenwerk:praesentation [Thema] [Form]`<br>(BW: GFS, SN: Komplexe Leistung …) | `/stundenwerk:praesentation Funktionen im Alltag Präsentation` | Länderprofil, Profil, Stoffverteilung, Schulvorgaben | `Praesentation/`: Themenliste, Anforderungen, Bewertungsbogen, Kolloquium-Leitfaden |
+| `/stundenwerk:pruefung [Abschluss] [Fach] [Thema]` | `/stundenwerk:pruefung MSA Mathematik gesamt` | Länderprofil, Lehrplan, Jahresplan, Prüfungsvorgaben | `Pruefung/`: Themenüberblick, Wiederholungsplan, Übungsaufgaben, Lösungen, Tipps |
 
 > Bei Klassenarbeiten und Kurztests prüft Claude, ob alles laut Logbuch unterrichtet wurde, und nutzt Begriffe und Regeln deines Landes (z. B. Ankündigung, Höchstzahl pro Tag/Woche) aus dem Länderprofil bzw. aus `_Schule/Landesvorgaben.md`.
 
@@ -379,22 +379,22 @@ Eigene Rule? Sag Claude z. B.: *„Leg eine Rule an: In Deutsch-Klassenarbeiten 
 
 | Befehl | Beispiel | Erzeugt |
 |---|---|---|
-| `/stundenweise:feedback [Stichworte]` | `/stundenweise:feedback Einleitung gut, Argumente ohne Beispiele, Schluss fehlt` | **nur Chat:** Rückmeldetext (Gelungen · Daran arbeiten · Tipp), keine Note |
-| `/stundenweise:fehleranalyse [KA-Ordner] [Stichworte]` | `/stundenweise:fehleranalyse Klassenarbeiten/KA2-… A3b: 15/27 verwechseln m und b` | `Fehleranalyse.md`: Fehler nach Ursache, Förderaufgaben, Plan für die nächsten Stunden |
-| `/stundenweise:berichtigung [KA-Ordner]` | `/stundenweise:berichtigung Klassenarbeiten/KA2-Lineare-Funktionen` | `Berichtigung.md` (gestufte Tipps und ähnliche Aufgaben) und Lösungen |
+| `/stundenwerk:feedback [Stichworte]` | `/stundenwerk:feedback Einleitung gut, Argumente ohne Beispiele, Schluss fehlt` | **nur Chat:** Rückmeldetext (Gelungen · Daran arbeiten · Tipp), keine Note |
+| `/stundenwerk:fehleranalyse [KA-Ordner] [Stichworte]` | `/stundenwerk:fehleranalyse Klassenarbeiten/KA2-… A3b: 15/27 verwechseln m und b` | `Fehleranalyse.md`: Fehler nach Ursache, Förderaufgaben, Plan für die nächsten Stunden |
+| `/stundenwerk:berichtigung [KA-Ordner]` | `/stundenwerk:berichtigung Klassenarbeiten/KA2-Lineare-Funktionen` | `Berichtigung.md` (gestufte Tipps und ähnliche Aufgaben) und Lösungen |
 
 ### 7.6 Klassenleitung und Organisation
 
 | Befehl | Beispiel | Start | Erzeugt |
 |---|---|---|---|
-| `/stundenweise:elternbrief [Anlass, Fakten]` | `/stundenweise:elternbrief Elternabend 3.12. 19 Uhr Raum 112` | `Klassenleitung-…` | `Elternbriefe/Datum_Anlass.md` mit Briefkopf und Rückmeldeabschnitt, auf Wunsch in Leichter Sprache oder übersetzt |
-| `/stundenweise:elterngespraech [Anlass]` | `/stundenweise:elterngespraech Leistungsabfall, Hausaufgaben fehlen` | `Klassenleitung-…` | **Chat:** Leitfaden, Formulierungshilfen, Protokollvorlage, nur Platzhalter |
-| `/stundenweise:protokoll [Sitzung] [Stichpunkte]` | `/stundenweise:protokoll Fachkonferenz Mathe: TOP1 …` | Schulordner | `_Schule/Protokolle/Datum_Art.md` (Klassenkonferenzen nur im Chat) |
-| `/stundenweise:ausflug [Art] [Ziel] [Datum] [Klasse]` | `/stundenweise:ausflug Exkursion Wilhelma 14.05. 7b` | `Klassenleitung-…` | `Ausfluege/Datum_Ziel/`: Planung, Checkliste, Kosten, Elternbrief, Arbeitsauftrag |
+| `/stundenwerk:elternbrief [Anlass, Fakten]` | `/stundenwerk:elternbrief Elternabend 3.12. 19 Uhr Raum 112` | `Klassenleitung-…` | `Elternbriefe/Datum_Anlass.md` mit Briefkopf und Rückmeldeabschnitt, auf Wunsch in Leichter Sprache oder übersetzt |
+| `/stundenwerk:elterngespraech [Anlass]` | `/stundenwerk:elterngespraech Leistungsabfall, Hausaufgaben fehlen` | `Klassenleitung-…` | **Chat:** Leitfaden, Formulierungshilfen, Protokollvorlage, nur Platzhalter |
+| `/stundenwerk:protokoll [Sitzung] [Stichpunkte]` | `/stundenwerk:protokoll Fachkonferenz Mathe: TOP1 …` | Schulordner | `_Schule/Protokolle/Datum_Art.md` (Klassenkonferenzen nur im Chat) |
+| `/stundenwerk:ausflug [Art] [Ziel] [Datum] [Klasse]` | `/stundenwerk:ausflug Exkursion Wilhelma 14.05. 7b` | `Klassenleitung-…` | `Ausfluege/Datum_Ziel/`: Planung, Checkliste, Kosten, Elternbrief, Arbeitsauftrag |
 
-### 7.7 Bundesländer: so passt sich Stundenweise an dein Land an
+### 7.7 Bundesländer: so passt sich Stundenwerk an dein Land an
 
-Stundenweise bringt für **jedes der 16 Länder ein Länderprofil** mit (`plugins/stundenweise/skills/unterricht/laender/`). Claude liest es automatisch anhand der Zeile `Bundesland:` in deiner `CLAUDE.md` und verwendet dann die Begriffe und Regeln deines Landes.
+Stundenwerk bringt für **jedes der 16 Länder ein Länderprofil** mit (`plugins/stundenwerk/skills/unterricht/laender/`). Claude liest es automatisch anhand der Zeile `Bundesland:` in deiner `CLAUDE.md` und verwendet dann die Begriffe und Regeln deines Landes.
 
 | Land | Lehrplan heißt … | Große schriftliche Arbeit | Erster / Mittlerer Abschluss |
 |---|---|---|---|
@@ -420,65 +420,65 @@ Stundenweise bringt für **jedes der 16 Länder ein Länderprofil** mit (`plugin
 **Dein Land genauer machen:**
 1. Trage geprüfte Regeln in **`_Schule/Landesvorgaben.md`** ein (mit Quelle). Die haben Vorrang vor dem Länderprofil.
 2. Oder lass Claude helfen: *„Prüfe die [prüfen]-Punkte meines Länderprofils auf den offiziellen Seiten meines Landes und trage die Ergebnisse mit Quelle in Landesvorgaben.md ein.“*
-3. Fehler im Länderprofil? Melde sie der Person, die Stundenweise pflegt. Dann sind sie mit dem nächsten Update für alle korrigiert.
+3. Fehler im Länderprofil? Melde sie der Person, die Stundenwerk pflegt. Dann sind sie mit dem nächsten Update für alle korrigiert.
 
 ---
 
 ## 8. Arbeitsabläufe: Befehle kombinieren
 
 ### 8.1 Schuljahresbeginn
-1. Altes Schuljahr sichern: `/stundenweise:sichern`, dann Claude bitten: *„Verschiebe alle Klassenordner in Archiv/2025-26.“*
+1. Altes Schuljahr sichern: `/stundenwerk:sichern`, dann Claude bitten: *„Verschiebe alle Klassenordner in Archiv/2025-26.“*
 2. `_Schule/Jahresplan-…md` mit Ferien und Terminen füllen (Claude kann eine Vorlage erstellen)
-3. Für jede neue Lerngruppe: `/stundenweise:neue-klasse Mathematik 5c Gymnasium 4 Std.`
+3. Für jede neue Lerngruppe: `/stundenwerk:neue-klasse Mathematik 5c Gymnasium 4 Std.`
 4. Stoffverteilungsplan: *„Entwirf den Stoffverteilungsplan für die 5c nach Lehrplan und Jahresplan.“*
-5. Erste Einheit: `/stundenweise:einheit …`
+5. Erste Einheit: `/stundenwerk:einheit …`
 
 ### 8.2 Zyklus einer Unterrichtseinheit
 
 ```text
-/stundenweise:einheit Lineare Funktionen 14         → Planung.md
+/stundenwerk:einheit Lineare Funktionen 14         → Planung.md
   └─ pro Stunde:
-     /stundenweise:einstieg …                       → Ideen (Chat)
-     /stundenweise:stunde …                         → Verlauf + Arbeitsblatt
-     /stundenweise:differenzieren Arbeitsblaetter/… → G/E/DaZ-Fassungen
-     /stundenweise:tafelbild …                      → Hefteintrag
-     /stundenweise:exit-ticket …                    → Lernstandscheck
-     /stundenweise:logbuch …                        → nach der Stunde eintragen (!)
+     /stundenwerk:einstieg …                       → Ideen (Chat)
+     /stundenwerk:stunde …                         → Verlauf + Arbeitsblatt
+     /stundenwerk:differenzieren Arbeitsblaetter/… → G/E/DaZ-Fassungen
+     /stundenwerk:tafelbild …                      → Hefteintrag
+     /stundenwerk:exit-ticket …                    → Lernstandscheck
+     /stundenwerk:logbuch …                        → nach der Stunde eintragen (!)
 ```
 
 ### 8.3 Zyklus einer Klassenarbeit
 
 ```text
-/stundenweise:kurztest …                            → zwischendurch Stand prüfen
-/stundenweise:lernlandkarte …                       → ca. 1 Woche vorher an die Klasse
-/stundenweise:klassenarbeit …                       → KA, Version B, Erwartungshorizont
+/stundenwerk:kurztest …                            → zwischendurch Stand prüfen
+/stundenwerk:lernlandkarte …                       → ca. 1 Woche vorher an die Klasse
+/stundenwerk:klassenarbeit …                       → KA, Version B, Erwartungshorizont
    (du korrigierst selbst)
-/stundenweise:feedback …                            → Rückmeldetexte (nacheinander, anonym)
-/stundenweise:fehleranalyse … [Stichworte]          → was lief schief, Förderaufgaben
-/stundenweise:berichtigung …                        → Berichtigungsblatt mit Tipps
-/stundenweise:logbuch KA2 zurückgegeben, Berichtigung als HA
+/stundenwerk:feedback …                            → Rückmeldetexte (nacheinander, anonym)
+/stundenwerk:fehleranalyse … [Stichworte]          → was lief schief, Förderaufgaben
+/stundenwerk:berichtigung …                        → Berichtigungsblatt mit Tipps
+/stundenwerk:logbuch KA2 zurückgegeben, Berichtigung als HA
 ```
 
 ### 8.4 Die Woche im Griff
 Sonntags im Schulordner:
 ```text
-/stundenweise:wochenplan
-/stundenweise:sichern
+/stundenwerk:wochenplan
+/stundenwerk:sichern
 ```
-→ To-do-Liste mit fertigen Befehlen, z. B. „`/stundenweise:stunde …` für 7b Dienstag“, „KA 9a ist angekündigt, aber noch nicht erstellt“.
+→ To-do-Liste mit fertigen Befehlen, z. B. „`/stundenwerk:stunde …` für 7b Dienstag“, „KA 9a ist angekündigt, aber noch nicht erstellt“.
 
-Fällt kurzfristig eine Stunde aus: `/stundenweise:vertretung 7b Mathe 45`, dann den Ablaufzettel weitergeben.
+Fällt kurzfristig eine Stunde aus: `/stundenwerk:vertretung 7b Mathe 45`, dann den Ablaufzettel weitergeben.
 
 ### 8.5 Präsentationsleistung und Abschlussprüfung
-- Präsentationsleistung (z. B. GFS in BW): `/stundenweise:praesentation` → Themenliste für die Klasse, Bewertungsbogen für dich, Kolloquiumsfragen
-- Abschlussklassen: `/stundenweise:pruefung MSA Deutsch gesamt` (Claude verwendet die Abschlussbezeichnung deines Landes). **Aktuelle Prüfungsvorgaben** in `_Lehrplan/` ablegen!
+- Präsentationsleistung (z. B. GFS in BW): `/stundenwerk:praesentation` → Themenliste für die Klasse, Bewertungsbogen für dich, Kolloquiumsfragen
+- Abschlussklassen: `/stundenwerk:pruefung MSA Deutsch gesamt` (Claude verwendet die Abschlussbezeichnung deines Landes). **Aktuelle Prüfungsvorgaben** in `_Lehrplan/` ablegen!
 
 ### 8.6 Klassenleitung
 Im Ordner `Klassenleitung-7b`:
 ```text
-/stundenweise:ausflug Schullandheim Schwarzwald 22.–24.06. 7b
-/stundenweise:elternbrief Infoabend Schullandheim 12.03. 19 Uhr
-/stundenweise:elterngespraech Häufige Verspätungen, Rückzug in der Pause
+/stundenwerk:ausflug Schullandheim Schwarzwald 22.–24.06. 7b
+/stundenwerk:elternbrief Infoabend Schullandheim 12.03. 19 Uhr
+/stundenwerk:elterngespraech Häufige Verspätungen, Rückzug in der Pause
 ```
 
 ---
@@ -514,7 +514,7 @@ entferne alle Namen. Speichere als KA-Beispiel-Kl7-Terme.md.
 ```
 
 ### Das Logbuch, der heimliche Star
-Fast alle Befehle lesen das Logbuch. Nach jeder Stunde eine Zeile, am einfachsten mit `/stundenweise:logbuch`:
+Fast alle Befehle lesen das Logbuch. Nach jeder Stunde eine Zeile, am einfachsten mit `/stundenwerk:logbuch`:
 
 ```markdown
 - 2026-11-24 | Std. 5–6 | Steigungsdreieck eingeführt, AB3 bis Nr. 4 | HA: S. 84/3a–c | fallende Geraden noch unsicher
@@ -530,7 +530,7 @@ So fragen Klassenarbeiten nichts ab, was gar nicht dran war. Folgestunden knüpf
 - **Persönliche Einstellungen** (von `/einrichten` angelegt): Lesesperren für `Schuelerdaten/`, `Noten/`, `*Notenliste*`, `Foerderplan*` im ganzen Schulordner, egal wo du startest
 - **Schulordner:** `.claude/settings.json` enthält dieselben Sperren als zweite Absicherung
 - **Rule `datenschutz.md`:** Claude weist auf eingefügte Namen hin und arbeitet mit Platzhaltern weiter
-- **`/stundenweise:sichern`** lässt diese Ordner aus jeder Sicherung weg
+- **`/stundenwerk:sichern`** lässt diese Ordner aus jeder Sicherung weg
 
 ### 10.2 Was die Befehle tun
 
@@ -554,19 +554,19 @@ So fragen Klassenarbeiten nichts ab, was gar nicht dran war. Folgestunden knüpf
 
 ## 11. Befehle anpassen und eigene schreiben
 
-> **Wichtig:** Die Plugin-Befehle (`/stundenweise:…`) werden bei jedem Update **ersetzt**. Änderungen direkt im Plugin gehen also verloren. Eigene Varianten legst du deshalb als **persönliche Skills** an. Die bleiben bei Updates erhalten.
+> **Wichtig:** Die Plugin-Befehle (`/stundenwerk:…`) werden bei jedem Update **ersetzt**. Änderungen direkt im Plugin gehen also verloren. Eigene Varianten legst du deshalb als **persönliche Skills** an. Die bleiben bei Updates erhalten.
 
 **Am einfachsten:** Sag Claude, was du willst:
 
 ```text
 Erstelle mir einen persönlichen Skill /meine-klassenarbeit auf Basis von
-/stundenweise:klassenarbeit, der zusätzlich immer eine Variante mit Hilfekarten
+/stundenwerk:klassenarbeit, der zusätzlich immer eine Variante mit Hilfekarten
 für den Nachteilsausgleich erstellt. Speichere ihn in ~/.claude/skills/.
 ```
 
 ```text
 Schreib mir einen persönlichen Skill /quiz nach dem Muster von
-/stundenweise:exit-ticket: 10 Multiple-Choice-Fragen zum aktuellen Thema, als Tabelle.
+/stundenwerk:exit-ticket: 10 Multiple-Choice-Fragen zum aktuellen Thema, als Tabelle.
 ```
 
 Persönliche Skills liegen in `~/.claude/skills/NAME/SKILL.md` (Windows: `C:\Users\NAME\.claude\skills\`) und heißen ohne Vorsilbe (`/quiz`).
@@ -602,17 +602,17 @@ Erstelle ein Quiz zu: $ARGUMENTS
 
 ## 12. Tipps für optimale Ergebnisse
 
-1. **Auf Rückfragen antworten.** Stundenweise fragt nach, wenn etwas Wichtiges fehlt. Je genauer deine Antwort, desto besser das Ergebnis.
-1. **„Bitte prüfen:“ ernst nehmen.** Dort stehen die Punkte, die Stundenweise nicht sicher belegen konnte.
+1. **Auf Rückfragen antworten.** Stundenwerk fragt nach, wenn etwas Wichtiges fehlt. Je genauer deine Antwort, desto besser das Ergebnis.
+1. **„Bitte prüfen:“ ernst nehmen.** Dort stehen die Punkte, die Stundenwerk nicht sicher belegen konnte.
 1. **Im Klassenordner starten.** Dann sind Schule, Fach und Klasse automatisch geladen.
 2. **Beispiele schlagen Beschreibungen.** Zwei gute eigene Klassenarbeiten in `_Beispiele/` bringen mehr als zehn Regeln.
-3. **Logbuch konsequent pflegen.** 30 Sekunden mit `/stundenweise:logbuch` nach jeder Stunde.
+3. **Logbuch konsequent pflegen.** 30 Sekunden mit `/stundenwerk:logbuch` nach jeder Stunde.
 4. **Ergebnisse als Dateien speichern lassen.** So wächst dein Materialarchiv von selbst.
 5. **Korrekturen zu Regeln machen.** Gefällt dir etwas nicht, sag: *„Nimm das als Regel in die Fach-CLAUDE.md auf.“*
 6. **Kurz halten.** CLAUDE.md unter 200 Zeilen.
-7. **Regelmäßig `/stundenweise:sichern`**, und ab und zu die neueste Sicherung extern kopieren.
+7. **Regelmäßig `/stundenwerk:sichern`**, und ab und zu die neueste Sicherung extern kopieren.
 8. **Drucken/Word:** *„Mach aus KA.md eine Word-Datei mit Schulkopf.“*
-9. **Ab und zu `/stundenweise:neuigkeiten`**, um neue Befehle nicht zu verpassen.
+9. **Ab und zu `/stundenwerk:neuigkeiten`**, um neue Befehle nicht zu verpassen.
 10. **Alles prüfen.** Fachliche Richtigkeit, Lehrplanbezug und Bewertung verantwortest du.
 
 ---
@@ -621,17 +621,17 @@ Erstelle ein Quiz zu: $ARGUMENTS
 
 | Problem | Lösung |
 |---|---|
-| `/stundenweise:…`-Befehle erscheinen nicht | Claude nach `/einrichten` neu starten. Dann `/plugin` → **Installed**: Ist `stundenweise` aktiviert? Sonst `/einrichten` erneut ausführen. |
+| `/stundenwerk:…`-Befehle erscheinen nicht | Claude nach `/einrichten` neu starten. Dann `/plugin` → **Installed**: Ist `stundenwerk` aktiviert? Sonst `/einrichten` erneut ausführen. |
 | `/einrichten` erscheint nicht | Claude wurde nicht im Schulordner (umbenannter Ordner `vorlage`) gestartet. Dort starten (Anhang A). |
 | `/einrichten` meldet, dass git fehlt | Claude hilft bei der Installation. Alternativ ohne Updates einrichten (Claude bietet das an). |
-| Updates kommen nicht an | `/plugin` → Marketplaces → stundenweise: Ist **auto-update** an? Sonst `/plugin marketplace update stundenweise` und neu starten. `/stundenweise:neuigkeiten` zeigt die Version. |
+| Updates kommen nicht an | `/plugin` → Marketplaces → stundenwerk: Ist **auto-update** an? Sonst `/plugin marketplace update stundenwerk` und neu starten. `/stundenwerk:neuigkeiten` zeigt die Version. |
 | Claude kennt mein Klassenprofil nicht | Nicht im Klassenordner gestartet. Mit `/memory` prüfen. |
 | Claude fragt ständig, ob es `_Schule/` oder `_Lehrplan/` lesen darf | Zugriff fehlt oder der Schulordner wurde verschoben. `/einrichten` erneut ausführen und den Zugriffs-Schritt bestätigen. |
 | Lehrplan-Nummern stimmen nicht | Auszug fehlt in `_Lehrplan/`. Claude markiert dann mit „[Lehrplanbezug prüfen]“. |
-| Begriffe oder Regeln passen nicht zu meinem Land | Bundesland in der `CLAUDE.md` prüfen. Richtige Angaben in `_Schule/Landesvorgaben.md` eintragen (haben Vorrang) und der Person melden, die Stundenweise pflegt. |
+| Begriffe oder Regeln passen nicht zu meinem Land | Bundesland in der `CLAUDE.md` prüfen. Richtige Angaben in `_Schule/Landesvorgaben.md` eintragen (haben Vorrang) und der Person melden, die Stundenwerk pflegt. |
 | Klassenarbeit fragt Unbehandeltes ab | Das Logbuch ist lückenhaft. Nachtragen und neu erzeugen lassen. |
 | Ergebnisse zu lang oder zu schwer | Beispiele in `_Beispiele/` ablegen, Regel in die Fach-CLAUDE.md schreiben. |
-| Befehl doppelt (`/klassenarbeit` und `/stundenweise:klassenarbeit`) | Alte Kopie aus Version 1.0. `/einrichten` bietet das Aufräumen an. |
+| Befehl doppelt (`/klassenarbeit` und `/stundenwerk:klassenarbeit`) | Alte Kopie aus Version 1.0. `/einrichten` bietet das Aufräumen an. |
 | Meldung „Settings Error“ beim Start | Einstellungsdatei beschädigt. **Mit Claude reparieren** wählen. |
 | Datei versehentlich überschrieben | Aus dem neuesten ZIP in `Backup/` wiederherstellen. |
 
@@ -642,12 +642,12 @@ Erstelle ein Quiz zu: $ARGUMENTS
 - [ ] Claude Code installiert und angemeldet
 - [ ] Ordner `vorlage` in `Schule` umbenannt und an festen Platz verschoben
 - [ ] Im Schulordner `/einrichten` vollständig durchlaufen
-- [ ] Claude neu gestartet, **Auto-Update eingeschaltet** (`/plugin` → Marketplaces → stundenweise)
-- [ ] Im Klassenordner `/memory` und `/stundenweise:einstieg …` getestet
+- [ ] Claude neu gestartet, **Auto-Update eingeschaltet** (`/plugin` → Marketplaces → stundenwerk)
+- [ ] Im Klassenordner `/memory` und `/stundenwerk:einstieg …` getestet
 - [ ] Notenschlüssel der Fachschaft eingetragen
 - [ ] Pro Fach: Lehrplan-Auszug und 1–2 eigene Beispiele
 - [ ] Pro Klasse: Stoffverteilungsplan
-- [ ] Routinen: `/stundenweise:logbuch` nach jeder Stunde, `/stundenweise:sichern` jede Woche
+- [ ] Routinen: `/stundenwerk:logbuch` nach jeder Stunde, `/stundenwerk:sichern` jede Woche
 
 ---
 
@@ -657,8 +657,8 @@ Erstelle ein Quiz zu: $ARGUMENTS
 - **Ausnahme für Lehrkräfte:** Auf Anfrage gibt es kostenlos eine Zusatzerlaubnis **ohne „Weitergabe unter gleichen Bedingungen“** (CC BY-NC 4.0). → Issue „Lizenz-Anfrage“
 - **Unternehmen und kommerzielle Nutzung:** nur mit **kostenpflichtiger Lizenz**. **Schulträger, Behörden, Landesinstitute:** für landes- oder trägerweiten Einsatz bitte Kontakt aufnehmen, es gibt kostenpflichtige Kooperations- und Supportverträge. → [`KOMMERZIELL.md`](KOMMERZIELL.md) · Kontakt: [kreide.skill@gmail.com](mailto:kreide.skill@gmail.com)
 - **Skripte** (`scripts/`): **MIT** → [`scripts/LICENSE`](scripts/LICENSE)
-- **Name „Stundenweise“, Logo und Wortmarke** sind **nicht** frei lizenziert. Unveränderte Weitergabe und Berichte sind erlaubt. Veränderte Fassungen brauchen einen eigenen Namen und ein eigenes Logo. → [`MARKE.md`](MARKE.md)
-- **Was du mit Stundenweise erstellst** (Klassenarbeiten, Arbeitsblätter, Briefe), ist dein Material.
+- **Name „Stundenwerk“, Logo und Wortmarke** sind **nicht** frei lizenziert. Unveränderte Weitergabe und Berichte sind erlaubt. Veränderte Fassungen brauchen einen eigenen Namen und ein eigenes Logo. → [`MARKE.md`](MARKE.md)
+- **Was du mit Stundenwerk erstellst** (Klassenarbeiten, Arbeitsblätter, Briefe), ist dein Material.
 
 ---
 
@@ -682,7 +682,7 @@ Das Terminal ist ein Fenster, in das man Befehle tippt. Du brauchst nur **drei D
 | Eingabe | Wirkung |
 |---|---|
 | `/` | Liste aller Befehle, weitertippen zum Filtern |
-| `/stundenweise:neuigkeiten` | was ist neu? |
+| `/stundenwerk:neuigkeiten` | was ist neu? |
 | `/memory` | geladene CLAUDE.md-Dateien |
 | `/plugin` | Plugins und Updates verwalten |
 | `/status` | aktive Einstellungen |
@@ -701,11 +701,11 @@ Das Terminal ist ein Fenster, in das man Befehle tippt. Du brauchst nur **drei D
 ### B.1 Aufbau
 
 ```text
-stundenweise/                      ← dieses Repo = Plugin-Marketplace
-├── .claude-plugin/marketplace.json      ← Katalog: Marketplace „stundenweise“, Plugin „Stundenweise“
-├── plugins/stundenweise/
+stundenwerk/                      ← dieses Repo = Plugin-Marketplace
+├── .claude-plugin/marketplace.json      ← Katalog: Marketplace „stundenwerk“, Plugin „Stundenwerk“
+├── plugins/stundenwerk/
 │   ├── .claude-plugin/plugin.json       ← Name, VERSION, Beschreibung
-│   └── skills/<name>/SKILL.md           ← die Befehle (/stundenweise:<name>)
+│   └── skills/<name>/SKILL.md           ← die Befehle (/stundenwerk:<name>)
 ├── vorlage/                             ← Schulordner-Vorlage inkl. /einrichten, Rules, Settings
 │   └── einrichtung/marketplace-quelle.txt  ← HIER die eigene Repo-Adresse eintragen
 ├── CHANGELOG.md
@@ -721,27 +721,27 @@ Warum so?
 - **`/einrichten` als Projekt-Skill der Vorlage** → funktioniert, bevor das Plugin installiert ist
 
 ### B.2 Erstveröffentlichung
-1. In `vorlage/einrichtung/marketplace-quelle.txt` die eigene Adresse eintragen, z. B. `meine-schule/stundenweise`
+1. In `vorlage/einrichtung/marketplace-quelle.txt` die eigene Adresse eintragen, z. B. `meine-schule/stundenwerk`
 2. In `.claude-plugin/marketplace.json` den `owner` anpassen
 3. Prüfen: `claude plugin validate .`
 4. Auf GitHub veröffentlichen:
    ```bash
-   gh repo create stundenweise --public --source=. --push
+   gh repo create stundenwerk --public --source=. --push
    ```
    **Öffentlich** ist am einfachsten. Lehrkräfte brauchen dann kein GitHub-Konto, Updates laufen ohne Anmeldung. Das Repo enthält keine personenbezogenen Daten. Bei einem **privaten** Repo braucht jede Lehrkraft Lesezugriff und gespeicherte Zugangsdaten auf ihrem Rechner.
 5. Auffindbarkeit einrichten (Beschreibung, 20 Topics, Release, Repo-Adresse in den Dateien):
    ```bash
    git push --tags   # Versions-Tags (z. B. v1.3.0) sind schon gesetzt
-   bash scripts/github-einrichten.sh NAME/stundenweise
+   bash scripts/github-einrichten.sh NAME/stundenwerk
    ```
    Danach im Browser unter **Settings → Social preview** das Bild `assets/social-preview.png` hochladen.
-6. Optional: Stundenweise im **Plugin-Verzeichnis von Anthropic** einreichen (Einreichungsformular auf claude.com/plugins). Nach einer Prüfung finden Lehrkräfte Stundenweise dann auch direkt in Claude.
+6. Optional: Stundenwerk im **Plugin-Verzeichnis von Anthropic** einreichen (Einreichungsformular auf claude.com/plugins). Nach einer Prüfung finden Lehrkräfte Stundenwerk dann auch direkt in Claude.
 7. Lehrkräften den Link zur ZIP (`Code → Download ZIP`) und diese README schicken
 
 ### B.3 Neue Version veröffentlichen
-1. Skills in `plugins/stundenweise/skills/` ändern oder hinzufügen
-2. **Version erhöhen** in `plugins/stundenweise/.claude-plugin/plugin.json` (z. B. `1.1.0` → `1.2.0`). **Ohne neue Versionsnummer bekommen die Lehrkräfte die Änderung nicht.**
-3. `CHANGELOG.md` ergänzen **und** `plugins/stundenweise/skills/neuigkeiten/SKILL.md` aktualisieren (das sehen die Lehrkräfte unter `/stundenweise:neuigkeiten`). Was die Lehrkräfte selbst tun müssen, gehört unter „Zu tun“.
+1. Skills in `plugins/stundenwerk/skills/` ändern oder hinzufügen
+2. **Version erhöhen** in `plugins/stundenwerk/.claude-plugin/plugin.json` (z. B. `1.1.0` → `1.2.0`). **Ohne neue Versionsnummer bekommen die Lehrkräfte die Änderung nicht.**
+3. `CHANGELOG.md` ergänzen **und** `plugins/stundenwerk/skills/neuigkeiten/SKILL.md` aktualisieren (das sehen die Lehrkräfte unter `/stundenwerk:neuigkeiten`). Was die Lehrkräfte selbst tun müssen, gehört unter „Zu tun“.
 4. `claude plugin validate .`, dann committen und pushen
 5. Optional ein GitHub-Release mit Versionsnummer anlegen. Wer das Repo mit „Watch → Releases“ beobachtet, bekommt eine E-Mail.
 6. Kurze Info über den üblichen Kanal (E-Mail, Moodle, Konferenz)
@@ -756,13 +756,13 @@ Nutzt die Schule Claude über eine Organisation, kann ein Admin über **verwalte
 ```json
 {
   "extraKnownMarketplaces": {
-    "stundenweise": {
-      "source": { "source": "github", "repo": "meine-schule/stundenweise" },
+    "stundenwerk": {
+      "source": { "source": "github", "repo": "meine-schule/stundenwerk" },
       "autoUpdate": true
     }
   },
   "enabledPlugins": {
-    "stundenweise@stundenweise": true
+    "stundenwerk@stundenwerk": true
   }
 }
 ```
@@ -770,7 +770,7 @@ Nutzt die Schule Claude über eine Organisation, kann ein Admin über **verwalte
 Details: [Manage plugins for your organization](https://code.claude.com/docs/en/plugins/org)
 
 ### B.5 Länderprofile pflegen
-- Dateien: `plugins/stundenweise/skills/unterricht/laender/<KÜRZEL>.md` (BW, BY, BE, BB, HB, HH, HE, MV, NI, NW, RP, SL, SN, ST, SH, TH)
+- Dateien: `plugins/stundenwerk/skills/unterricht/laender/<KÜRZEL>.md` (BW, BY, BE, BB, HB, HH, HE, MV, NI, NW, RP, SL, SN, ST, SH, TH)
 - Regel: Nur belegte Angaben ohne Zusatz, alles andere mit „[prüfen]“. Quelle im Commit oder als Kommentar nennen.
 - Rückmeldungen von Lehrkräften (aus ihren `Landesvorgaben.md`) sind die beste Quelle, um „[prüfen]“-Punkte aufzulösen.
 - Nach Änderungen: Version erhöhen, `CHANGELOG.md` und `neuigkeiten` ergänzen (siehe B.3).
@@ -779,7 +779,7 @@ Details: [Manage plugins for your organization](https://code.claude.com/docs/en/
 ```bash
 claude plugin validate .
 claude plugin marketplace add ./          # lokaler Test-Marketplace
-claude plugin install stundenweise@stundenweise
+claude plugin install stundenwerk@stundenwerk
 ```
 Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bzw. mit `/reload-plugins`.
 
@@ -788,6 +788,6 @@ Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bz
 **Offizielle Dokumentation:**
 [CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions) · [Plugins](https://code.claude.com/docs/en/plugins) · [Marketplace erstellen](https://code.claude.com/docs/en/plugin-marketplaces) · [Marketplace hosten & Updates](https://code.claude.com/docs/en/plugins/host-marketplace)
 
-*Stundenweise © 2026 [DEIN NAME] und Mitwirkende · Inhalte: CC BY-NC-SA 4.0 (kostenlos für Lehrkräfte, kommerziell nur mit Lizenz) · Skripte: MIT · Name und Logo: siehe MARKE.md*
+*Stundenwerk © 2026 [DEIN NAME] und Mitwirkende · Inhalte: CC BY-NC-SA 4.0 (kostenlos für Lehrkräfte, kommerziell nur mit Lizenz) · Skripte: MIT · Name und Logo: siehe MARKE.md*
 
 *Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetze, Verordnungen, Lehrpläne deines Landes) und die Vorgaben deiner Schule.*

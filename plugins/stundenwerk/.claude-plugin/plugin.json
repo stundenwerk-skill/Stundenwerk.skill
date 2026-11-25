@@ -1,0 +1,26 @@
+{
+  "name": "stundenwerk",
+  "displayName": "Stundenwerk",
+  "version": "1.3.0",
+  "description": "Stundenwerk – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern: Unterrichtsplanung, Klassenarbeiten nach Landesvorgaben, Differenzierung, Korrektur, Klassenleitung. Länderprofile, Lehrplanbezug und Datenschutz eingebaut.",
+  "author": {
+    "name": "[DEIN NAME]",
+    "email": "kreide.skill@gmail.com"
+  },
+  "repository": "https://github.com/DEIN-GITHUB-NAME/stundenwerk",
+  "keywords": [
+    "lehrer",
+    "lehrkraefte",
+    "schule",
+    "unterricht",
+    "unterrichtsplanung",
+    "klassenarbeit",
+    "lehrplan",
+    "bundeslaender",
+    "education",
+    "teachers",
+    "lesson-planning",
+    "germany"
+  ],
+  "license": "CC-BY-NC-SA-4.0"
+}

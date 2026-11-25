@@ -23,7 +23,7 @@ body:
   - type: textarea
     id: zweck
     attributes:
-      label: Wofür möchtest du Stundenweise nutzen?
+      label: Wofür möchtest du Stundenwerk nutzen?
     validations:
       required: true
   - type: markdown

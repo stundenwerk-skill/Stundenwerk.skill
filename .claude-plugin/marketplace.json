@@ -1,15 +1,15 @@
 {
-  "name": "stundenweise",
-  "description": "Stundenweise – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
+  "name": "stundenwerk",
+  "description": "Stundenwerk – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
   "owner": {
     "name": "[DEIN NAME]",
     "email": "kreide.skill@gmail.com"
   },
   "plugins": [
     {
-      "name": "stundenweise",
-      "source": "./plugins/stundenweise",
-      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /stundenweise:stunde, /stundenweise:klassenarbeit, /stundenweise:vertretung u. v. m."
+      "name": "stundenwerk",
+      "source": "./plugins/stundenwerk",
+      "description": "25 Skills für Lehrkräfte in Deutschland mit Länderprofilen für alle 16 Bundesländer: /stundenwerk:stunde, /stundenwerk:klassenarbeit, /stundenwerk:vertretung u. v. m."
     }
   ]
 }

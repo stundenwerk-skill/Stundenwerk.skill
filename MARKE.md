@@ -1,17 +1,17 @@
-# Name und Logo von Stundenweise
+# Name und Logo von Stundenwerk
 
-Die Inhalte von Stundenweise sind offen lizenziert (siehe [`LIZENZ.md`](LIZENZ.md)). **Der Name „Stundenweise“ für dieses Projekt, das Logo, die Wortmarke und das Vorschaubild sind davon ausgenommen.** Die Creative-Commons-Lizenz selbst stellt klar, dass Marken- und Patentrechte nicht mitlizenziert werden (CC BY-NC-SA 4.0, Abschnitt 2 b 2).
+Die Inhalte von Stundenwerk sind offen lizenziert (siehe [`LIZENZ.md`](LIZENZ.md)). **Der Name „Stundenwerk“ für dieses Projekt, das Logo, die Wortmarke und das Vorschaubild sind davon ausgenommen.** Die Creative-Commons-Lizenz selbst stellt klar, dass Marken- und Patentrechte nicht mitlizenziert werden (CC BY-NC-SA 4.0, Abschnitt 2 b 2).
 
-Ziel: Lehrkräfte sollen sich darauf verlassen können, dass „Stundenweise“ mit diesem Logo die gepflegte Originalfassung ist – mit aktuellen Länderprofilen und Qualitätsregeln.
+Ziel: Lehrkräfte sollen sich darauf verlassen können, dass „Stundenwerk“ mit diesem Logo die gepflegte Originalfassung ist – mit aktuellen Länderprofilen und Qualitätsregeln.
 
 ## Erlaubt, ohne zu fragen
-- Stundenweise **unverändert** weitergeben (z. B. die ZIP oder den Link zum Repo) und dabei Name und Logo zeigen
-- Über Stundenweise berichten, es in Fortbildungen, Präsentationen, Artikeln oder Moodle-Kursen vorstellen und dafür Name und Logo verwenden
-- Bei eigenen, veränderten Fassungen sachlich auf die Herkunft hinweisen: „basiert auf Stundenweise“
+- Stundenwerk **unverändert** weitergeben (z. B. die ZIP oder den Link zum Repo) und dabei Name und Logo zeigen
+- Über Stundenwerk berichten, es in Fortbildungen, Präsentationen, Artikeln oder Moodle-Kursen vorstellen und dafür Name und Logo verwenden
+- Bei eigenen, veränderten Fassungen sachlich auf die Herkunft hinweisen: „basiert auf Stundenwerk“
 
 ## Nicht erlaubt ohne Zustimmung
-- Veränderte Fassungen „Stundenweise“ nennen oder mit dem Stundenweise-Logo bzw. einem verwechselbar ähnlichen Logo versehen
-- Den Eindruck erwecken, eine Fassung, ein Produkt oder ein Angebot sei offiziell von Stundenweise oder von den Verantwortlichen unterstützt
+- Veränderte Fassungen „Stundenwerk“ nennen oder mit dem Stundenwerk-Logo bzw. einem verwechselbar ähnlichen Logo versehen
+- Den Eindruck erwecken, eine Fassung, ein Produkt oder ein Angebot sei offiziell von Stundenwerk oder von den Verantwortlichen unterstützt
 - Name oder Logo für eigene kommerzielle Produkte oder Dienstleistungen verwenden (Ausnahme: im Rahmen einer kommerziellen Lizenz nach Absprache, siehe [`KOMMERZIELL.md`](KOMMERZIELL.md))
 
 ## Eigene Fassung erstellen?

@@ -13,8 +13,8 @@ body:
   - type: input
     id: version
     attributes:
-      label: Stundenweise-Version
-      description: Steht unter /stundenweise:neuigkeiten
+      label: Stundenwerk-Version
+      description: Steht unter /stundenwerk:neuigkeiten
   - type: dropdown
     id: system
     attributes:

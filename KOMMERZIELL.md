@@ -1,11 +1,11 @@
 # Kommerzielle Lizenz und Kooperationen
 
-Stundenweise ist für **Lehrkräfte kostenlos**. Für kommerzielle Nutzung ist eine **kostenpflichtige Lizenz** nötig; für Schulträger, Behörden und Landesinstitute gibt es **Kooperations- und Supportverträge**.
+Stundenwerk ist für **Lehrkräfte kostenlos**. Für kommerzielle Nutzung ist eine **kostenpflichtige Lizenz** nötig; für Schulträger, Behörden und Landesinstitute gibt es **Kooperations- und Supportverträge**.
 
 ## Wann brauche ich eine kommerzielle Lizenz?
-Wenn du Stundenweise oder Teile davon **vorrangig mit geschäftlichem Interesse oder gegen Bezahlung** nutzt, zum Beispiel:
+Wenn du Stundenwerk oder Teile davon **vorrangig mit geschäftlichem Interesse oder gegen Bezahlung** nutzt, zum Beispiel:
 - Einbau in ein Produkt, eine App, eine Plattform oder einen KI-Dienst (Edtech, Verlage, Softwareanbieter)
-- kostenpflichtige Kurse, Fortbildungen oder Beratung, die auf Stundenweise aufbauen
+- kostenpflichtige Kurse, Fortbildungen oder Beratung, die auf Stundenwerk aufbauen
 - Weiterverkauf oder Bündelung mit kostenpflichtigen Angeboten
 - Nutzung der Inhalte ohne die Pflichten aus CC BY-NC-SA (z. B. ohne Weitergabe unter gleichen Bedingungen)
 

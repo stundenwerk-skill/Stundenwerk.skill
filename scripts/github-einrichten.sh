@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# Stundenweise – GitHub-Repo für gute Auffindbarkeit einrichten.
+# Stundenwerk – GitHub-Repo für gute Auffindbarkeit einrichten.
 # Voraussetzung: gh ist installiert und angemeldet (gh auth login).
-# Aufruf im Repo-Ordner:  bash scripts/github-einrichten.sh NAME/stundenweise "Urheber (Name oder Schule)"
+# Aufruf im Repo-Ordner:  bash scripts/github-einrichten.sh NAME/stundenwerk "Urheber (Name oder Schule)"
 set -euo pipefail
 
-REPO="${1:?Bitte Repo angeben, z. B.: bash scripts/github-einrichten.sh meine-schule/stundenweise}"
+REPO="${1:?Bitte Repo angeben, z. B.: bash scripts/github-einrichten.sh meine-schule/stundenwerk}"
 
 AUTOR="${2:-}"
 
-DESCRIPTION="Stundenweise – KI-Kollegium für Lehrkräfte: Claude-Code-Plugin für Unterrichtsplanung, Klassenarbeiten, Differenzierung, Korrektur und Elternbriefe. Länderprofile für alle 16 Bundesländer, Datenschutz eingebaut, automatische Updates."
+DESCRIPTION="Stundenwerk – KI-Kollegium für Lehrkräfte: Claude-Code-Plugin für Unterrichtsplanung, Klassenarbeiten, Differenzierung, Korrektur und Elternbriefe. Länderprofile für alle 16 Bundesländer, Datenschutz eingebaut, automatische Updates."
 
 TOPICS=(
   claude-code claude-code-plugin claude-plugin agent-skills claude-skills
@@ -31,14 +31,14 @@ for t in "${TOPICS[@]}"; do ARGS+=(--add-topic "$t"); done
 gh repo edit "$REPO" "${ARGS[@]}"
 
 echo "→ Repo-Adresse in den Dateien eintragen"
-sed -i.bak "s#DEIN-GITHUB-NAME/stundenweise#$REPO#g" \
+sed -i.bak "s#DEIN-GITHUB-NAME/stundenwerk#$REPO#g" \
   vorlage/einrichtung/marketplace-quelle.txt \
-  plugins/stundenweise/.claude-plugin/plugin.json README.md
-rm -f vorlage/einrichtung/marketplace-quelle.txt.bak plugins/stundenweise/.claude-plugin/plugin.json.bak README.md.bak
+  plugins/stundenwerk/.claude-plugin/plugin.json README.md
+rm -f vorlage/einrichtung/marketplace-quelle.txt.bak plugins/stundenwerk/.claude-plugin/plugin.json.bak README.md.bak
 
 if [ -n "$AUTOR" ]; then
   echo "→ Urheber „$AUTOR“ eintragen"
-  for f in README.md LIZENZ.md BEITRAGSVEREINBARUNG.md scripts/LICENSE plugins/stundenweise/.claude-plugin/plugin.json .claude-plugin/marketplace.json; do
+  for f in README.md LIZENZ.md BEITRAGSVEREINBARUNG.md scripts/LICENSE plugins/stundenwerk/.claude-plugin/plugin.json .claude-plugin/marketplace.json; do
     python3 - "$f" "$AUTOR" <<'PY'
 import sys; p,a=sys.argv[1],sys.argv[2]
 s=open(p,encoding='utf-8').read(); open(p,'w',encoding='utf-8').write(s.replace('[DEIN NAME]',a))
@@ -46,13 +46,13 @@ PY
   done
 fi
 
-VERSION=$(python3 -c "import json;print(json.load(open('plugins/stundenweise/.claude-plugin/plugin.json'))['version'])")
+VERSION=$(python3 -c "import json;print(json.load(open('plugins/stundenwerk/.claude-plugin/plugin.json'))['version'])")
 echo "→ Release v$VERSION anlegen (Notizen aus CHANGELOG.md)"
 NOTES=$(awk -v v="## $VERSION" '$0 ~ "^"v {f=1; next} /^## / && f {exit} f' CHANGELOG.md)
 if git rev-parse "v$VERSION" >/dev/null 2>&1; then
-  gh release create "v$VERSION" --repo "$REPO" --title "Stundenweise $VERSION" --notes "$NOTES" --verify-tag || true
+  gh release create "v$VERSION" --repo "$REPO" --title "Stundenwerk $VERSION" --notes "$NOTES" --verify-tag || true
 else
-  echo "   Tag v$VERSION fehlt lokal – bitte zuerst: git tag -a v$VERSION -m 'Stundenweise $VERSION' && git push --tags"
+  echo "   Tag v$VERSION fehlt lokal – bitte zuerst: git tag -a v$VERSION -m 'Stundenwerk $VERSION' && git push --tags"
 fi
 
 cat <<'HINWEIS'
