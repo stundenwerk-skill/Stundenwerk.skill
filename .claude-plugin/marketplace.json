@@ -2,7 +2,7 @@
   "name": "stundenwerk",
   "description": "Stundenwerk – KI-Kollegium für Lehrkräfte in allen 16 Bundesländern",
   "owner": {
-    "name": "[DEIN NAME]",
+    "name": "Nedim Boztepe",
     "email": "stundenwerk.skill@gmail.com"
   },
   "plugins": [

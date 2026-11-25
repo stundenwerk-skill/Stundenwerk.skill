@@ -788,6 +788,6 @@ Bei lokal hinzugefügten Marketplaces wirken Änderungen beim nächsten Start bz
 **Offizielle Dokumentation:**
 [CLAUDE.md & Rules](https://code.claude.com/docs/en/memory) · [Skills](https://code.claude.com/docs/en/skills) · [Settings](https://code.claude.com/docs/en/settings) · [Permissions](https://code.claude.com/docs/en/permissions) · [Plugins](https://code.claude.com/docs/en/plugins) · [Marketplace erstellen](https://code.claude.com/docs/en/plugin-marketplaces) · [Marketplace hosten & Updates](https://code.claude.com/docs/en/plugins/host-marketplace)
 
-*Stundenwerk © 2026 [DEIN NAME] und Mitwirkende · Inhalte: CC BY-NC-SA 4.0 (kostenlos für Lehrkräfte, kommerziell nur mit Lizenz) · Skripte: MIT · Name und Logo: siehe MARKE.md*
+*Stundenwerk © 2026 Nedim Boztepe und Mitwirkende · Inhalte: CC BY-NC-SA 4.0 (kostenlos für Lehrkräfte, kommerziell nur mit Lizenz) · Skripte: MIT · Name und Logo: siehe MARKE.md*
 
 *Alle Inhalte sind Arbeitshilfen ohne Gewähr. Maßgeblich sind die jeweils gültigen Vorschriften (Schulgesetze, Verordnungen, Lehrpläne deines Landes) und die Vorgaben deiner Schule.*

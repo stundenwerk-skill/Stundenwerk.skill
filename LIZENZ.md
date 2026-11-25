@@ -6,7 +6,7 @@
 | **Schulen, Schulträger, Behörden, Landesinstitute** | Nicht-kommerzielle Nutzung ist nach CC BY-NC-SA 4.0 erlaubt. Für **landes- oder trägerweite Bereitstellung** (z. B. Einbindung in Landesplattformen, Rollout an viele Schulen) bitten wir um Kontaktaufnahme: Dafür gibt es **kostenpflichtige Kooperations- und Supportverträge** (z. B. gepflegte Länderprofile, Anpassungen, Schulungen). |
 | **Unternehmen und andere kommerzielle Nutzung** (z. B. Edtech-Produkte, Verlage, kostenpflichtige Kurse oder Fortbildungen, Einbau in Software oder Dienste) | **Nur mit kostenpflichtiger kommerzieller Lizenz.** → [`KOMMERZIELL.md`](KOMMERZIELL.md) |
 
-Urheber: © 2026 [DEIN NAME] und Mitwirkende.
+Urheber: © 2026 Nedim Boztepe und Mitwirkende.
 
 ## Was die Lizenzen im Einzelnen bedeuten
 
@@ -19,7 +19,7 @@ Urheber: © 2026 [DEIN NAME] und Mitwirkende.
 **CC BY-NC-SA 4.0 erlaubt** – für nicht-kommerzielle Zwecke –: teilen, kopieren, verändern, für die eigene Schule oder das eigene Land anpassen.
 **Bedingungen:**
 - **Namensnennung**: Urheber nennen, auf die Lizenz verlinken, Änderungen angeben. Vorschlag:
-  > Basiert auf „Stundenwerk“ von [DEIN NAME], lizenziert unter CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de). Änderungen: …
+  > Basiert auf „Stundenwerk“ von Nedim Boztepe, lizenziert unter CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed.de). Änderungen: …
 - **Nicht kommerziell**: keine Nutzung, die vorrangig auf geschäftlichen Vorteil oder Bezahlung ausgerichtet ist.
 - **Weitergabe unter gleichen Bedingungen**: Veränderte Fassungen ebenfalls unter CC BY-NC-SA 4.0.
 - **Eigener Name**: Veränderte Fassungen dürfen nicht „Stundenwerk“ heißen und nicht das Stundenwerk-Logo tragen ([`MARKE.md`](MARKE.md)).
