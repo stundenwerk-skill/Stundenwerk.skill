@@ -20,4 +20,4 @@ Issue **„Neuer Befehl oder Verbesserung“**. Ein eigener Skill-Entwurf (SKILL
 Ablauf für neue Versionen: siehe README, Anhang B (Version erhöhen, CHANGELOG, `neuigkeiten`).
 
 ## Kontakt
-Fragen, Lizenzanfragen, Kooperationen: [kreide.skill@gmail.com](mailto:kreide.skill@gmail.com). Bitte keine personenbezogenen Daten von Schülerinnen und Schülern senden.
+Fragen, Lizenzanfragen, Kooperationen: [stundenwerk.skill@gmail.com](mailto:stundenwerk.skill@gmail.com). Bitte keine personenbezogenen Daten von Schülerinnen und Schülern senden.

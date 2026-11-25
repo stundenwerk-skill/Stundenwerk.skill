@@ -22,6 +22,6 @@ Die nicht-kommerzielle Nutzung ist nach CC BY-NC-SA 4.0 erlaubt. Für den **Eins
 - Laufzeit, Umfang und Preis nach Vereinbarung
 
 ## Kontakt
-[kreide.skill@gmail.com](mailto:kreide.skill@gmail.com) – oder ein Issue „Lizenz-Anfrage“ im Repo (ohne vertrauliche Angaben).
+[stundenwerk.skill@gmail.com](mailto:stundenwerk.skill@gmail.com) – oder ein Issue „Lizenz-Anfrage“ im Repo (ohne vertrauliche Angaben).
 
 *Die Bedingungen werden im Einzelfall schriftlich vereinbart.*
