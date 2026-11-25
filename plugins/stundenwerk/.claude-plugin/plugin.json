@@ -22,5 +22,10 @@
     "lesson-planning",
     "germany"
   ],
-  "license": "CC-BY-NC-SA-4.0"
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://github.com/stundenwerk-skill/Stundenwerk.skill",
+  "documentationUrl": "https://github.com/stundenwerk-skill/Stundenwerk.skill#readme",
+  "supportUrl": "https://github.com/stundenwerk-skill/Stundenwerk.skill/issues",
+  "privacyPolicyUrl": "https://github.com/stundenwerk-skill/Stundenwerk.skill/blob/main/DATENSCHUTZ.md",
+  "termsOfServiceUrl": "https://github.com/stundenwerk-skill/Stundenwerk.skill/blob/main/LIZENZ.md"
 }
