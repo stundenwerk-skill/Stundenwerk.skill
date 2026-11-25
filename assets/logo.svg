@@ -1,10 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Stundenwerk Logo"><g transform="translate(0 0) scale(1.0)">
   <rect width="512" height="512" rx="112" fill="#22412F"/>
   <rect x="64" y="404" width="384" height="16" rx="8" fill="#335A43"/>
-  <g stroke="#F6F1E3" stroke-width="46" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M314 150 C292 112 194 108 186 168 C178 226 318 222 318 288 C318 354 206 362 176 316"/>
+  <g stroke="#F6F1E3" stroke-width="40" stroke-linecap="round" fill="none">
+    <path d="M378 196 A128 128 0 1 1 330 136"/>
+    <path d="M250 236 L250 160"/>
+    <path d="M250 236 L312 270"/>
   </g>
-  <path d="M372 92 C376 120 384 128 412 132 C384 136 376 144 372 172 C368 144 360 136 332 132 C360 128 368 120 372 92 Z" fill="#F2C14E"/>
-  <circle cx="420" cy="196" r="11" fill="#F2C14E"/>
+  <circle cx="250" cy="236" r="22" fill="#F2C14E"/>
+  <path d="M392 72 C396 100 404 108 432 112 C404 116 396 124 392 152 C388 124 380 116 352 112 C380 108 388 100 392 72 Z" fill="#F2C14E"/>
+  <circle cx="440" cy="176" r="11" fill="#F2C14E"/>
   <rect x="300" y="384" width="104" height="24" rx="12" fill="#F6F1E3" transform="rotate(-6 352 396)"/>
 </g></svg>
